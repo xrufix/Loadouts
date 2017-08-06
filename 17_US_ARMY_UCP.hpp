@@ -81,7 +81,7 @@
 #define UNIFORM_CREW        UNIFORM
 #define UNIFORM_HELICOPTER  ARR_1("U_B_HeliPilotCoveralls")
 #define UNIFORM_JET         ARR_1("U_B_PilotCoveralls")
-#define UNIFORM_SNIPER      ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_ard")
+#define UNIFORM_SNIPER      ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_lsh")
 
 
 
@@ -110,12 +110,7 @@
 
 
 /* ###################### - BACKPACKS - ###################### */
-#define BACKPACK_ASSAULT    ARR_4(  \
-    "B_AssaultPack_cbr",            \
-    "B_AssaultPack_khk",            \
-    "rhsusf_falconii_coy",          \
-    "rhsusf_assault_eagleaiii_ucp"  \ 
-)
+#define BACKPACK_ASSAULT    ARR_4("B_AssaultPack_cbr","B_AssaultPack_khk","rhsusf_falconii_coy","rhsusf_assault_eagleaiii_ucp")
 #define BACKPACK_KITBAG     ARR_3("B_Kitbag_rgr","B_Kitbag_cbr","B_Kitbag_mcamo")
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_cbr")
 #define BACKPACK_BERGEN     ARR_1("")
@@ -133,20 +128,20 @@
 
 
 /* ###################### - ATTACHMENTS- ###################### */
-#define LASERPOINTER_BK "rhsusf_acc_anpeq15side_bk"
-#define LASERPOINTER_TN "rhsusf_acc_anpeq15side"
+#define LASERPOINTER_BK ARR_1("rhsusf_acc_anpeq15side_bk")
+#define LASERPOINTER_TN ARR_1("rhsusf_acc_anpeq15side")
 
-#define RCO_1 "rhsusf_acc_ACOG"
-#define RCO_2 "rhsusf_acc_ACOG2"
-#define RCO_3 "rhsusf_acc_ACOG3"
+#define RCO_1 ARR_1("rhsusf_acc_ACOG")
+#define RCO_2 ARR_1("rhsusf_acc_ACOG2")
+#define RCO_3 ARR_1("rhsusf_acc_ACOG3")
 
-#define HOLOSIGHT "rhsusf_acc_eotech_552"
-#define CCO "rhsusf_acc_compm4"
+#define HOLOSIGHT   ARR_1("rhsusf_acc_eotech_552")
+#define CCO         ARR_1("rhsusf_acc_compm4")
 
-#define SNIPER_OPTIC "rhsusf_acc_premier"
-#define SNIPER_OPTIC_NV "rhsusf_acc_premier_anpvs27"
+#define SNIPER_OPTIC    ARR_1("rhsusf_acc_premier")
+#define SNIPER_OPTIC_NV ARR_1("rhsusf_acc_premier_anpvs27")
 
-#define DMR_BIPOD "rhsusf_acc_harris_bipod"
+#define DMR_BIPOD ARR_1("rhsusf_acc_harris_bipod")
 
 
 
@@ -163,27 +158,29 @@
     WEAPON(RIFLE_2,LASERPOINTER_BK,RCO_2,""), \
     WEAPON(RIFLE_2,LASERPOINTER_BK,RCO_3,"")  \
 )
-#define RIFLE_UGL_RCO ARR_3(                    \
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_1,""), \
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_2,""),	\
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_3,"")	\
+#define RIFLE_UGL_RCO ARR_3(                       \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_1,""),    \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_2,""),    \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_3,"")	   \
 )
 #define RIFLE_CCO ARR_2(                    \
     WEAPON(RIFLE_1,LASERPOINTER_BK,CCO,""), \
     WEAPON(RIFLE_2,LASERPOINTER_BK,CCO,"") \
 )
-#define RIFLE_UGL_CCO WEAPON(RIFLE_UGL,LASERPOINTER_BK,CCO,"")
+#define RIFLE_UGL_CCO ARR_1(                  \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,CCO,"") \
+)
 
 // CARBINE & PDW
-#define PDW         WEAPON("SMG_05_F","","","")
-#define CARBINE_1   "rhs_weap_m4_carryhandle"
-#define CARBINE_2   "rhs_weap_m4_carryhandle_mstock"
-#define CARBINE_3   "rhs_weap_m4_carryhandle_pmag"
-#define CARBINE_4   "rhs_weap_m4_mstock"
+#define PDW WEAPON("SMG_05_F","","","")
+#define CARBINE_1 "rhs_weap_m4_carryhandle"
+#define CARBINE_2 "rhs_weap_m4_carryhandle_mstock"
+#define CARBINE_3 "rhs_weap_m4_carryhandle_pmag"
+#define CARBINE_4 "rhs_weap_m4_mstock"
 #define CARBINE_UGL	"rhs_weap_m4a1_m203"
 
-#define CARBINE         ARR_4(CARBINE_1,CARBINE_2,CARBINE_3,CARBINE_4)
-#define CARBINE_HOLO    ARR_4(          \
+#define CARBINE ARR_4(CARBINE_1,CARBINE_2,CARBINE_3,CARBINE_4)
+#define CARBINE_HOLO ARR_4(            	\
     WEAPON(CARBINE_1,HOLOSIGHT,"",""),	\
     WEAPON(CARBINE_2,HOLOSIGHT,"",""),	\
     WEAPON(CARBINE_3,HOLOSIGHT,"",""),	\
@@ -343,8 +340,8 @@
 
 
 /* ###################### - NIGHT VISION DEVICES - ###################### */
-#define NVG				ARR_1("rhsusf_ANPVS_14")
-#define NVG_SF			ARR_1("rhsusf_ANPVS_15")
+#define NVG		ARR_1("rhsusf_ANPVS_14")
+#define NVG_SF	ARR_1("rhsusf_ANPVS_15")
 
 
 
@@ -392,4 +389,3 @@
 #ifndef INSIGNIA_SUPPORT
     #define INSIGNIA_SUPPORT INSIGNIA_COMMON
 #endif
-

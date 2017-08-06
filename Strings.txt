@@ -1,0 +1,5 @@
+preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];";
+preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true];";
+preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 2, true];";
+preLoadout = "(_this select 0) setVariable [""ACE_isEOD"", true, true];";

@@ -1,3 +1,77 @@
+/* ###################### - DISPLAY NAMES - ###################### */
+#define DN_CO_CO    "Company Commanding Officer"
+#define DN_CO_XO    "Company Executive Officer"
+#define DN_CO_MIO   "Mission Intelligence Officer"
+#define DN_CO_COLO  "Chief of Logistics"
+#define DN_CO_FO    "Forward Observer"
+
+#define DN_PL_PL    "Infantry Platoon Leader"
+#define DN_PL_PS    "Infantry Platoon Sergeant"
+#define DN_PL_UAV   "Infantry Platoon UAV Operator"
+#define DN_PL_JTAC  "Infantry Platoon JTAC"
+#define DN_PL_MED   "Infantry Platoon Medic"
+
+#define DN_RS_SL    "Squad Leader"
+#define DN_RS_TL    "Squad Rifleman"   // Ohne Granatwerfer
+#define DN_RS_AR    "Squad Automatic Rifleman"
+#define DN_RS_GRN   "Squad Fireteam Leader"
+#define DN_RS_M32   "Squad Grenadier (M32)"
+#define DN_RS_LITE  "Squad Rifleman (light)"
+#define DN_RS_AC    "Squad Assistant Automatic Rifleman"
+#define DN_RS_LAT   "Squad Light Anti-Tank Rifleman"
+#define DN_RS_CM    "Squad Combat Medic"
+#define DN_RS_DM    "Squad Designated Marksman"
+#define DN_RS_ENG   "Squad Combat Engineer"
+
+#define DN_WS_MMG   "Weapon Squad Medium Machine Gunner"
+#define DN_WS_MMGA  "Weapon Squad Assistant MMG"
+#define DN_WS_HMG   "Weapon Squad Heavy Machine Gunner"
+#define DN_WS_HMGA  "Weapon Squad Assistant HMG"
+#define DN_WS_GMG   "Weapon Squad Grenade Machine Gunner"
+#define DN_WS_GMGA  "Weapon Squad Assistant GMG"
+#define DN_WS_AT    "Weapon Squad AT-Specialist"
+#define DN_WS_AAT   "Weapon Squad AT-Assistant"
+#define DN_WS_AA    "Weapon Squad AA-Specialist"
+#define DN_WS_AAA   "Weapon Squad AA-Assistant"
+#define DN_WS_MOR   "Weapon Squad Mortar Gunner"
+#define DN_WS_MORA  "Weapon Squad Mortar Assistant"
+#define DN_WS_MORAC ""
+
+#define DN_SF_RM    "Special Team Operator"
+#define DN_SF_TL    "Special Team Leader"
+#define DN_SF_AR    "Special Team Automatic Rifleman"
+#define DN_SF_GRN   "Special Team Grenadier"
+#define DN_SF_LAT   "Special Team Light Anti-Tank"
+#define DN_SF_MED   "Special Team Medic"
+#define DN_SF_DM    "Special Team Marksman"
+#define DN_SF_EXP   "Special Team Explosive Specialist"
+
+#define DN_DV_RM    "Combat Diver Operator"
+#define DN_DV_TL    "Combat Diver Team Leader"
+#define DN_DV_EXP   "Combat Diver Explosive Specialist"
+#define DN_DV_MED   "Combat Diver Medic"
+#define DN_DV_DM    "Combat Diver Marksman"
+#define DN_DV_JTAC  "Combat Diver Terminal Attack Controller"
+
+#define DN_SN_SPOT  "Sniper Spotter"
+#define DN_SN_AP    "Sniper (M2010)"
+#define DN_SN_AM    "Sniper (M107)"
+#define DN_SN_EXP   "Sniper Explosive Specialist"
+
+#define DN_VE_CRW   "Armored Vehicle Crew"
+#define DN_VE_CMD   "Armored Vehicle Commander"
+#define DN_VE_JET   "Jet Pilot"
+#define DN_VE_HCRW  "Helicopter Crew"
+#define DN_VE_HPL   "Helicopter Pilot/Copilot/Gunner"
+
+#define DN_SP_LOG   "Logistician"
+#define DN_ME_DCT   "Medical Service Doctor"
+#define DN_ME_TL    "Medical Service Team Leader"
+#define DN_ME_PIL   "Medical Service Helicopter Pilot"
+#define DN_ME_DRV   "Medical Service Driver"
+
+
+
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_STR "rhs_uniform_FROG01_wd"
 #define UNIFORM ARR_1(UNIFORM_STR)
@@ -57,9 +131,9 @@
 #define LASERPOINTER_BK "rhsusf_acc_anpeq15side_bk"
 #define LASERPOINTER_TN "rhsusf_acc_anpeq15side"
 
-#define ACOG_1 "rhsusf_acc_ACOG_USMC"
-#define ACOG_2 "rhsusf_acc_ACOG2_USMC"
-#define ACOG_3 "rhsusf_acc_ACOG3_USMC"
+#define RCO_1 "rhsusf_acc_ACOG_USMC"
+#define RCO_2 "rhsusf_acc_ACOG2_USMC"
+#define RCO_3 "rhsusf_acc_ACOG3_USMC"
 
 #define HOLOSIGHT "rhsusf_acc_eotech_552"
 #define CCO "rhsusf_acc_compm4"
@@ -76,19 +150,21 @@
 #define RIFLE_1 "rhs_weap_m16a4_carryhandle"
 #define RIFLE_2 "rhs_weap_m16a4_carryhandle_pmag"
 #define RIFLE_UGL "rhs_weap_m16a4_carryhandle_M203"
-#define RIFLE_ACOG ARR_6(                   \
-    WEAPON(RIFLE_1,LASERPOINTER_BK,ACOG_1,""), \
-    WEAPON(RIFLE_1,LASERPOINTER_BK,ACOG_2,""), \
-    WEAPON(RIFLE_1,LASERPOINTER_BK,ACOG_3,""), \
-    WEAPON(RIFLE_2,LASERPOINTER_BK,ACOG_1,""), \
-    WEAPON(RIFLE_2,LASERPOINTER_BK,ACOG_2,""), \
-    WEAPON(RIFLE_2,LASERPOINTER_BK,ACOG_3,"")  \
+#define RIFLE_RCO ARR_6(                      \
+    WEAPON(RIFLE_1,LASERPOINTER_BK,RCO_1,""), \
+    WEAPON(RIFLE_1,LASERPOINTER_BK,RCO_2,""), \
+    WEAPON(RIFLE_1,LASERPOINTER_BK,RCO_3,""), \
+    WEAPON(RIFLE_2,LASERPOINTER_BK,RCO_1,""), \
+    WEAPON(RIFLE_2,LASERPOINTER_BK,RCO_2,""), \
+    WEAPON(RIFLE_2,LASERPOINTER_BK,RCO_3,"")  \
 )
-#define RIFLE_UGL_ACOG ARR_3(                   \
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,ACOG_1,""),   \
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,ACOG_2,""),	\
-    WEAPON(RIFLE_UGL,LASERPOINTER_BK,ACOG_3,"")	\
+#define RIFLE_UGL_RCO ARR_3(                    \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_1,""), \
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_2,""),	\
+    WEAPON(RIFLE_UGL,LASERPOINTER_BK,RCO_3,"")	\
 )
+#define RIFLE_CCO RIFLE_RCO
+#define RIFLE_UGL_CCO RIFLE_UGL_RCO
 
 // CARBINE & PDW
 #define PDW WEAPON("SMG_05_F","","","")
@@ -141,13 +217,13 @@
 // AUTOMATIC RIFLES & MACHINE GUNS
 #define AUTORIFLE_1 "rhs_weap_m249_pip_S"
 #define AUTORIFLE_2 "rhs_weap_m249_pip_S_vfg"
-#define AUTORIFLE_ACOG ARR_6(                    	\
-    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,ACOG_1,""),	\
-    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,ACOG_2,""),	\
-    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,ACOG_3,""),	\
-    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,ACOG_1,""),	\
-    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,ACOG_2,""),	\
-    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,ACOG_3,"")	\
+#define AUTORIFLE_RCO ARR_6(                    	\
+    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,RCO_1,""),	\
+    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,RCO_2,""),	\
+    WEAPON(AUTORIFLE_1,LASERPOINTER_BK,RCO_3,""),	\
+    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,RCO_1,""),	\
+    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,RCO_2,""),	\
+    WEAPON(AUTORIFLE_2,LASERPOINTER_BK,RCO_3,"")	\
 )
 #define AUTORIFLE_SF ARR_3(                                                                     	\
     WEAPON("arifle_SPAR_02_khk_F","rhsusf_acc_nt4_tan","bipod_01_F_khk","rhsusf_acc_SpecterDR_D"),	\
@@ -299,20 +375,20 @@
     #define INSIGNIA_COMMON ARR_1("")
 #endif
 #ifndef INSIGNIA_SF
-    #define INSIGNIA_SF ARR_1("")
+    #define INSIGNIA_SF INSIGNIA_COMMON
 #endif
 #ifndef INSIGNIA_TNK
-    #define INSIGNIA_TNK ARR_1("")
+    #define INSIGNIA_TNK INSIGNIA_COMMON
 #endif
 #ifndef INSIGNIA_HELI
-    #define INSIGNIA_HELI ARR_1("")
+    #define INSIGNIA_HELI INSIGNIA_COMMON
 #endif
 #ifndef INSIGNIA_JET
-    #define INSIGNIA_JET ARR_1("")
+    #define INSIGNIA_JET INSIGNIA_COMMON
 #endif
 #ifndef INSIGNIA_MEV
-    #define INSIGNIA_MEV ARR_1("")
+    #define INSIGNIA_MEV INSIGNIA_COMMON
 #endif
 #ifndef INSIGNIA_SUPPORT
-    #define INSIGNIA_SUPPORT ARR_1("")
+    #define INSIGNIA_SUPPORT INSIGNIA_COMMON
 #endif

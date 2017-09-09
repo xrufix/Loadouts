@@ -380,7 +380,7 @@ class B_support_AMort_F: B_support_Common_Asst {
 };
 //M252 Ammo Bearer (ausgeklammert, weil der M252 derzeit nicht ACE-kompatibel ist.
 class b_support_Mort_Ammo: B_support_Common {
-    displayName = DN_WS_MORCA;
+    displayName = DN_WS_MORAC;
     backpack[] = {BACKPACK_KITBAG};
     items[] += {"ACE_1Rnd_82mm_Mo_HE",5};
     //"ACE_1Rnd_82mm_Mo_Smoke","ACE_1Rnd_82mm_Mo_Illum"
@@ -742,6 +742,7 @@ class B_helipilot_F: B_helicrew_F {
     goggles[] = {GOGGLES_PILOT};
     lrRadios[] = {RADIO_PACK};
     headgear[] = {HELMET_HELICOPTER};
+    nvgs[] = {NVG_SF};
 };
 
 /* ###################### - Logistik - ###################### */
@@ -809,6 +810,7 @@ class B_MEDEVAC_Pilot: B_MEDEVAC_Common {
     goggles[] = {GOGGLES_PILOT};
     lrRadios[] = {RADIO_PACK};
     headgear[] = {HELMET_HELICOPTER};
+    nvgs[] = {NVG_SF};
 };
 //MEDEVAC Driver
 class B_MEDEVAC_Driver: B_MEDEVAC_Common {

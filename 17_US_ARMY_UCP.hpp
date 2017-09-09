@@ -35,7 +35,7 @@
 #define DN_WS_AAA   "Weapon Squad AA-Assistant"
 #define DN_WS_MOR   "Weapon Squad Mortar Gunner"
 #define DN_WS_MORA  "Weapon Squad Mortar Assistant"
-#define DN_WS_MORAC ""
+#define DN_WS_MORAC "Weapon Squad Mortar Ammo Carrier"
 
 #define DN_SF_RM    "Special Team Operator"
 #define DN_SF_TL    "Special Team Leader"

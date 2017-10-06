@@ -19,3 +19,8 @@
 
 #define EASYTRACK_PDA QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,PDA))
 #define EASYTRACK_TABLET QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,Tablet))
+
+#define SOLDIER(var1,var2,var3) \
+class var3 : LOADOUT(var1,var2) { \
+    scope = 0; \
+};

@@ -73,46 +73,46 @@
 
 
 /* ###################### - UNIFORMS - ###################### */
-#define	UNIFORM_STR "rhs_uniform_FROG01_wd"
-#define UNIFORM ARR_1(UNIFORM_STR)
-#define UNIFORM_COMMAND UNIFORM
-#define UNIFORM_SPECIAL UNIFORM
-#define UNIFORM_DIVER ARR_1("U_I_Wetsuit")
-#define UNIFORM_CREW UNIFORM
-#define UNIFORM_HELICOPTER ARR_1("U_B_HeliPilotCoveralls")
-#define UNIFORM_JET ARR_1("U_B_PilotCoveralls")
-#define UNIFORM_SNIPER ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_lsh")
+#define	UNIFORM_STR         "rhs_uniform_FROG01_d"
+#define UNIFORM             ARR_1(UNIFORM_STR)
+#define UNIFORM_COMMAND     UNIFORM
+#define UNIFORM_SPECIAL     UNIFORM
+#define UNIFORM_DIVER       ARR_1("U_I_Wetsuit")
+#define UNIFORM_CREW        UNIFORM
+#define UNIFORM_HELICOPTER  ARR_1("U_B_HeliPilotCoveralls")
+#define UNIFORM_JET         ARR_1("U_B_PilotCoveralls")
+#define UNIFORM_SNIPER      ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_ard")
 
 
 
 /* ###################### - VESTS - ###################### */
-#define VEST_EMPTY ARR_1("rhsusf_spc")
-#define VEST_BELT ARR_1("V_Rangemaster_belt")
-#define VEST_LIGHT ARR_1("rhsusf_spc_light")
-#define VEST_RIFLEMAN ARR_1("rhsusf_spc_rifleman")
-#define VEST_GRENADIER ARR_1("rhsusf_spc_teamleader")
-#define VEST_MEDIC ARR_1("rhsusf_spc_corpsman")
-#define VEST_SL ARR_1("rhsusf_spc_teamleader")
-#define VEST_TL VEST_SL
-#define VEST_MG ARR_1("rhsusf_spc_mg")
-#define VEST_DM ARR_1("rhsusf_spc_marksman")
+#define VEST_EMPTY      ARR_1("rhsusf_spc")
+#define VEST_BELT       ARR_1("V_Rangemaster_belt")
+#define VEST_LIGHT      ARR_1("rhsusf_spc_light")
+#define VEST_RIFLEMAN   ARR_1("rhsusf_spc_rifleman")
+#define VEST_GRENADIER  ARR_1("rhsusf_spc_teamleader")
+#define VEST_MEDIC      ARR_1("rhsusf_spc_corpsman")
+#define VEST_SL         ARR_1("rhsusf_spc_teamleader")
+#define VEST_TL         VEST_SL
+#define VEST_MG         ARR_1("rhsusf_spc_mg")
+#define VEST_DM         ARR_1("rhsusf_spc_marksman")
 
-#define VEST_CREW			ARR_1("rhsusf_spc_crewman")
+#define VEST_CREW		ARR_1("rhsusf_spc_crewman")
 
-#define VEST_SF				VEST_RIFLEMAN
-#define VEST_SF_TL			VEST_TL
-#define VEST_SF_MG			VEST_MG
-#define VEST_SF_GR			VEST_GRENADIER
+#define VEST_SF			VEST_RIFLEMAN
+#define VEST_SF_TL		VEST_TL
+#define VEST_SF_MG		VEST_MG
+#define VEST_SF_GR		VEST_GRENADIER
 
-#define VEST_BREATHER		ARR_1("V_RebreatherB")
-#define VEST_DIVER			"VSM_LBT1961_Black"
+#define VEST_BREATHER	"V_RebreatherB"
+#define VEST_DIVER		"VSM_LBT1961_Black"
 
 
 
 /* ###################### - BACKPACKS - ###################### */
-#define BACKPACK_ASSAULT    ARR_3("B_AssaultPack_rgr","B_AssaultPack_khk","rhsusf_falconii")
+#define BACKPACK_ASSAULT    ARR_3("B_AssaultPack_cbr","B_AssaultPack_sgg","rhsusf_falconii_coy")
 #define BACKPACK_KITBAG     ARR_2("B_Kitbag_rgr","B_Kitbag_cbr")
-#define BACKPACK_CARRYALL   ARR_1("B_Carryall_oli")
+#define BACKPACK_CARRYALL   ARR_1("B_Carryall_cbr")
 #define BACKPACK_BERGEN     ARR_1("")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	""
@@ -187,19 +187,19 @@
 #define SF_CARBINE ARR_4(	                                                                        \
     WEAPON("rhs_weap_mk18_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),   	\
     WEAPON("rhs_weap_mk18","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),        	\
-    WEAPON("rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD"),	\
-    WEAPON("rhs_weap_mk18_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD")   	\
+    WEAPON("rhs_weap_mk18_KAC_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D"),	\
+    WEAPON("rhs_weap_mk18_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D")   	\
 )
 #define SF_CARBINE_UGL ARR_3(	                                                                            \
-    WEAPON("rhs_weap_m4a1_blockII_M203","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),	    \
+    WEAPON("rhs_weap_m4a1_blockII_M203","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR"),	    \
     WEAPON("rhs_weap_m4a1_blockII_M203_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),	\
-    WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD")	\
+    WEAPON("rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D")	\
 )
 #define SF_CARBINE_TN ARR_2(	                                                                    \
-    WEAPON("rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD"),	\
-    WEAPON("rhs_weap_mk18_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD")	    \
+    WEAPON("rhs_weap_mk18_KAC_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D"),	\
+    WEAPON("rhs_weap_mk18_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D")	    \
 )
-#define SF_CARBINE_UGL_TN		WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD")
+#define SF_CARBINE_UGL_TN		WEAPON("rhs_weap_m4a1_blockII_M203_d","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_D")
 #define SF_CARBINE_DIVER 		WEAPON("rhs_weap_mk18_KAC_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,CCO)
 #define SF_CARBINE_DIVER_UGL 	WEAPON("rhs_weap_m4a1_blockII_M203_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,CCO)
 
@@ -211,8 +211,8 @@
     WEAPON("arifle_SPAR_03_snd_F","muzzle_snds_B_snd_F",LASERPOINTER_TN,"optic_AMS_snd")	\
 )
 #define DMR_DIVER WEAPON("arifle_SPAR_03_blk_F","muzzle_snds_B",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_A")
-#define SR_AP WEAPON("rhs_weap_m40a5_wd",SNIPER_OPTIC,"rhsusf_acc_harris_swivel","")
-#define SR_AM WEAPON("rhs_weap_M107_w",SNIPER_OPTIC,"","")
+#define SR_AP WEAPON("rhs_weap_m40a5_d",SNIPER_OPTIC,"rhsusf_acc_harris_swivel","")
+#define SR_AM WEAPON("rhs_weap_M107_d",SNIPER_OPTIC,"","")
 
 // AUTOMATIC RIFLES & MACHINE GUNS
 #define AUTORIFLE_1 "rhs_weap_m249_pip_S"
@@ -288,26 +288,26 @@
 
 /* ###################### - HEADGEAR - ###################### */
 // GENERAL INFANTRY
-#define HELMET ARR_6(                           	\
-    "rhsusf_mich_helmet_marpatwd",              	\
-    "rhsusf_mich_helmet_marpatwd_alt",          	\
-    "rhsusf_mich_helmet_marpatwd_alt_headset",  	\
-    "rhsusf_mich_helmet_marpatwd_headset",      	\
-    "rhsusf_mich_helmet_marpatwd_norotos",      	\
-    "rhsusf_mich_helmet_marpatwd_norotos_headset"	\
+#define HELMET ARR_6(                           \
+    "rhsusf_mich_helmet_marpatd",              	\
+    "rhsusf_mich_helmet_marpatd_alt",          	\
+    "rhsusf_mich_helmet_marpatd_alt_headset",  	\
+    "rhsusf_mich_helmet_marpatd_headset",      	\
+    "rhsusf_mich_helmet_marpatd_norotos",      	\
+    "rhsusf_mich_helmet_marpatd_norotos_headset"\
 )
 // NON-COMBAT INFANTRY
-#define HELMET_BARE ARR_6(              	\
-    "rhsusf_mich_bare",                 	\
-    "rhsusf_mich_bare_alt",             	\
-    "rhsusf_mich_bare_headset",         	\
-    "rhsusf_mich_bare_norotos",         	\
-    "rhsusf_mich_bare_norotos_alt",     	\
-    "rhsusf_mich_bare_norotos_alt_headset"	\
+#define HELMET_BARE ARR_6(                     	\
+    "rhsusf_mich_bare_tan",                 	\
+    "rhsusf_mich_bare_alt_tan",             	\
+    "rhsusf_mich_bare_tan_headset",         	\
+    "rhsusf_mich_bare_norotos_tan",         	\
+    "rhsusf_mich_bare_norotos_alt_tan",     	\
+    "rhsusf_mich_bare_norotos_alt_tan_headset"	\
 )
 // SPECIAL FORCES INFANTRY
 #define HELMET_SF ARR_6(        	\
-    "rhsusf_opscore_aor2_pelt", 	\
+    "rhsusf_opscore_aor1_pelt", 	\
     "rhsusf_opscore_fg_pelt",   	\
     "rhsusf_opscore_fg_pelt_cam",	\
     "rhsusf_opscore_paint_pelt",	\
@@ -319,7 +319,7 @@
     "rhsusf_protech_helmet"	    	\
 )
 // VEHICLE CREWS
-#define HELMET_CREW 		ARR_1("rhsusf_cvc_green_helmet")
+#define HELMET_CREW 		ARR_1("rhsusf_cvc_helmet")
 #define HELMET_HELICOPTER	ARR_1("rhsusf_hgu56p")
 #define HELMET_HELI_CREW	ARR_1("rhsusf_hgu56p_mask")
 #define HELMET_JET			ARR_1("H_PilotHelmetFighter_B")
@@ -356,9 +356,9 @@
 
 
 /* ###################### - NAVIGATION - ###################### */
-#define GPS			ARR_1("")
-#define BFT_PDA		ARR_1("b_EasyTrack_PDA")
-#define BFT_TABLET	ARR_1("b_EasyTrack_Tablet")
+#define GPS			""
+#define BFT_PDA		"b_EasyTrack_PDA"
+#define BFT_TABLET	"b_EasyTrack_Tablet"
 #define TERMINAL	"B_UavTerminal"
 
 
@@ -392,3 +392,6 @@
 #ifndef INSIGNIA_SUPPORT
     #define INSIGNIA_SUPPORT INSIGNIA_COMMON
 #endif
+
+
+#include "common.hpp"

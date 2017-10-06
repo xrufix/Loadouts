@@ -364,19 +364,19 @@ class LOADOUT(weapons,aaa) : LOADOUT(assistant,common) {
     magazines[] += {MAGS_AA_MISSILE_ASST};
 };
 //M252 Gunner
-class LOADOUT(weapons,mor) : LOADOUT(weapons,common) {
+class LOADOUT(weapons,mort) : LOADOUT(weapons,common) {
     displayName = DN_WS_MOR;
     backpack[] = {MORTAR_GUN};
     items[] += {"ACE_RangeTable_82mm"};
 };
 //M252 Assistant
-class LOADOUT(weapons,amor) : LOADOUT(assistant,common) {
+class LOADOUT(weapons,amort) : LOADOUT(assistant,common) {
     displayName = DN_WS_MORA;
     backpack[] = {MORTAR_BAG};
     items[] += {"ACE_RangeTable_82mm"};
 };
 
-class LOADOUT(weapons,acmor) : LOADOUT(assistant,common) {
+class LOADOUT(weapons,acmort) : LOADOUT(assistant,common) {
     displayName = DN_WS_MORAC;
     items[] += {"ACE_1Rnd_82mm_Mo_HE",5};
     //"ACE_1Rnd_82mm_Mo_Smoke","ACE_1Rnd_82mm_Mo_Illum"

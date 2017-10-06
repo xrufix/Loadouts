@@ -1,12 +1,6 @@
-/*
-//preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];"; CM
-//preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true];"; Arzt
-//preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
-//preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 2, true];";
-//preLoadout = "(_this select 0) setVariable [""ACE_isEOD"", true, true];";
- */
-
-class CommonBlufor {
+class COMMON {
+    side = QUOTE(SIDE);
+    
     uniform[] = {UNIFORM};
     vest[] = {VEST_EMPTY};
     backpack[] = {BACKPACK_ASSAULT};
@@ -41,10 +35,12 @@ class CommonBlufor {
 
     lrRadios[] = {""};
     insignia[] = {INSIGNIA_COMMON};
+
+    preLoadout = NOTRAITS;
 };
 
 /* ###################### - Company Command - ###################### */
-class B_Company_Common : CommonBlufor {
+class LOADOUT(company,common) : COMMON {
     vest[] = {VEST_BELT};
     primary[] = {PDW};
     magazines[] = {
@@ -59,40 +55,40 @@ class B_Company_Common : CommonBlufor {
     binoculars[] = {RANGEFINDER};
 
     map[] = {"ItemMap"};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
 
     lrRadios[] = {RADIO_PACK};
 };
 //CO
-class B_Company_CO: B_Company_Common {
+class LOADOUT(company,co) : LOADOUT(company,common) {
     displayName = DN_CO_CO;
     headgear[] = {CAP_CO};
 };
 //XO
-class B_Company_XO: B_Company_Common {
+class LOADOUT(company,xo) : LOADOUT(company,common) {
     displayName = DN_CO_XO;
-    gps[] = {BFT_TABLET};
+    gps[] = {EASYTRACK_TABLET};
     headgear[] = {CAP_XO};
 };
 //MIO
-class B_Company_MIO: B_Company_Common {
+class LOADOUT(company,mio) : LOADOUT(company,common) {
     displayName = DN_CO_MIO;
-    gps[] = {BFT_TABLET};
+    gps[] = {EASYTRACK_TABLET};
 };
 //CoLo
-class B_Company_CoLo: B_Company_Common {
+class LOADOUT(company,colo) : LOADOUT(company,common) {
     displayName = DN_CO_COLO;
     items[] += {"CL_Logitracker"};
 };
 //FO
-class B_Company_FO: B_Company_Common {
+class LOADOUT(company,fo) : LOADOUT(company,common) {
     displayName = DN_CO_FO;
     items[] += {"ACE_RangeTable_82mm"};
 };
 
 /* ###################### - Platoon Lead - ###################### */
 //PL Basis
-class B_Platoon_Common: CommonBlufor {
+class LOADOUT(platoon,common): COMMON {
     vest[] = {VEST_LIGHT};
     primary[] = {CARBINE_HOLO};
     magazines[] = {
@@ -103,30 +99,30 @@ class B_Platoon_Common: CommonBlufor {
     };
     items[] += {"ACE_MapTools"};
     headgear[] = {HELMET_BARE};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     map[] = {"ItemMap"};
     binoculars[] = {RANGEFINDER};
     goggles[] = {GOGGLES_OFFICER};
     lrRadios[] = {RADIO_HAND};
 };
 //PL
-class B_Platoon_PL: B_Platoon_Common {
+class LOADOUT(platoon,pl) : LOADOUT(platoon,common) {
     displayName = DN_PL_PL;
     lrRadios[] += {RADIO_PACK};
 };
 //PSgt
-class B_Platoon_Sgt: B_Platoon_Common {
+class LOADOUT(platoon,psgt) : LOADOUT(platoon,common) {
     displayName = DN_PL_PS;
-    gps[] = {BFT_TABLET};
+    gps[] = {EASYTRACK_TABLET};
     lrRadios[] += {RADIO_PACK};
 };
 //UAV Operator
-class B_soldier_UAV_F: B_Platoon_Common {
+class LOADOUT(platoon,uav) : LOADOUT(platoon,common) {
     displayName = DN_PL_UAV;
     items[] += {"ACE_UAVBattery",TERMINAL};
 };
 //JTAC
-class B_recon_JTAC_F: B_Platoon_Common {
+class LOADOUT(platoon,jtac) : LOADOUT(platoon,common) {
     displayName = DN_PL_JTAC;
     vest[] = {VEST_GRENADIER};
     backpack[] = {BACKPACK_KITBAG};
@@ -149,7 +145,7 @@ class B_recon_JTAC_F: B_Platoon_Common {
     };
 };
 //Platoon-Medic
-class B_Platoon_Medic: B_Platoon_Common {
+class LOADOUT(platoon,medic) : LOADOUT(platoon,common) {
     displayName = DN_PL_MED;
     vest[] = {VEST_MEDIC};
     backpack[] = {BACKPACK_KITBAG};
@@ -164,15 +160,15 @@ class B_Platoon_Medic: B_Platoon_Common {
         "ACE_morphine",15,
         "ACE_epinephrine",30
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true];";
+    preLoadout = QUOTE(ISMEDIC(2));
 };
 
 /* ###################### - Rifle Squad - ###################### */
 //Squadleader
-class B_Soldier_SL_F: CommonBlufor {
+class LOADOUT(squad,sl) : COMMON {
     displayName = DN_RS_SL;
     vest[] = {VEST_SL};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     binoculars[] = {RANGEFINDER};
     primary[] = {RIFLE_UGL_CCO};
     magazines[] += {
@@ -188,7 +184,7 @@ class B_Soldier_SL_F: CommonBlufor {
     map[] = {"ItemMap"};
 };
 //Fireteam Leader (kein Granatwerfer!)
-class B_Soldier_TL_F: CommonBlufor {
+class LOADOUT(squad,ftl) : COMMON {
     displayName = DN_RS_TL;
     vest[] = {VEST_TL};
     binoculars[] = {BINOCULAR};
@@ -196,7 +192,7 @@ class B_Soldier_TL_F: CommonBlufor {
     magazines[] += {MAG_AUTORIFLE,1};
 };
 //Automatic Rifleman
-class B_soldier_AR_F: CommonBlufor {
+class LOADOUT(squad,ar) : COMMON {
     displayName = DN_RS_AR;
     vest[] = {VEST_MG};
     primary[] = {AUTORIFLE_RCO};
@@ -208,14 +204,14 @@ class B_soldier_AR_F: CommonBlufor {
     goggles[] = {GOGGLES_FULL};
 };
 //Grenadier
-class B_Soldier_GL_F: CommonBlufor {
+class LOADOUT(squad,gl) : COMMON {
     displayName = DN_RS_GRN;
     vest[] = {VEST_GRENADIER};
     primary[] = {RIFLE_UGL_CCO};
     magazines[] += {"1Rnd_HE_Grenade_shell",24,"1Rnd_Smoke_Grenade_shell",8};
 };
 //Grenadier M32
-class B_Squad_M32: CommonBlufor {
+class LOADOUT(squad,gl2) : COMMON {
     displayName = DN_RS_M32;
     vest[] = {VEST_GRENADIER};
     primary[] = {"rhs_weap_m32"};
@@ -228,13 +224,13 @@ class B_Squad_M32: CommonBlufor {
     };
 };
 //Rifleman (Light)
-class B_Soldier_lite_F: CommonBlufor {
+class LOADOUT(squad,light) : COMMON {
     displayName = DN_RS_LITE;
     primary[] = {RIFLE_RCO};
     vest[] = {VEST_RIFLEMAN};
 };
-//Rifleman (Ammo Carrier)
-class B_Soldier_F: CommonBlufor {
+//Rifleman (Ass. Autorifleman)
+class LOADOUT(squad,aar) : COMMON {
     displayName = DN_RS_AC;
     primary[] = {RIFLE_RCO};
     vest[] = {VEST_RIFLEMAN};
@@ -245,7 +241,7 @@ class B_Soldier_F: CommonBlufor {
     };
 };
 //Rifleman AT
-class B_soldier_LAT_F: CommonBlufor {
+class LOADOUT(squad,lat) : COMMON {
     displayName = DN_RS_LAT;
     vest[] = {VEST_RIFLEMAN};
     backpack[] = {BACKPACK_AT_LIGHT};
@@ -253,7 +249,7 @@ class B_soldier_LAT_F: CommonBlufor {
     magazines[] += {MAGS_AT_LIGHT};
 };
 //Combat Medic
-class B_medic_F: CommonBlufor {
+class LOADOUT(squad,cm) : COMMON {
     displayName = DN_RS_CM;
     vest[] = {VEST_MEDIC};
     items[] += {
@@ -266,10 +262,10 @@ class B_medic_F: CommonBlufor {
         "ACE_salineIV_500",2,
         "ACE_surgicalKit"
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true];";
+    preLoadout = QUOTE(ISMEDIC(1));
 };
 //Squad Designated Marksman
-class B_soldier_M_F: CommonBlufor {
+class LOADOUT(squad,dm) : COMMON {
     displayName = DN_RS_DM;
     vest[] = {VEST_DM};
     primary[] = {DMR};
@@ -281,17 +277,17 @@ class B_soldier_M_F: CommonBlufor {
     };
 };
 //Combat Engineer
-class B_engineer_F: CommonBlufor {
+class LOADOUT(squad,eng) : COMMON {
     displayName = DN_RS_ENG;
     vest[] = {VEST_LIGHT};
     items[] += {"ToolKit"};
-    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 1, true];"
+    preLoadout = QUOTE(ISENGINEER(1));
 };
 
 
 /* ###################### - Weapon Squad - ###################### */
 //Common
-class B_support_Common: CommonBlufor {
+class LOADOUT(weapons,common): COMMON {
     vest[] = {VEST_RIFLEMAN};
     magazines[] = {
         MAG_PISTOL,3,
@@ -300,12 +296,12 @@ class B_support_Common: CommonBlufor {
         GRENADES_BASIC
     };
 };
-class B_support_Common_Asst: B_support_Common {
+class LOADOUT(assistant,common): LOADOUT(weapons,common) {
     backpack[] = {BACKPACK_KITBAG};
     binoculars[] = {BINOCULAR};
 }
 //MMG
-class B_HeavyGunner_F: B_support_Common {
+class LOADOUT(weapons,mg) : LOADOUT(weapons,common) {
     displayName = DN_WS_MMG;
     vest[] = {VEST_MG};
     backpack[] = {""};
@@ -318,78 +314,77 @@ class B_HeavyGunner_F: B_support_Common {
     goggles[] = {GOGGLES_FULL};
 };
 //MMG Assistant
-class B_soldier_AAR_F: B_support_Common_Asst {
+class LOADOUT(weapons,amg) : LOADOUT(assistant,common) {
     displayName = DN_WS_MMGA;
     magazines[] += {MAG_MMG,5};
+    items[] += {"ACE_SpareBarrel"};
 };
 //HMG
-class B_support_MG_F: B_support_Common {
+class LOADOUT(weapons,hmg) : LOADOUT(weapons,common) {
     displayName = DN_WS_HMG;
     backpack[] = {HMG_GUN};
 };
 //HMG Assistant
-class B_support_AMG_F: B_support_Common_Asst {
+class LOADOUT(weapons,ahmg) : LOADOUT(assistant,common) {
     displayName = DN_WS_HMGA;
     backpack[] = {HMG_TRIPOD};
 };
 //GMG
-class B_support_GMG_F: B_support_Common {
+class LOADOUT(weapons,gmg) : LOADOUT(weapons,common) {
     displayName = DN_WS_GMG;
     backpack[] = {GMG_GUN};
 };
 //GMG Assistant
-class B_support_AGMG: B_support_Common_Asst {
+class LOADOUT(weapons,agmg) : LOADOUT(assistant,common) {
     displayName = DN_WS_GMGA;
     backpack[] = {GMG_TRIPOD};
 };
 //MS AT
-class B_soldier_AT_F: B_support_Common {
+class LOADOUT(weapons,atgm) : LOADOUT(weapons,common) {
     displayName = DN_WS_AT;
     backpack[] = {""};
     launcher[] = {AT_MISSILE};
 };
 //AMS AT
-class B_soldier_AAT_F: B_support_Common_Asst {
+class LOADOUT(weapons,aatgm) : LOADOUT(assistant,common) {
     displayName = DN_WS_AAT;
     backpack[] = {BACKPACK_CARRYALL};
     magazines[] += {MAGS_AT_MISSILE_ASST};
 };
 //MS AA
-class B_soldier_AA_F: B_support_Common {
+class LOADOUT(weapons,aa) : LOADOUT(weapons,common) {
     displayName = DN_WS_AA;
     backpack[] = {""};
     launcher[] = {AA_MISSILE};
     magazines[] += {MAGS_AA_MISSILE};
 };
 //AMS AA
-class B_soldier_AAA_F: B_support_Common_Asst {
+class LOADOUT(weapons,aaa) : LOADOUT(assistant,common) {
     displayName = DN_WS_AAA;
     magazines[] += {MAGS_AA_MISSILE_ASST};
 };
 //M252 Gunner
-class B_support_Mort_F: B_support_Common {
+class LOADOUT(weapons,mor) : LOADOUT(weapons,common) {
     displayName = DN_WS_MOR;
     backpack[] = {MORTAR_GUN};
     items[] += {"ACE_RangeTable_82mm"};
 };
 //M252 Assistant
-class B_support_AMort_F: B_support_Common_Asst {
+class LOADOUT(weapons,amor) : LOADOUT(assistant,common) {
     displayName = DN_WS_MORA;
     backpack[] = {MORTAR_BAG};
     items[] += {"ACE_RangeTable_82mm"};
 };
-//M252 Ammo Bearer (ausgeklammert, weil der M252 derzeit nicht ACE-kompatibel ist.
-class b_support_Mort_Ammo: B_support_Common {
+
+class LOADOUT(weapons,acmor) : LOADOUT(assistant,common) {
     displayName = DN_WS_MORAC;
-    backpack[] = {BACKPACK_KITBAG};
     items[] += {"ACE_1Rnd_82mm_Mo_HE",5};
     //"ACE_1Rnd_82mm_Mo_Smoke","ACE_1Rnd_82mm_Mo_Illum"
 };
 
 /* ###################### - Reconnaissance - ###################### */
 //Common Recon
-class B_recon_Common: CommonBlufor {
-    displayName = DN_SF_RM;
+class LOADOUT(recon,common): COMMON {
     vest[] = {VEST_SF};
     secondary[] = {PISTOL_SF};
     primary[] = {SF_CARBINE};
@@ -408,10 +403,17 @@ class B_recon_Common: CommonBlufor {
     nvgs[] = {NVG_SF};
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_SF};
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+    preLoadout = QUOTE(ISENGINEER(1) ISMEDIC(1));
+};
+//Operator
+class LOADOUT(recon,rm) : LOADOUT(recon,common) {
+    displayName = DN_SF_RM;
+    items[] += {
+        "ACE_wirecutter"
+    };
 };
 //Teamlead
-class B_recon_TL_F: B_recon_Common {
+class LOADOUT(recon,tl) : LOADOUT(recon,common) {
     displayName = DN_SF_TL;
     vest[] = {VEST_SF_TL};
     primary[] = {SF_CARBINE_UGL};
@@ -430,11 +432,11 @@ class B_recon_TL_F: B_recon_Common {
         "ACE_HuntIR_monitor"
     };
     binoculars[] = {RANGEFINDER};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     lrRadios[] = {RADIO_HAND};
 };
 //AR
-class B_Recon_Sharpshooter_F: B_recon_Common {
+class LOADOUT(recon,ar) : LOADOUT(recon,common) {
     displayName = DN_SF_AR;
     vest[] = {VEST_SF_MG};
     primary[] = {AUTORIFLE_SF};
@@ -447,7 +449,7 @@ class B_Recon_Sharpshooter_F: B_recon_Common {
     goggles[] = {GOGGLES_SF_FULL};
 };
 //Grenadier
-class B_recon_F: B_recon_Common {
+class LOADOUT(recon,gl) : LOADOUT(recon,common) {
     displayName = DN_SF_GRN;
     vest[] = {VEST_SF_GR};
     primary[] = {SF_CARBINE_UGL};
@@ -457,14 +459,14 @@ class B_recon_F: B_recon_Common {
     };
 };
 //LAT
-class B_recon_LAT_F: B_recon_Common {
+class LOADOUT(recon,lat) : LOADOUT(recon,common) {
     displayName = DN_SF_LAT;
     backpack[] = {""};
     launcher[] = {AT_LIGHT};
     magazines[] += {MAGS_AT_LIGHT};
 };
 //CM
-class B_recon_medic_F: B_recon_Common {
+class LOADOUT(recon,cm) : LOADOUT(recon,common) {
     displayName = DN_SF_MED;
     items[] += {
         "ACE_fieldDressing",10,
@@ -476,10 +478,10 @@ class B_recon_medic_F: B_recon_Common {
         "ACE_salineIV_500",3,
         "ACE_surgicalKit"
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true];";
+    preLoadout = QUOTE(ISMEDIC(2));
 };
 //Marksman
-class B_recon_M_F: B_recon_Common {
+class LOADOUT(recon,dm) : LOADOUT(recon,common) {
     displayName = DN_SF_DM;
     primary[] = {DMR_SF};
     magazines[] = {
@@ -490,7 +492,7 @@ class B_recon_M_F: B_recon_Common {
     items[] += {DMR_BIPOD};
 };
 //Explosive Specialist
-class B_recon_exp_F: B_recon_Common {
+class LOADOUT(recon,exp) : LOADOUT(recon,common) {
     displayName = DN_SF_EXP;
     backpack[] = {BACKPACK_KITBAG};
     secondary[] = {"ACE_VMM3"};
@@ -506,19 +508,18 @@ class B_recon_exp_F: B_recon_Common {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_isEOD"", true, true];(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+    preLoadout = QUOTE(ISEOD(true) ISENGINEER(1));
 };
 
 /* ###################### - Diver - ###################### */
-//Assault Diver
-class B_diver_F: B_recon_Common {
+class LOADOUT(diver,common) : LOADOUT(recon,common) {
     displayName = DN_DV_RM;
     uniform[] = {UNIFORM_DIVER};
     vest[] = {VEST_BREATHER};
     backpack[] = {BACKPACK_CARRYALL};
     primary[] = {SF_CARBINE_DIVER};
     secondary[] = {PISTOL_SF};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     magazines[] = {
         MAG_PISTOL,3,
         MAG_CARBINE,10,
@@ -533,8 +534,10 @@ class B_diver_F: B_recon_Common {
     headgear[] = {HELMET_DIVER};
     nvgs[] = {"NVGoggles_OPFOR"};
 };
+//Assault Diver
+class LOADOUT(diver,rm) : LOADOUT(diver,common) {};
 //Diver Team Lead
-class B_diver_TL_F: B_diver_F {
+class LOADOUT(diver,tl) : LOADOUT(diver,common) {
     displayName = DN_DV_TL;
     binoculars[] = {RANGEFINDER};
     lrRadios[] = {RADIO_HAND};
@@ -543,7 +546,7 @@ class B_diver_TL_F: B_diver_F {
     items[] += {"ACE_MapTools"};
 };
 //Diver Explosive Specialist
-class B_diver_exp_F: B_diver_F {
+class LOADOUT(diver,exp) : LOADOUT(diver,common) {
     displayName = DN_DV_EXP;
     magazines[] += {"DemoCharge_Remote_Mag",4};
     items[] += {
@@ -553,10 +556,10 @@ class B_diver_exp_F: B_diver_F {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_isEOD"", true, true];(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+    preLoadout = QUOTE(ISEOD(true) ISENGINEER(1));
 };
 // Diver Medic
-class B_diver_Medic: B_diver_F {
+class LOADOUT(diver,cm) : LOADOUT(diver,common) {
     displayName = DN_DV_MED;
     items[] += {
         "W_Defibrillator",
@@ -570,10 +573,10 @@ class B_diver_Medic: B_diver_F {
         "ACE_surgicalKit"
     };
     binoculars[] = {"ACE_MX2A"};
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true];";
+    preLoadout = QUOTE(ISMEDIC(2));
 };
 // Marksman
-class B_diver_DM: B_diver_F {
+class LOADOUT(diver,dm) : LOADOUT(diver,common) {
     displayName = DN_DV_DM;
     primary[] = {DMR_DIVER};
     magazines[] = {
@@ -585,7 +588,7 @@ class B_diver_DM: B_diver_F {
     items[] += {DMR_BIPOD};
 };
 // Diver TL/JTAC
-class b_diver_JTAC: B_diver_TL_F {
+class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
     displayName = DN_DV_JTAC;
     primary[] = {SF_CARBINE_DIVER_UGL};
     binoculars[] = {DESIGNATOR};
@@ -604,7 +607,7 @@ class b_diver_JTAC: B_diver_TL_F {
 
 /* ###################### - Sniper - ###################### */
 //Spotter
-class B_sniper_common : B_recon_Common {
+class LOADOUT(sniper,common) : LOADOUT(recon,common) {
     uniform[] = {UNIFORM_SNIPER};
     map[] = {"ItemMap"};
     items[] += {
@@ -612,11 +615,11 @@ class B_sniper_common : B_recon_Common {
         "ACE_Rangecard"
     };
 }
-class B_spotter_f: B_recon_common {
+class LOADOUT(sniper,spot) : LOADOUT(recon,common) {
     displayName = DN_SN_SPOT;
     uniform[] = {UNIFORM_SNIPER};
     primary[] = {SF_CARBINE_UGL_TN};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     binoculars[] = {RANGEFINDER};
     magazines[] = {
         MAG_PISTOL_SF,3,
@@ -641,7 +644,7 @@ class B_spotter_f: B_recon_common {
     lrRadios[] = {RADIO_HAND};
 };
 //Sniper Anti-Personel
-class B_sniper_f : B_sniper_common {
+class LOADOUT(sniper,ap): LOADOUT(sniper,common) {
     displayName = DN_SN_AP;
     primary[] = {SR_AP};
     magazines[] = {
@@ -651,7 +654,7 @@ class B_sniper_f : B_sniper_common {
     };
 };
 //Sniper Anti-Materiel
-class B_ghillie_ard_F: B_sniper_common {
+class LOADOUT(sniper,am) : LOADOUT(sniper,common) {
     displayName = DN_SN_AM;
     primary[] = {SR_AM};
     magazines[] = {
@@ -661,7 +664,7 @@ class B_ghillie_ard_F: B_sniper_common {
     };
 };
 //Explosives
-class B_ghillie_sard_f: B_recon_common {
+class LOADOUT(sniper,exp) : LOADOUT(recon,common) {
     displayName = DN_SN_EXP;
     uniform[] = {UNIFORM_SNIPER};
     primary[] = {SF_CARBINE_TN};
@@ -676,12 +679,12 @@ class B_ghillie_sard_f: B_recon_common {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_isEOD"", true, true];(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+    preLoadout = QUOTE(ISEOD(true) ISMEDIC(1));
 };
 
 /* ###################### - Tank - ###################### */
 //Crewman (Driver, Gunner)
-class B_crew_F: CommonBlufor {
+class LOADOUT(crew,common) : COMMON {
     displayName = DN_VE_CRW;
     backpack[] = {""};
     vest[] = {VEST_CREW};
@@ -695,20 +698,20 @@ class B_crew_F: CommonBlufor {
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_TNK};
     lrRadios[] = {RADIO_HAND};
-    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 1, true];";
+    preLoadout = QUOTE(ISENGINEER(1));
 };
 //Tank Commander
-class B_Tank_Commander: B_crew_F {
+class LOADOUT(crew,cmd) : LOADOUT(crew,common) {
     displayName = DN_VE_CMD;
     backpack[] = {BACKPACK_RADIO};
     lrRadios[] += {RADIO_PACK};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     binoculars[] = {BINOCULAR};
 };
 
 /* ###################### - Aircraft - ###################### */
 //Jetpilot
-class B_Pilot_F: CommonBlufor {
+class LOADOUT(crew,jet) : COMMON {
     displayName = DN_VE_JET;
     uniform[] = {UNIFORM_JET};
     vest[] = {""};
@@ -720,25 +723,25 @@ class B_Pilot_F: CommonBlufor {
     };
     headgear[] = {HELMET_JET};
     map[] = {"itemMap"};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     nvgs[] = {""};
     watch[] = {"ACE_Altimeter"};
     goggles[] = {GOGGLES_PILOT};
     insignia[] = {INSIGNIA_JET};
 };
 //HeliCrew
-class B_helicrew_F: B_crew_F {
+class LOADOUT(crew,heli) : LOADOUT(crew,common) {
     displayName = DN_VE_HCRW;
     headgear[] = {HELMET_HELI_CREW};
     map[] = {""};
     insignia[] = {INSIGNIA_HELI};
 };
 //HeliPilot
-class B_helipilot_F: B_helicrew_F {
+class LOADOUT(crew,helipilot) : LOADOUT(crew,heli) {
     displayName = DN_VE_HPL;
     backpack[] = {BACKPACK_ASSAULT};
     map[] = {"itemMap"};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     goggles[] = {GOGGLES_PILOT};
     lrRadios[] = {RADIO_PACK};
     headgear[] = {HELMET_HELICOPTER};
@@ -747,7 +750,7 @@ class B_helipilot_F: B_helicrew_F {
 
 /* ###################### - Logistik - ###################### */
 //Logistiker
-class B_soldier_repair_F: CommonBlufor {
+class LOADOUT(logistics,common) : COMMON {
     displayName = DN_SP_LOG;
     vest[] = {VEST_LIGHT};
     backpack[] = {BACKPACK_KITBAG};
@@ -760,15 +763,15 @@ class B_soldier_repair_F: CommonBlufor {
     headgear[] = {HELMET_BARE};
     items[] += {"CL_Logitracker","ToolKit"};
     lrRadios[] = {RADIO_PACK,RADIO_HAND};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_SUPPORT};
-    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", 2, true];";
+    preLoadout = QUOTE(ISENGINEER(2));
 };
 
 /* ###################### - MEDEVAC - ###################### */
 //Common MEDEVAC
-class B_MEDEVAC_Common: CommonBlufor {
+class LOADOUT(medevac,common): COMMON {
     primary[] = {""};
     secondary[] = {PISTOL};
     magazines[] = {GRENADES_LIGHT};
@@ -776,11 +779,11 @@ class B_MEDEVAC_Common: CommonBlufor {
     headgear[] = {HELMET_BARE};
     goggles[] = {GOGGLES_OFFICER};
     insignia[] = {INSIGNIA_MEV};
-    preLoadout = "(_this select 0) setCaptive true;"
+    preLoadout = QUOTE(ISPROTECTED(true));
 };
 
 //Doctor
-class B_MEDEVAC_Doctor: B_MEDEVAC_Common {
+class LOADOUT(medevac,doc) : LOADOUT(medevac,common) {
     displayName = DN_ME_DCT;
     backpack[] = {BACKPACK_KITBAG};
     items[] += {
@@ -794,26 +797,26 @@ class B_MEDEVAC_Doctor: B_MEDEVAC_Common {
         "ACE_morphine",15,
         "ACE_epinephrine",30
     };
-    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; (_this select 0) setCaptive true;";
+    preLoadout = QUOTE(ISMEDIC(2) ISPROTECTED(true));
 };
 //Doctor TL
-class B_MEDEVAC_TL: B_MEDEVAC_Doctor {
+class LOADOUT(medevac,tl) : LOADOUT(medevac,doc) {
     displayName = DN_ME_TL;
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     lrRadios[] = {RADIO_HAND};
 };
 //MEDEVAC Pilot
-class B_MEDEVAC_Pilot: B_MEDEVAC_Common {
+class LOADOUT(medevac,heli) : LOADOUT(medevac,common) {
     displayName = DN_ME_PIL;
     map[] = {"itemMap"};
-    gps[] = {BFT_PDA};
+    gps[] = {EASYTRACK_PDA};
     goggles[] = {GOGGLES_PILOT};
     lrRadios[] = {RADIO_PACK};
     headgear[] = {HELMET_HELICOPTER};
     nvgs[] = {NVG_SF};
 };
 //MEDEVAC Driver
-class B_MEDEVAC_Driver: B_MEDEVAC_Common {
+class LOADOUT(medevac,drv) : LOADOUT(medevac,common) {
     displayName = DN_ME_DRV;
     items[] += {"ACE_Banana"};
 };

@@ -1,5 +1,3 @@
-#define QUOTE(var1) #var1
-
 #define ARR_1(var1) var1
 #define ARR_2(var1,var2) var1, var2
 #define ARR_3(var1,var2,var3) var1, var2, var3
@@ -11,7 +9,13 @@
 
 #define WEAPON(var1,var2,var3,var4) {ARR_4(var1,var2,var3,var4)}
 
-#define ASSIGN_MEDICCLASS(var1) QUOTE((_this select 0) setVariable ['ACE_medical_medicClass', var1, true];)
-#define ASSIGN_REPAIRCLASS(var1) QUOTE((_this select 0) setVariable ['ACE_isEngineer', var1, true];)
-#define ASSIGN_EOD QUOTE((_this select 0) setVariable ['ACE_isEOD', true, true];)
-#define ACE_SETCAPTIVE QUOTE((_this select 0) setCaptive true;)
+#define DOUBLES(var1,var2) ##var1##_##var2
+#define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
+#define QUOTE(var1) #var1
+#define QQUOTE(var1) QUOTE(QUOTE(var1))
+
+#define COMMON Common##SIDE
+#define LOADOUT(var1,var2) TRIPLES(SIDE_SHORT,var1,var2)
+
+#define EASYTRACK_PDA QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,PDA))
+#define EASYTRACK_TABLET QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,Tablet))

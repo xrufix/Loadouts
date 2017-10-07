@@ -1,3 +1,6 @@
+
+#include "common.hpp"
+
 // SOLDIER(company,co,)
 // SOLDIER(company,xo, )
 // SOLDIER(company,mio )

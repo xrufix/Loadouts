@@ -1,80 +1,11 @@
 /* ###################### - DISPLAY NAMES - ###################### */
-#define DN_CO_CO    "Company Commanding Officer"
-#define DN_CO_XO    "Company Executive Officer"
-#define DN_CO_MIO   "Mission Intelligence Officer"
-#define DN_CO_COLO  "Chief of Logistics"
-#define DN_CO_FO    "Forward Observer"
-
-#define DN_PL_PL    "Infantry Platoon Leader"
-#define DN_PL_PS    "Infantry Platoon Sergeant"
-#define DN_PL_UAV   "Infantry Platoon UAV Operator"
-#define DN_PL_JTAC  "Infantry Platoon JTAC"
-#define DN_PL_MED   "Infantry Platoon Medic"
-
-#define DN_RS_SL    "Squad Leader"
-#define DN_RS_TL    "Squad Fireteam Leader"   // Ohne Granatwerfer
-#define DN_RS_AR    "Squad Automatic Rifleman"
-#define DN_RS_GRN   "Squad Grenadier"
-#define DN_RS_M32   "Squad Grenadier (M32)"
-#define DN_RS_LITE  "Squad Rifleman (light)"
-#define DN_RS_AC    "Squad Ammo Carrier"
-#define DN_RS_LAT   "Squad Light Anti-Tank Rifleman"
-#define DN_RS_CM    "Squad Combat Medic"
-#define DN_RS_DM    "Squad Designated Marksman"
-#define DN_RS_ENG   "Squad Combat Engineer"
-
-#define DN_WS_MMG   "Weapon Squad Medium Machine Gunner"
-#define DN_WS_MMGA  "Weapon Squad Assistant MMG"
-#define DN_WS_HMG   "Weapon Squad Heavy Machine Gunner"
-#define DN_WS_HMGA  "Weapon Squad Assistant HMG"
-#define DN_WS_GMG   "Weapon Squad Grenade Machine Gunner"
-#define DN_WS_GMGA  "Weapon Squad Assistant GMG"
-#define DN_WS_AT    "Weapon Squad AT-Specialist"
-#define DN_WS_AAT   "Weapon Squad AT-Assistant"
-#define DN_WS_AA    "Weapon Squad AA-Specialist"
-#define DN_WS_AAA   "Weapon Squad AA-Assistant"
-#define DN_WS_MOR   "Weapon Squad Mortar Gunner"
-#define DN_WS_MORA  "Weapon Squad Mortar Assistant"
-#define DN_WS_MORAC "Weapon Squad Mortar Ammo Carrier"
-
-#define DN_SF_RM    "Special Team Operator"
-#define DN_SF_TL    "Special Team Leader"
-#define DN_SF_AR    "Special Team Automatic Rifleman"
-#define DN_SF_GRN   "Special Team Grenadier"
-#define DN_SF_LAT   "Special Team Light Anti-Tank"
-#define DN_SF_MED   "Special Team Medic"
-#define DN_SF_DM    "Special Team Marksman"
-#define DN_SF_EXP   "Special Team Explosive Specialist"
-
-#define DN_DV_RM    "Combat Diver Operator"
-#define DN_DV_TL    "Combat Diver Team Leader"
-#define DN_DV_EXP   "Combat Diver Explosive Specialist"
-#define DN_DV_MED   "Combat Diver Medic"
-#define DN_DV_DM    "Combat Diver Marksman"
-#define DN_DV_JTAC  "Combat Diver Terminal Attack Controller"
-
-#define DN_SN_SPOT  "Sniper Spotter"
-#define DN_SN_AP    "Sniper (M2010)"
-#define DN_SN_AM    "Sniper (M107)"
-#define DN_SN_EXP   "Sniper Explosive Specialist"
-
-#define DN_VE_CRW   "Armored Vehicle Crew"
-#define DN_VE_CMD   "Armored Vehicle Commander"
-#define DN_VE_JET   "Jet Pilot"
-#define DN_VE_HCRW  "Helicopter Crew"
-#define DN_VE_HPL   "Helicopter Pilot/Copilot/Gunner"
-
-#define DN_SP_LOG   "Logistician"
-#define DN_ME_DCT   "Medical Service Doctor"
-#define DN_ME_TL    "Medical Service Team Leader"
-#define DN_ME_PIL   "Medical Service Helicopter Pilot"
-#define DN_ME_DRV   "Medical Service Driver"
-
+#include "displayNames.hpp"
+// Definiere hier Namen, die vom Standard abweichen!
 
 
 /* ###################### - UNIFORMS - ###################### */
-#define	UNIFORM_STR         "rhs_uniform_g3_rgr"    // Für Inventar
-#define UNIFORM             ARR_1(UNIFORM_STR)      // Für Zufallsauswahl
+#define	UNIFORM_SINGLE         "rhs_uniform_g3_rgr"    // Für Inventar
+#define UNIFORM             ARR_1(UNIFORM_SINGLE)      // Für Zufallsauswahl
 #define UNIFORM_COMMAND     UNIFORM
 #define UNIFORM_SPECIAL     UNIFORM
 #define UNIFORM_DIVER       ARR_1("U_I_Wetsuit")
@@ -183,7 +114,7 @@
 
 // AUTOMATIC RIFLES & MACHINE GUNS
 #define AUTORIFLE "LMG_Zafir_F"
-#define AUTORIFLE_RCO WEAPON(AUTORIFLE,"","","")
+#define AUTORIFLE_RCO WEAPON(AUTORIFLE,"",RCO,"")
 #define AUTORIFLE_SF WEAPON(AUTORIFLE,LASERPOINTER_BK,RCO,"")
 #define MMG AUTORIFLE_SF
 
@@ -197,8 +128,9 @@
 
 /* ###################### - LAUNCHERS - ###################### */
 #define AT_LIGHT	WEAPON("rhs_weap_m72a7","","","")
-#define AT_MISSILE	WEAPON("CUP_launch_M47","","","")
+#define AT_ROCKET	WEAPON("CUP_launch_M47","","","")
 #define AA_MISSILE	WEAPON("rhs_weap_fim92","","","")   // Nicht nutzen!
+#define ATGM_MISSILE AT_ROCKET
 
 
 
@@ -228,13 +160,14 @@
 
 //  ROCKETS & MISSILES
 #define MAGS_AT_LIGHT           ARR_1("rhs_m72a7_mag")
-#define MAGS_AT_MISSILE         ARR_1("CUP_Dragon_EP1_M")
-#define MAGS_AT_MISSILE_ASST    ARR_2("CUP_Dragon_EP1_M",1)
+#define MAGS_AT_ROCKET         ARR_1("CUP_Dragon_EP1_M")
+#define MAGS_AT_ROCKET_ASST    ARR_2("CUP_Dragon_EP1_M",1)
+#define MAGS_ATGM_MISSILE       MAGS_AT_ROCKET
+#define MAGS_ATGM_MISSILE_ASST  MAGS_AT_ROCKET_ASST
 #define MAGS_AA_MISSILE         ARR_1("rhs_fim92_mag")
 #define MAGS_AA_MISSILE_ASST    ARR_2("rhs_fim92_mag",2)
 
 //  GRENADES
-#define GRENADE_IR	    ARR_2("B_IR_Grenade",2)
 #define GRENADES_BASIC  ARR_8("Chemlight_red","Chemlight_green","HandGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple")
 #define GRENADES_MINI   ARR_8("Chemlight_red","Chemlight_green","MiniGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple")
 #define GRENADES_LIGHT  ARR_4("Chemlight_red","Chemlight_green","SmokeShellOrange","SmokeShellPurple")
@@ -251,7 +184,7 @@
 #define HELMET_BARE HELMET
 // SPECIAL FORCES INFANTRY
 #define HELMET_SF ARR_6(        	\
-    "rhsusf_opscore_aor1_pelt", 	\
+    "rhsusf_opscore_aor2_pelt", 	\
     "rhsusf_opscore_fg_pelt",   	\
     "rhsusf_opscore_fg_pelt_cam",	\
     "rhsusf_opscore_paint_pelt",	\
@@ -299,14 +232,6 @@
 
 
 
-/* ###################### - NAVIGATION - ###################### */
-#define GPS			ARR_1("")
-#define BFT_PDA		ARR_1("b_EasyTrack_PDA")
-#define BFT_TABLET	ARR_1("b_EasyTrack_Tablet")
-#define TERMINAL	ARR_1("B_UavTerminal")
-
-
-
 /* ###################### - RADIOS - ###################### */
 #define RADIO_HAND	ARR_1("ACRE_PRC148")
 #define RADIO_PACK 	ARR_1("ACRE_PRC117F")
@@ -336,5 +261,3 @@
 #ifndef INSIGNIA_SUPPORT
     #define INSIGNIA_SUPPORT INSIGNIA_COMMON
 #endif
-
-#include "common.hpp"

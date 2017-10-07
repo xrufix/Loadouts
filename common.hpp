@@ -179,7 +179,7 @@ class LOADOUT(platoon,medic) : LOADOUT(platoon,common) {
 /* ###################### - Rifle Squad - ###################### */
 //Squadleader
 class LOADOUT(squad,sl) : COMMON {
-    scope = 0;
+    scope = 1;
     displayName = DN_RS_SL;
     vest[] = {VEST_SL};
     gps[] = {EASYTRACK_PDA};
@@ -204,7 +204,6 @@ class LOADOUT(squad,ftl) : COMMON {
     vest[] = {VEST_TL};
     binoculars[] = {BINOCULAR};
     items[] += {"ACE_IR_Strobe_Item"};
-    magazines[] += {MAG_AUTORIFLE,1};
 };
 //Automatic Rifleman
 class LOADOUT(squad,ar) : COMMON {
@@ -259,6 +258,7 @@ class LOADOUT(squad,aar) : COMMON {
         "HandGrenade",2,
         MAG_AUTORIFLE,2
     };
+    items[] += {"ACE_SpareBarrel"};
 };
 //Rifleman AT
 class LOADOUT(squad,lat) : COMMON {
@@ -372,18 +372,33 @@ class LOADOUT(weapons,agmg) : LOADOUT(assistant,common) {
     backpack[] = {GMG_TRIPOD};
 };
 //MS AT
-class LOADOUT(weapons,atgm) : LOADOUT(weapons,common) {
+class LOADOUT(weapons,at) : LOADOUT(weapons,common) {
     scope = 1;
     displayName = DN_WS_AT;
     backpack[] = {""};
-    launcher[] = {AT_MISSILE};
+    launcher[] = {AT_ROCKET};
+};
+//AMS AT
+class LOADOUT(weapons,aat) : LOADOUT(assistant,common) {
+    scope = 1;
+    displayName = DN_WS_AAT;
+    backpack[] = {BACKPACK_CARRYALL};
+    magazines[] += {MAGS_AT_ROCKET_ASST};
+};
+//MS AT
+class LOADOUT(weapons,atgm) : LOADOUT(weapons,common) {
+    scope = 1;
+    displayName = DN_WS_ATGM;
+    backpack[] = {""};
+    launcher[] = {ATGM_MISSILE};
+    magazines[] += {MAGS_ATGM_MISSILE};
 };
 //AMS AT
 class LOADOUT(weapons,aatgm) : LOADOUT(assistant,common) {
     scope = 1;
-    displayName = DN_WS_AAT;
+    displayName = DN_WS_AATGM;
     backpack[] = {BACKPACK_CARRYALL};
-    magazines[] += {MAGS_AT_MISSILE_ASST};
+    magazines[] += {MAGS_ATGM_MISSILE_ASST};
 };
 //MS AA
 class LOADOUT(weapons,aa) : LOADOUT(weapons,common) {
@@ -577,7 +592,7 @@ class LOADOUT(diver,common) : LOADOUT(recon,common) {
     };
     items[] += {
         VEST_DIVER,
-        UNIFORM_STR
+        UNIFORM_SINGLE
     };
     goggles[] = {GOGGLES_DIVER};
     headgear[] = {HELMET_DIVER};

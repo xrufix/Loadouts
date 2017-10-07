@@ -19,6 +19,8 @@
 
 #define EASYTRACK_PDA QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,PDA))
 #define EASYTRACK_TABLET QUOTE(TRIPLES(SIDE_SHORT,EasyTrack,Tablet))
+#define TERMINAL QUOTE(DOUBLES(SIDE_SHORT,UavTerminal))
+#define GRENADE_IR ARR_2(QUOTE(DOUBLES(SIDE_SHORT,ir_grenade)),2)
 
 #define SOLDIER(var1,var2,var3) \
 class var3 : LOADOUT(var1,var2) { \

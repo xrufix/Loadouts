@@ -65,6 +65,7 @@
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_cbr")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	""
+#define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
 
 //	CSW-BACKPACKS
 #define HMG_GUN		ARR_1("RHS_M2_Gun_Bag")
@@ -193,7 +194,7 @@
 #define AT_LIGHT	WEAPON("rhs_weap_M136_hedp","","","")
 #define AT_ROCKET	WEAPON("rhs_weap_fgm148","","","")
 #define AA_MISSILE	WEAPON("rhs_weap_fim92","","","")
-#define ATGM_MISSILE AT_ROCKET
+#define AT_MISSILE AT_ROCKET
 
 
 
@@ -205,10 +206,15 @@
 #define MAG_CARBINE MAG_RIFLE
 #define MAG_CARBINE_TRACER MAG_RIFLE_TRACER
 
+#define MAG_CARBINE_SF          MAG_RIFLE
+#define MAG_CARBINE_SF_TRACER   MAG_RIFLE_TRACER
+
 //  AR & MG
-#define MAG_AUTORIFLE "rhs_200rnd_556x45_M_SAW"
-#define MAG_MMG "rhsusf_100Rnd_762x51"
-#define MAGS_AUTORIFLE_SF "150Rnd_556x45_Drum_Mag_F",6
+#define MAG_AUTORIFLE       ARR_1("rhs_200rnd_556x45_M_SAW")
+#define MAGS_AUTORIFLE      ARR_2(MAG_AUTORIFLE,3)
+#define MAGS_AUTORIFLE_ASST ARR_2(MAG_AUTORIFLE,2)
+#define MAG_MMG             ARR_1("rhsusf_100Rnd_762x51")
+#define MAGS_AUTORIFLE_SF   ARR_2("150Rnd_556x45_Drum_Mag_F",6)
 
 //  DMR & SR
 #define MAG_DMR "20Rnd_762x51_Mag"
@@ -227,13 +233,11 @@
 #define MAGS_AT_ROCKET_ASST    "rhs_fgm148_magazine_AT",1
 #define MAGS_AA_MISSILE         "rhs_fim92_mag"
 #define MAGS_AA_MISSILE_ASST    "rhs_fim92_mag",2
-#define MAGS_ATGM_MISSILE       MAGS_AT_ROCKET
-#define MAGS_ATGM_MISSILE_ASST  MAGS_AT_ROCKET_ASST
+#define MAGS_AT_MISSILE       MAGS_AT_ROCKET
+#define MAGS_AT_MISSILE_ASST  MAGS_AT_ROCKET_ASST
 
 //  GRENADES
-#define GRENADES_BASIC  "Chemlight_red","Chemlight_green","HandGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple"
-#define GRENADES_MINI   "Chemlight_red","Chemlight_green","MiniGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple"
-#define GRENADES_LIGHT  "Chemlight_red","Chemlight_green","SmokeShellOrange","SmokeShellPurple"
+
 
 
 

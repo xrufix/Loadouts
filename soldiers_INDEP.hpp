@@ -1,3 +1,6 @@
+#define GRENADES_BASIC  ARR_4("Chemlight_blue","Chemlight_yellow","SmokeShellBlue","SmokeShellYellow")
+#define GRENADES_MINI   ARR_5(GRENADES_BASIC,"MiniGrenade","SmokeShell",2)
+#define GRENADES_RGO    ARR_5(GRENADES_BASIC,"HandGrenade",2,"SmokeShell",2)
 
 #include "common.hpp"
 

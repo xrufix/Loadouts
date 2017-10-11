@@ -4,7 +4,7 @@
 
 
 /* ###################### - UNIFORMS - ###################### */
-#define	UNIFORM_SINGLE         "rhs_uniform_g3_rgr"    // Für Inventar
+#define	UNIFORM_SINGLE      "rhs_uniform_g3_rgr"        // Für Inventar
 #define UNIFORM             ARR_1(UNIFORM_SINGLE)      // Für Zufallsauswahl
 #define UNIFORM_COMMAND     UNIFORM
 #define UNIFORM_SPECIAL     UNIFORM
@@ -46,6 +46,7 @@
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_oli")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	BACKPACK_ASSAULT
+#define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
 
 //	CSW-BACKPACKS
 #define HMG_GUN		"RHS_M2_Gun_Bag"                //Browning M2
@@ -130,20 +131,25 @@
 #define AT_LIGHT	WEAPON("rhs_weap_m72a7","","","")
 #define AT_ROCKET	WEAPON("CUP_launch_M47","","","")
 #define AA_MISSILE	WEAPON("rhs_weap_fim92","","","")   // Nicht nutzen!
-#define ATGM_MISSILE AT_ROCKET
+#define AT_MISSILE AT_ROCKET
 
 
 
 /* ###################### - MAGAZINES - ###################### */
 //  RIFLE & CARBINE
-#define MAG_RIFLE			ARR_1("30Rnd_556x45_Stanag")
-#define MAG_RIFLE_TRACER	ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
+#define MAG_RIFLE			    ARR_1("30Rnd_556x45_Stanag")
+#define MAG_RIFLE_TRACER	    ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
 
-#define MAG_CARBINE         MAG_RIFLE
-#define MAG_CARBINE_TRACER  MAG_RIFLE_TRACER
+#define MAG_CARBINE             MAG_RIFLE
+#define MAG_CARBINE_TRACER      MAG_RIFLE_TRACER
+
+#define MAG_CARBINE_SF          MAG_RIFLE
+#define MAG_CARBINE_SF_TRACER   MAG_RIFLE_TRACER
 
 //  AR & MG
 #define MAG_AUTORIFLE       ARR_1("150Rnd_762x54_Box")
+#define MAGS_AUTORIFLE      ARR_2(MAG_AUTORIFLE,3)
+#define MAGS_AUTORIFLE_ASST MAG_AUTORIFLE
 #define MAG_MMG             MAG_AUTORIFLE
 #define MAGS_AUTORIFLE_SF   ARR_2(MAG_AUTORIFLE,5)
 
@@ -160,17 +166,15 @@
 
 //  ROCKETS & MISSILES
 #define MAGS_AT_LIGHT           ARR_1("rhs_m72a7_mag")
-#define MAGS_AT_ROCKET         ARR_1("CUP_Dragon_EP1_M")
-#define MAGS_AT_ROCKET_ASST    ARR_2("CUP_Dragon_EP1_M",1)
-#define MAGS_ATGM_MISSILE       MAGS_AT_ROCKET
-#define MAGS_ATGM_MISSILE_ASST  MAGS_AT_ROCKET_ASST
+#define MAGS_AT_ROCKET          ARR_1("CUP_Dragon_EP1_M")
+#define MAGS_AT_ROCKET_ASST     ARR_2("CUP_Dragon_EP1_M",1)
+#define MAGS_AT_MISSILE       MAGS_AT_ROCKET
+#define MAGS_AT_MISSILE_ASST  MAGS_AT_ROCKET_ASST
 #define MAGS_AA_MISSILE         ARR_1("rhs_fim92_mag")
 #define MAGS_AA_MISSILE_ASST    ARR_2("rhs_fim92_mag",2)
 
 //  GRENADES
-#define GRENADES_BASIC  ARR_8("Chemlight_red","Chemlight_green","HandGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple")
-#define GRENADES_MINI   ARR_8("Chemlight_red","Chemlight_green","MiniGrenade",2,"SmokeShell",2,"SmokeShellOrange","SmokeShellPurple")
-#define GRENADES_LIGHT  ARR_4("Chemlight_red","Chemlight_green","SmokeShellOrange","SmokeShellPurple")
+
 
 
 

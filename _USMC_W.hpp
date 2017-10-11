@@ -37,7 +37,6 @@
 #define BACKPACK_KITBAG     ARR_2("B_Kitbag_rgr","B_Kitbag_cbr")
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_oli")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
-#define BACKPACK_AT_LIGHT 	""
 
 //	CSW-BACKPACKS
 /* Wie Desert */

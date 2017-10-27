@@ -1,5 +1,5 @@
 /* ###################### - DISPLAY NAMES - ###################### */
-#include "displayNames.hpp"
+#include "components\displayNames.hpp"
 // Definiere hier Namen, die vom Standard abweichen!
 
 #define DN_WS_AT    "Weapon Squad AT (SMAW)"
@@ -10,6 +10,8 @@
 #define DN_SN_AP    "Sniper (M2010)"
 #define DN_SN_AM    "Sniper (M107)"
 
+/* ###################### - UGL-Magazines - ###################### */
+#include "components\ugl_vanilla.hpp"
 
 
 /* ###################### - UNIFORMS - ###################### */
@@ -62,6 +64,7 @@
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	ARR_1("")
 #define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
+#define BACKPACK_RECON      BACKPACK_ASSAULT
 
 //	CSW-BACKPACKS
 #define HMG_GUN		ARR_1("RHS_M2_Gun_Bag")
@@ -210,7 +213,8 @@
 #define MAG_AUTORIFLE       ARR_1("rhs_200rnd_556x45_M_SAW")
 #define MAGS_AUTORIFLE      ARR_2(MAG_AUTORIFLE,3)
 #define MAGS_AUTORIFLE_ASST ARR_2(MAG_AUTORIFLE,2)
-#define MAG_MMG             ARR_1("rhsusf_100Rnd_762x51")
+#define MAGS_MMG            ARR_2("rhsusf_100Rnd_762x51",3)
+#define MAGS_MMG_ASST       ARR_2("rhsusf_100Rnd_762x51",5)
 #define MAGS_AUTORIFLE_SF   ARR_2(MAG_AUTORIFLE,5)
 
 //  DMR & SR
@@ -268,23 +272,23 @@
 )
 // VEHICLE CREWS
 #define HELMET_CREW 		ARR_1("rhsusf_cvc_helmet")
-#define HELMET_HELICOPTER	ARR_1("rhsusf_hgu56p")
-#define HELMET_HELI_CREW	ARR_1("rhsusf_hgu56p_mask")
+#define HELMET_HELICOPTER	ARR_2("rhsusf_hgu56p_green","rhsusf_hgu56p_visor_green")
+#define HELMET_HELI_CREW	ARR_4("rhsusf_hgu56p_mask_green","rhsusf_hgu56p_mask_green_mo","rhsusf_hgu56p_visor_mask_green","rhsusf_hgu56p_visor_mask_green_mo")
 #define HELMET_JET			ARR_1("H_PilotHelmetFighter_B")
 
 // COMMANDERS
 #define CAP_CO      ARR_1("H_Beret_02")
 #define CAP_XO      ARR_1("H_Beret_blk")
-#define CAP_OFFICER ARR_1("H_Cap_oli_hs")
+#define CAP_OFFICER ARR_1("rhsusf_patrolcap_ocp")
 
 
 
 /* ###################### - GOGGLES / FACEWEAR - ###################### */
-#define GOGGLES         ARR_1("rhs_googles_clear")
-#define GOGGLES_OFFICER ARR_3("","G_Spectacles","G_Aviator")
-#define GOGGLES_FULL    ARR_1("rhs_ess_black")
-#define GOGGLES_SF		ARR_4("G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli","G_Bandanna_beast")
-#define GOGGLES_SF_FULL ARR_1("G_Balaclava_combat")
+#define GOGGLES         ARR_4("rhs_googles_clear","rhs_googles_black","rhs_googles_orange","rhs_googles_yellow")
+#define GOGGLES_OFFICER ARR_3("","G_Spectacles","G_Aviator");
+#define GOGGLES_FULL    ARR_6("rhsusf_shemagh_gogg_tan","rhsusf_shemagh_gogg_od","rhsusf_oakley_goggles_blk","rhsusf_oakley_goggles_clr","rhsusf_oakley_goggles_ylw","rhsusf_oakley_goggles_blk")
+#define GOGGLES_SF		ARR_8("rhsusf_shemagh_grn","rhsusf_shemagh_tan","rhsusf_shemagh_white","rhsusf_shemagh_od","G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli","G_Bandanna_beast")
+#define GOGGLES_SF_FULL ARR_4("rhsusf_shemagh_gogg_grn","rhsusf_shemagh_gogg_tan","rhsusf_shemagh_gogg_od","rhsusf_shemagh_gogg_white")
 #define GOGGLES_DIVER	ARR_1("G_B_Diving")
 #define GOGGLES_PILOT	ARR_1("G_Aviator")
 

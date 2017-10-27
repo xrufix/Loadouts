@@ -1,5 +1,11 @@
+#define MAGS_COMMON ARR_7(MAG_PISTOL,3,MAG_RIFLE,7,MAG_RIFLE_TRACER,4,GRENADES_RGO)
+
 class COMMON : CommonDefault {
     side = QUOTE(SIDE);
+    sideShort = QUOTE(SIDE_SHORT);
+#ifdef FACTION
+    faction = QUOTE(FACTION);
+#endif
     scope = 0;
     
     uniform[] = {UNIFORM};
@@ -10,12 +16,7 @@ class COMMON : CommonDefault {
     secondary[] = {PISTOL};
     launcher[] = {""};
 
-    magazines[] = {
-        MAG_PISTOL,3,
-        MAG_RIFLE,7,
-        MAG_RIFLE_TRACER,4,
-        GRENADES_RGO
-    };
+    magazines[] = {MAGS_COMMON};
     items[] = {
         "ACE_EarPlugs",
         "ACE_microDAGR",
@@ -37,7 +38,7 @@ class COMMON : CommonDefault {
     lrRadios[] = {""};
     insignia[] = {INSIGNIA_COMMON};
 
-    preLoadout = NOTRAITS;
+    preLoadout = TRAITS(0,0,false,false);
 };
 
 /* ###################### - Company Command - ###################### */
@@ -144,16 +145,9 @@ class LOADOUT(platoon,jtac) : LOADOUT(platoon,common) {
     lrRadios[] += {RADIO_PACK};
     magazines[] += {
         "Laserbatteries",
-        "1Rnd_SmokeOrange_Grenade_shell",2,
-        "1Rnd_SmokeBlue_Grenade_shell",2,
-        "1Rnd_SmokePurple_Grenade_shell",2,
-        "1Rnd_SmokeYellow_Grenade_shell",2,
-        "1Rnd_SmokeGreen_Grenade_shell",2,
-        "1Rnd_SmokeRed_Grenade_shell",2,
-        "1Rnd_Smoke_Grenade_shell",2,
-        "UGL_FlareGreen_F",2,
-        "UGL_FlareRed_F",2,
-        "UGL_FlareYellow_F",2
+        UGL_SMK,2,
+        UGLS_COL2,
+        UGLS_FLR
     };
 };
 //Platoon-Medic
@@ -173,7 +167,7 @@ class LOADOUT(platoon,medic) : LOADOUT(platoon,common) {
         "ACE_morphine",15,
         "ACE_epinephrine",30
     };
-    preLoadout = QUOTE(ISMEDIC(2));
+    preLoadout = TRAITS(2,0,false,false);
 };
 
 /* ###################### - Rifle Squad - ###################### */
@@ -186,14 +180,20 @@ class LOADOUT(squad,sl) : COMMON {
     binoculars[] = {RANGEFINDER};
     primary[] = {RIFLE_UGL_CCO};
     magazines[] += {
-        "1Rnd_HE_Grenade_shell",10,
-        "1Rnd_Smoke_Grenade_shell",2,
-        "1Rnd_SmokeRed_Grenade_shell",2,
-        "1Rnd_SmokeGreen_Grenade_shell",2,
-        "1Rnd_SmokePurple_Grenade_shell",2,
-        "1Rnd_SmokeOrange_Grenade_shell",2,
-        "ACE_HuntIR_M203",4};
-    items[] += {"ACE_IR_Strobe_Item","ACE_HuntIR_monitor"};
+        #ifdef HUNTIR
+            "ACE_HuntIR_M203",4,
+        #endif
+        UGL_HE,10,
+        UGL_SMK,2,
+        UGLS_COL1,
+        UGLS_FLR
+    };
+    items[] += {
+        "ACE_IR_Strobe_Item"
+        #ifdef HUNTIR
+            ,"ACE_HuntIR_monitor"
+        #endif
+    };
     lrRadios[] = {RADIO_HAND};
     map[] = {"ItemMap"};
 };
@@ -224,7 +224,7 @@ class LOADOUT(squad,gl) : COMMON {
     displayName = DN_RS_GRN;
     vest[] = {VEST_GRENADIER};
     primary[] = {RIFLE_UGL_CCO};
-    magazines[] += {"1Rnd_HE_Grenade_shell",24,"1Rnd_Smoke_Grenade_shell",8};
+    magazines[] += {UGLS_GREN};
 };
 //Grenadier M32
 class LOADOUT(squad,gl2) : COMMON {
@@ -253,9 +253,10 @@ class LOADOUT(squad,aar) : COMMON {
     displayName = DN_RS_AC;
     primary[] = {RIFLE_RCO};
     vest[] = {VEST_RIFLEMAN};
-    magazines[] += {
+    magazines[] = {
         "ACE_SpareBarrel",
-        MAGS_AUTORIFLE_ASST
+        MAGS_AUTORIFLE_ASST,
+        MAGS_COMMON
     };
 };
 //Rifleman AT
@@ -282,7 +283,7 @@ class LOADOUT(squad,cm) : COMMON {
         "ACE_salineIV_500",2,
         "ACE_surgicalKit"
     };
-    preLoadout = QUOTE(ISMEDIC(1));
+    preLoadout = TRAITS(1,0,false,false);
 };
 //Squad Designated Marksman
 class LOADOUT(squad,dm) : COMMON {
@@ -303,7 +304,7 @@ class LOADOUT(squad,eng) : COMMON {
     displayName = DN_RS_ENG;
     vest[] = {VEST_LIGHT};
     items[] += {"ToolKit"};
-    preLoadout = QUOTE(ISENGINEER(1));
+    preLoadout = TRAITS(0,1,false,false);
 };
 
 
@@ -333,7 +334,7 @@ class LOADOUT(weapons,mg) : LOADOUT(weapons,common) {
     primary[] = {MMG};
     magazines[] = {
         MAG_PISTOL,3,
-        MAG_MMG,3,
+        MAGS_MMG,
         GRENADES_BASIC
     };
     goggles[] = {GOGGLES_FULL};
@@ -342,7 +343,7 @@ class LOADOUT(weapons,mg) : LOADOUT(weapons,common) {
 class LOADOUT(weapons,amg) : LOADOUT(assistant,common) {
     scope = 1;
     displayName = DN_WS_MMGA;
-    magazines[] += {MAG_MMG,5,"ACE_SpareBarrel"};
+    magazines[] += {MAGS_MMG_ASST,"ACE_SpareBarrel"};
 };
 //HMG
 class LOADOUT(weapons,hmg) : LOADOUT(weapons,common) {
@@ -439,6 +440,7 @@ class LOADOUT(recon,common): COMMON {
     scope = 0;
     uniform[] = {UNIFORM_SPECIAL};
     vest[] = {VEST_SF};
+    backpack[] = {BACKPACK_RECON};
     secondary[] = {PISTOL_SF};
     primary[] = {SF_CARBINE};
     magazines[] = {
@@ -456,7 +458,7 @@ class LOADOUT(recon,common): COMMON {
     nvgs[] = {NVG_SF};
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_SF};
-    preLoadout = QUOTE(ISENGINEER(1) ISMEDIC(1));
+    preLoadout = TRAITS(1,1,false,false);
 };
 //Operator
 class LOADOUT(recon,rm) : LOADOUT(recon,common) {
@@ -473,17 +475,19 @@ class LOADOUT(recon,tl) : LOADOUT(recon,common) {
     vest[] = {VEST_SF_TL};
     primary[] = {SF_CARBINE_UGL};
     magazines[] += {
-        "1Rnd_HE_Grenade_shell",10,
-        "1Rnd_Smoke_Grenade_shell",2,
-        "1Rnd_SmokeOrange_Grenade_shell",
-        "1Rnd_SmokePurple_Grenade_shell",
-        "1Rnd_SmokeGreen_Grenade_shell",
-        "ACE_HuntIR_M203",5,
-        GRENADE_IR
+        UGL_HE,10,
+        UGL_SMK,2,
+        UGLS_COL1,
+        GRENADE_IR,
+        #ifdef HUNTIR
+            "ACE_HuntIR_M203",5
+        #endif
     };
     items[] += {
-        "ACE_IR_Strobe_Item",
-        "ACE_HuntIR_monitor"
+        "ACE_IR_Strobe_Item"
+        #ifdef HUNTIR
+            ,"ACE_HuntIR_monitor"
+        #endif
     };
     binoculars[] = {RANGEFINDER};
     gps[] = {EASYTRACK_PDA};
@@ -509,16 +513,12 @@ class LOADOUT(recon,gl) : LOADOUT(recon,common) {
     displayName = DN_SF_GRN;
     vest[] = {VEST_SF_GR};
     primary[] = {SF_CARBINE_UGL};
-    magazines[] += {
-        "1Rnd_HE_Grenade_shell",24,
-        "1Rnd_Smoke_Grenade_shell",8
-    };
+    magazines[] += {UGLS_GREN};
 };
 //LAT
 class LOADOUT(recon,lat) : LOADOUT(recon,common) {
     scope = 1;
     displayName = DN_SF_LAT;
-    backpack[] = {""};
     launcher[] = {AT_LIGHT};
     magazines[] += {MAGS_AT_LIGHT};
 };
@@ -536,7 +536,7 @@ class LOADOUT(recon,cm) : LOADOUT(recon,common) {
         "ACE_salineIV_500",3,
         "ACE_surgicalKit"
     };
-    preLoadout = QUOTE(ISMEDIC(2));
+    preLoadout = TRAITS(2,0,false,false);
 };
 //Marksman
 class LOADOUT(recon,dm) : LOADOUT(recon,common) {
@@ -568,7 +568,7 @@ class LOADOUT(recon,exp) : LOADOUT(recon,common) {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = QUOTE(ISEOD(true) ISENGINEER(1));
+    preLoadout = TRAITS(0,1,true,false);
 };
 
 /* ###################### - Diver - ###################### */
@@ -621,7 +621,7 @@ class LOADOUT(diver,exp) : LOADOUT(diver,common) {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = QUOTE(ISEOD(true) ISENGINEER(1));
+    preLoadout = TRAITS(0,1,true,false);
 };
 // Diver Medic
 class LOADOUT(diver,cm) : LOADOUT(diver,common) {
@@ -639,7 +639,7 @@ class LOADOUT(diver,cm) : LOADOUT(diver,common) {
         "ACE_surgicalKit"
     };
     binoculars[] = {"ACE_MX2A"};
-    preLoadout = QUOTE(ISMEDIC(2));
+    preLoadout = TRAITS(2,0,false,false);
 };
 // Marksman
 class LOADOUT(diver,dm) : LOADOUT(diver,common) {
@@ -662,12 +662,7 @@ class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
     binoculars[] = {DESIGNATOR};
     magazines[] += {
         "Laserbatteries",
-        "1Rnd_SmokeOrange_Grenade_shell",2,
-        "1Rnd_SmokeBlue_Grenade_shell",2,
-        "1Rnd_SmokePurple_Grenade_shell",2,
-        "1Rnd_SmokeYellow_Grenade_shell",2,
-        "1Rnd_SmokeGreen_Grenade_shell",2,
-        "1Rnd_SmokeRed_Grenade_shell",2
+        UGLS_COL2
     };
 };
 
@@ -695,19 +690,22 @@ class LOADOUT(sniper,spot) : LOADOUT(recon,common) {
         GRENADES_RGO,
         MAG_CARBINE_SF,8,
         MAG_CARBINE_SF_TRACER,2,
-        "1Rnd_HE_Grenade_shell",10,
-        "1Rnd_Smoke_Grenade_shell",2,
-        "1Rnd_SmokeOrange_Grenade_shell",
-        "1Rnd_SmokePurple_Grenade_shell",
-        "1Rnd_SmokeGreen_Grenade_shell",
+        UGL_HE,10,
+        UGL_SMK,4
+        #ifdef HUNTIR
+            ,"ACE_HuntIR_M203",4
+        #endif
     };
     items[] += {
+        "ACE_SpottingScope",
+        "ACE_Tripod",
         "ACE_ATragMX",
         "ACE_IR_Strobe_Item",
         "ACE_Rangecard",
-        "ACE_SpottingScope",
-        "ACE_Kestrel4500",
-        "ACE_Tripod"
+        "ACE_Kestrel4500"
+        #ifdef HUNTIR
+            ,"ACE_HuntIR_monitor"
+        #endif
     };
     lrRadios[] = {RADIO_HAND};
 };
@@ -750,7 +748,7 @@ class LOADOUT(sniper,exp) : LOADOUT(recon,common) {
         "ACE_DefusalKit",
         "ACE_DeadManSwitch"
     };
-    preLoadout = QUOTE(ISEOD(true) ISMEDIC(1));
+    preLoadout = TRAITS(1,0,true,false);
 };
 
 /* ###################### - Tank - ###################### */
@@ -771,7 +769,7 @@ class LOADOUT(crew,common) : COMMON {
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_TNK};
     lrRadios[] = {RADIO_HAND};
-    preLoadout = QUOTE(ISENGINEER(1));
+    preLoadout = TRAITS(0,1,false,false);
 };
 //Tank Commander
 class LOADOUT(crew,cmd) : LOADOUT(crew,common) {
@@ -845,7 +843,7 @@ class LOADOUT(logistics,common) : COMMON {
     gps[] = {EASYTRACK_PDA};
     map[] = {"ItemMap"};
     insignia[] = {INSIGNIA_SUPPORT};
-    preLoadout = QUOTE(ISENGINEER(2));
+    preLoadout = TRAITS(0,2,false,false);
 };
 
 /* ###################### - MEDEVAC - ###################### */
@@ -859,7 +857,7 @@ class LOADOUT(medevac,common): COMMON {
     headgear[] = {HELMET_BARE};
     goggles[] = {GOGGLES_OFFICER};
     insignia[] = {INSIGNIA_MEV};
-    preLoadout = QUOTE(ISPROTECTED(true));
+    preLoadout = TRAITS(0,0,false,true);
 };
 
 //Doctor
@@ -878,7 +876,7 @@ class LOADOUT(medevac,doc) : LOADOUT(medevac,common) {
         "ACE_morphine",15,
         "ACE_epinephrine",30
     };
-    preLoadout = QUOTE(ISMEDIC(2) ISPROTECTED(true));
+    preLoadout = TRAITS(2,0,false,true);
 };
 //Doctor TL
 class LOADOUT(medevac,tl) : LOADOUT(medevac,doc) {
@@ -905,3 +903,5 @@ class LOADOUT(medevac,drv) : LOADOUT(medevac,common) {
     displayName = DN_ME_DRV;
     items[] += {"ACE_Banana"};
 };
+
+#undef HUNTIR

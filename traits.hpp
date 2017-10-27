@@ -1,8 +1,7 @@
 
-#define ISENGINEER(a) (_this select 0) setVariable [ARR_3(QQUOTE(ACE_isEngineer),a,true)];
-#define ISEOD(a) (_this select 0) setVariable [ARR_3(QQUOTE(ACE_isEOD),a,true)];
-#define ISMEDIC(a) (_this select 0) setVariable [ARR_3(QQUOTE(ACE_medical_medicClass), a, true)];
+#define SETENGINEER(int)   (_this select 0) setVariable [ARR_3(QQUOTE(ACE_isEngineer),int,true)];
+#define SETEOD(bool)        (_this select 0) setVariable [ARR_3(QQUOTE(ACE_isEOD),bool,true)];
+#define SETMEDIC(int)         (_this select 0) setVariable [ARR_3(QQUOTE(ACE_medical_medicClass), int, true)];
+#define SETPROTECTED(bool)     (_this select 0) setCaptive bool;
 
-#define NOTRAITS QUOTE(ISENGINEER(false) ISEOD(false) ISMEDIC(0))
-
-#define ISPROTECTED(a) (_this select 0) setCaptive true;
+#define TRAITS(medic,engineer,eod,protected) QUOTE(SETMEDIC(medic) SETENGINEER(engineer) SETEOD(eod) SETPROTECTED(protected))

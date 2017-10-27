@@ -1,6 +1,9 @@
 /* ###################### - DISPLAY NAMES - ###################### */
-#include "displayNames.hpp"
+#include "components\displayNames.hpp"
 // Definiere hier Namen, die vom Standard abweichen!
+
+/* ###################### - UGL-Magazines - ###################### */
+#include "components\ugl_vanilla.hpp"
 
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      ARR_1("U_B_CTRG_1")        // Für Inventar
@@ -46,6 +49,7 @@
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	ARR_1("")
 #define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
+#define BACKPACK_RECON      BACKPACK_ASSAULT
 
 //	CSW-BACKPACKS
 #define HMG_GUN		"i_HMG_01_weapon_F"
@@ -142,7 +146,8 @@
 //  AR & MG
 #define MAGS_AUTORIFLE      ARR_3("200Rnd_556x45_Box_Red_F",2,"200Rnd_556x45_Box_Tracer_Red_F")
 #define MAGS_AUTORIFLE_ASST MAGS_AUTORIFLE
-#define MAG_MMG             ARR_1("130Rnd_338_Mag")
+#define MAGS_MMG            ARR_2("130Rnd_338_Mag",3)
+#define MAGS_MMG_ASST       ARR_2("130Rnd_338_Mag",5)
 #define MAGS_AUTORIFLE_SF   ARR_2("150Rnd_556x45_Drum_Mag_F",7)
 
 //  DMR & SR
@@ -157,9 +162,9 @@
 #define MAG_PISTOL_SF 	ARR_1("11Rnd_45ACP_Mag")
 
 //  ROCKETS & MISSILES
-#define MAGS_AT_LIGHT           ARR_1("")
-#define MAGS_AT_ROCKET          ARR_1("")   // Nicht nutzen
-#define MAGS_AT_ROCKET_ASST     ARR_1("")   // Nicht nutzen
+#define MAGS_AT_LIGHT           MAG_PISTOL
+#define MAGS_AT_ROCKET          MAGS_AT_LIGHT   // Nicht nutzen
+#define MAGS_AT_ROCKET_ASST     MAGS_AT_LIGHT   // Nicht nutzen
 #define MAGS_AT_MISSILE         ARR_1("Titan_AT")
 #define MAGS_AT_MISSILE_ASST    ARR_3("Titan_AT",2,"Titan_AP")
 #define MAGS_AA_MISSILE         ARR_1("Titan_AA")

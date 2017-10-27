@@ -1,4 +1,4 @@
-#include "_USMC_D.hpp"
+#include "USMC_D.hpp"
 // Definiere hier nur, was von USMC Desert abweicht!
 
 /* ###################### - DISPLAY NAMES - ###################### */
@@ -132,12 +132,12 @@
 )
 // VEHICLE CREWS
 #define HELMET_CREW 		ARR_1("rhsusf_cvc_green_helmet")
-#define HELMET_HELICOPTER	ARR_1("rhsusf_hgu56p")
-#define HELMET_HELI_CREW	ARR_1("rhsusf_hgu56p_mask")
+#define HELMET_HELICOPTER	ARR_2("rhsusf_hgu56p","rhsusf_hgu56p_visor")
+#define HELMET_HELI_CREW	ARR_6("rhsusf_hgu56p_mask","rhsusf_hgu56p_mask_mo","rhsusf_hgu56p_mask_skull","rhsusf_hgu56p_visor_mask","rhsusf_hgu56p_visor_mask_mo","rhsusf_hgu56p_visor_mask_skull")
 #define HELMET_JET			ARR_1("H_PilotHelmetFighter_B")
 
 // COMMANDERS
-/* Wie Desert */
+#define CAP_OFFICER "rhs_8point_marpatwd"
 
 
 

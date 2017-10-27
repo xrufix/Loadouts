@@ -1,8 +1,6 @@
 #define GRENADES_BASIC  ARR_4("ACE_Chemlight_Orange","ACE_Chemlight_White","SmokeShellOrange","SmokeShellPurple")
-#define GRENADES_MINI   ARR_5(GRENADES_BASIC,"MiniGrenade",2,"SmokeShell",2)
-#define GRENADES_RGO    ARR_5(GRENADES_BASIC,"HandGrenade",2,"SmokeShell",2)
 
-#include "common.hpp"
+#include "template.hpp"
 
 // SOLDIER(company,co,)
 // SOLDIER(company,xo, )

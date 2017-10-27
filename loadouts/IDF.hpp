@@ -1,7 +1,9 @@
 /* ###################### - DISPLAY NAMES - ###################### */
-#include "displayNames.hpp"
+#include "components\displayNames.hpp"
 // Definiere hier Namen, die vom Standard abweichen!
 
+/* ###################### - UGL-Magazines - ###################### */
+#include "components\ugl_vanilla.hpp"
 
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      "rhs_uniform_g3_rgr"        // Für Inventar
@@ -47,6 +49,7 @@
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	BACKPACK_ASSAULT
 #define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
+#define BACKPACK_RECON      BACKPACK_ASSAULT
 
 //	CSW-BACKPACKS
 #define HMG_GUN		"RHS_M2_Gun_Bag"                //Browning M2
@@ -150,7 +153,8 @@
 #define MAG_AUTORIFLE       ARR_1("150Rnd_762x54_Box")
 #define MAGS_AUTORIFLE      ARR_2(MAG_AUTORIFLE,3)
 #define MAGS_AUTORIFLE_ASST MAG_AUTORIFLE
-#define MAG_MMG             MAG_AUTORIFLE
+#define MAGS_MMG            MAGS_AUTORIFLE
+#define MAGS_MMG_ASST       ARR_2(MAG_AUTORIFLE,5)
 #define MAGS_AUTORIFLE_SF   ARR_2(MAG_AUTORIFLE,5)
 
 //  DMR & SR

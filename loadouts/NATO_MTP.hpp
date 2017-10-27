@@ -1,7 +1,9 @@
 /* ###################### - DISPLAY NAMES - ###################### */
-#include "displayNames.hpp"
+#include "components\displayNames.hpp"
 // Definiere hier Namen, die vom Standard abweichen!
 
+/* ###################### - UGL-Magazines - ###################### */
+#include "components\ugl_vanilla.hpp"
 
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      "U_B_CombatUniform_mcam"        // Für Inventar
@@ -47,6 +49,7 @@
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	ARR_1("")
 #define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
+#define BACKPACK_RECON      BACKPACK_ASSAULT
 
 //	CSW-BACKPACKS
 #define HMG_GUN		"B_HMG_01_weapon_F"
@@ -81,7 +84,7 @@
 #define RIFLE_UGL_CCO   WEAPON(RIFLE_UGL,LASERPOINTER,CCO,"")
 
 // CARBINE & PDW
-#define PDW         WEAPON("smg_01_f",CCO,"","")
+#define PDW         WEAPON("smg_01_f",CCO,"acc_flashlight_smg_01","")
 #define CARBINE     ARR_1("arifle_MXC_Black_F")
 #define CARBINE_UGL	ARR_1("arifle_MX_GL_Black_F")
 
@@ -168,7 +171,8 @@
 //  AR & MG
 #define MAGS_AUTORIFLE      ARR_4("100Rnd_65x39_caseless_mag",7,"100Rnd_65x39_caseless_mag_Tracer",3)
 #define MAGS_AUTORIFLE_ASST ARR_4("100Rnd_65x39_caseless_mag",2,"100Rnd_65x39_caseless_mag_Tracer",1)
-#define MAG_MMG             ARR_1("130Rnd_338_Mag")
+#define MAGS_MMG            ARR_2("130Rnd_338_Mag",3)
+#define MAGS_MMG_ASST       ARR_2("130Rnd_338_Mag",5)
 #define MAGS_AUTORIFLE_SF   ARR_2("150Rnd_556x45_Drum_Mag_F",7)
 
 //  DMR & SR
@@ -183,9 +187,9 @@
 #define MAG_PISTOL_SF 	ARR_1("11Rnd_45ACP_Mag")
 
 //  ROCKETS & MISSILES
-#define MAGS_AT_LIGHT           ARR_1("")
-#define MAGS_AT_ROCKET          ARR_1("")   // Nicht nutzen
-#define MAGS_AT_ROCKET_ASST     ARR_1("")   // Nicht nutzen
+#define MAGS_AT_LIGHT           MAG_PISTOL
+#define MAGS_AT_ROCKET          MAGS_AT_LIGHT   // Nicht nutzen
+#define MAGS_AT_ROCKET_ASST     MAGS_AT_LIGHT   // Nicht nutzen
 #define MAGS_AT_MISSILE       ARR_1("Titan_AT")
 #define MAGS_AT_MISSILE_ASST  ARR_3("Titan_AT",2,"Titan_AP")
 #define MAGS_AA_MISSILE         ARR_1("Titan_AA")

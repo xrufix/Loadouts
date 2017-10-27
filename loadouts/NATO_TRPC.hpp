@@ -1,34 +1,31 @@
-#include "_NATO_MTP.hpp"
-
-/* ###################### - DISPLAY NAMES - ###################### */
-#include "displayNames.hpp"
-// Definiere hier Namen, die vom Standard abweichen!
-
+#include "NATO_MTP.hpp"
 
 /* ###################### - UNIFORMS - ###################### */
-#define	UNIFORM_SINGLE      "xru_u_b_combatuniform_wdl"        // Für Inventar
-#define UNIFORM             ARR_2(UNIFORM_SINGLE,"xru_u_b_combatuniform_wdl_vest")      // Für Zufallsauswahl
+#define	UNIFORM_SINGLE      "U_B_T_Soldier_F"        // Für Inventar
+#define UNIFORM             ARR_3(UNIFORM_SINGLE,"U_B_T_Soldier_SL_F","U_B_T_Soldier_AR_F")      // Für Zufallsauswahl
+#define UNIFORM_COMMAND     UNIFORM_SINGLE
+#define UNIFORM_SPECIAL     UNIFORM
 
-#define UNIFORM_CREW        ARR_1("xru_u_b_combatuniform_sage_tshirt")
-
-#define UNIFORM_SNIPER      ARR_1("U_B_FullGhillie_lsh")
+#define UNIFORM_SNIPER      ARR_1("U_B_T_FullGhillie_tna_F")
 
 
 
 /* ###################### - VESTS - ###################### */
-#define VEST_EMPTY      ARR_1("V_PlateCarrier1_rgr")
-#define VEST_RIFLEMAN   ARR_1("V_PlateCarrier2_rgr")
-#define VEST_SL         ARR_1("V_PlateCarrierGL_rgr")
+#define VEST_EMPTY      ARR_1("V_PlateCarrier1_tna_f")
+#define VEST_BELT       ARR_1("V_Rangemaster_belt")
+#define VEST_LIGHT      ARR_1("V_PlateCarrier1_tna_f")
+#define VEST_RIFLEMAN   ARR_1("V_PlateCarrier2_tna_f")
 
 
 
 /* ###################### - BACKPACKS - ###################### */
-#define BACKPACK_ASSAULT    ARR_1("B_AssaultPack_rgr")
+#define BACKPACK_ASSAULT    ARR_2("B_AssaultPack_rgr","B_AssaultPack_tna_f")
 #define BACKPACK_KITBAG     ARR_1("B_Kitbag_rgr")
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_oli")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 #define BACKPACK_AT_LIGHT 	ARR_1("")
 #define BACKPACK_DIVER      ARR_1("xru_Carryall_blk")
+#define BACKPACK_RECON      BACKPACK_ASSAULT
 
 //	CSW-BACKPACKS
 #define HMG_GUN		"i_HMG_01_weapon_F"
@@ -41,27 +38,21 @@
 
 
 /* ###################### - ATTACHMENTS- ###################### */
-#define SNIPER_OPTIC "optic_LRPS_tna_f"
-#define DMR_BIPOD "bipod_01_F_blk"
 
+#define RCO "optic_hamr_khk_f"
+#define CCO "optic_aco"
+
+#define SNIPER_OPTIC "optic_LRPS_tna_f"
+#define DMR_BIPOD "bipod_01_F_khk"
 
 
 /* ###################### - PRIMARY WEAPONS - ###################### */
 // STANDARD ISSUE ASSAULT RIFLE
-#define RIFLE           ARR_1("arifle_MX_Black_F")
-#define RIFLE_UGL       ARR_1("arifle_MX_GL_Black_F")
-#define RIFLE_RCO       WEAPON(RIFLE,LASERPOINTER,RCO,"")
-#define RIFLE_UGL_RCO   WEAPON(RIFLE_UGL,LASERPOINTER,RCO,"")
-#define RIFLE_CCO       WEAPON(RIFLE,LASERPOINTER,CCO,"")
-#define RIFLE_UGL_CCO   WEAPON(RIFLE_UGL,LASERPOINTER,CCO,"")
+#define RIFLE      ARR_1("arifle_MX_khk_F")
+#define RIFLE_UGL  ARR_1("arifle_MX_GL_khk_F")
 
 // CARBINE & PDW
-#define PDW         ARR_4("smg_01_f",CCO,"","")
-#define CARBINE     "arifle_MXC_Black_F"
-#define CARBINE_UGL	RIFLE_UGL
-
-#define CARBINE_HOLO        WEAPON(CARBINE,CCO,"","")
-#define CARBINE_UGL_HOLO    WEAPON(CARBINE_UGL,CCO,"","")
+/* Wie MTP */
 
 // SF CARBINES
 #define SF_CARBINE ARR_2(\
@@ -76,7 +67,7 @@
 #define SF_CARBINE_UGL_TN   WEAPON("arifle_SPAR_01_gl_khk_F",LASERPOINTER,"optic_ERCO_khk_F","muzzle_snds_M_khk_f")
 
 // DESIGNATED MARKSMAN RIFLES & SNIPER RIFLES
-#define DMR WEAPON("arifle_MXM_Black_F",DMR_BIPOD,LASERPOINTER,"optic_SOS")
+#define DMR WEAPON("arifle_MXM_khk_F",DMR_BIPOD,LASERPOINTER,"optic_SOS_khk_F")
 
 #define DMR_SF ARR_2(\
     WEAPON("arifle_SPAR_03_blk_F",LASERPOINTER,"optic_ams","muzzle_snds_b"),\
@@ -87,23 +78,26 @@
 #define SR_AM WEAPON("srifle_lrr_tna_f",SNIPER_OPTIC,"","")
 
 // AUTOMATIC RIFLES & MACHINE GUNS
-#define AUTORIFLE_RCO   WEAPON("arifle_MX_SW_Black_F",LASERPOINTER,RCO,DMR_BIPOD)
+#define AUTORIFLE_RCO   WEAPON("arifle_MX_SW_khk_F",LASERPOINTER,RCO,DMR_BIPOD)
 #define AUTORIFLE_SF    ARR_2(\
     WEAPON("arifle_SPAR_02_blk_F",LASERPOINTER,"optic_ERCO_blk_F","muzzle_snds_M"),\
     WEAPON("arifle_SPAR_02_khk_F",LASERPOINTER,"optic_ERCO_khk_F","muzzle_snds_M_khk_f")\
 )
-#define MMG WEAPON("MMG_02_black_F",LASERPOINTER,RCO,DMR_BIPOD)
+#define MMG WEAPON("MMG_02_black_F",LASERPOINTER,"optic_Hamr","bipod_01_F_blk")
 
 
 
 /* ###################### - SIDEARMS - ###################### */
-/* Wie MTP */
+#define PISTOL		WEAPON("hgun_p07_khk_f","","","")
+#define PISTOL_SF	WEAPON("hgun_Pistol_heavy_01_F","muzzle_snds_acp","optic_MRD","")
 
 
 
 /* ###################### - LAUNCHERS - ###################### */
+#define AT_LIGHT	    WEAPON("launch_nlaw_f","","","")
+#define AT_ROCKET	    WEAPON("launch_nlaw_f","","","")
 #define AA_MISSILE	    WEAPON("launch_B_Titan_tna_F","","","")
-#define AT_MISSILE      WEAPON("launch_B_Titan_short_tna_F","","","")
+#define AT_MISSILE    WEAPON("launch_B_Titan_short_tna_F","","","")
 
 
 
@@ -133,36 +127,52 @@
 
 /* ###################### - HEADGEAR - ###################### */
 // GENERAL INFANTRY
-/* Wie MTP */
+#define HELMET ARR_1("H_HelmetB_Enh_tna_F")
 // NON-COMBAT INFANTRY
-/* Wie MTP */
+#define HELMET_BARE ARR_1("H_HelmetB_tna_F")
 // SPECIAL FORCES INFANTRY
-/* Wie MTP */
+#define HELMET_SF ARR_1("H_HelmetB_Light_tna_F")
+#define HELMET_DIVER ARR_1("H_HelmetB_light_black")
 // VEHICLE CREWS
-/* Wie MTP */
+#define HELMET_CREW 		ARR_1("H_HelmetCrew_B")
+#define HELMET_HELICOPTER	ARR_1("H_PilotHelmetHeli_B")
+#define HELMET_HELI_CREW	ARR_1("H_CrewHelmetHeli_B")
+#define HELMET_JET			ARR_1("H_PilotHelmetFighter_B")
 
 // COMMANDERS
-#define CAP_OFFICER ARR_1("h_cap_usblack")
+#define CAP_CO      ARR_1("xru_h_beret_colonel_eagle")
+#define CAP_XO      ARR_1("H_Beret_blk")
+#define CAP_OFFICER ARR_1("h_milcap_tna_f")
 
 
 
 /* ###################### - GOGGLES / FACEWEAR - ###################### */
-/* Wie MTP */
+#define GOGGLES         ARR_1("")
+#define GOGGLES_OFFICER ARR_3("","G_Spectacles","G_Aviator")
+#define GOGGLES_FULL    ARR_1("G_Combat_Goggles_tna_F")
+#define GOGGLES_SF		ARR_4("G_Bandanna_blk","G_Tactical_Clear","G_Bandanna_oli","G_Bandanna_beast")
+#define GOGGLES_SF_FULL ARR_1("G_Combat_Goggles_tna_F")
+#define GOGGLES_DIVER	ARR_1("G_B_Diving")
+#define GOGGLES_PILOT	ARR_1("G_Aviator")
 
 
 
 /* ###################### - NIGHT VISION DEVICES - ###################### */
-#define NVG	    ARR_1("NVGoggles_INDEP")
+#define NVG	    ARR_1("NVGoggles_tna_F")
 #define NVG_SF	NVG
 
 
 
 /* ###################### - BINOCULARS - ###################### */
-/* Wie MTP */
+#define BINOCULAR	ARR_1("Binocular")
+#define RANGEFINDER	ARR_1("ACE_Vector")
+#define DESIGNATOR	ARR_1("Laserdesignator_01_khk_F")
+
 
 
 /* ###################### - RADIOS - ###################### */
-/* Wie MTP */
+#define RADIO_HAND	ARR_1("ACRE_PRC148")
+#define RADIO_PACK 	ARR_1("ACRE_PRC117F")
 
 
 

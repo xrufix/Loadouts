@@ -189,7 +189,7 @@
 
 /* ###################### - SIDEARMS - ###################### */
 #define PISTOL			WEAPON("rhsusf_weap_m9","","","")
-#define PISTOL_SF		WEAPON("rhsusf_weap_m9","","","")
+#define PISTOL_SF		WEAPON("rhsusf_weap_glock17g4","","","")
 
 
 

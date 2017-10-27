@@ -22,7 +22,7 @@
 #define UNIFORM_DIVER       ARR_1("U_I_Wetsuit")
 #define UNIFORM_CREW        UNIFORM
 #define UNIFORM_HELICOPTER  ARR_1("U_B_HeliPilotCoveralls")
-#define UNIFORM_JET         ARR_1("U_B_PilotCoveralls")
+#define UNIFORM_JET         ARR_1("U_B_PilotCoveralls") 
 #define UNIFORM_SNIPER      ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_ard")
 
 

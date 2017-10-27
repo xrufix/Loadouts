@@ -2,10 +2,6 @@
 
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      "rhs_uniform_acu_ucp"
-#define UNIFORM             ARR_1(UNIFORM_SINGLE)
-#define UNIFORM_COMMAND     UNIFORM
-#define UNIFORM_SPECIAL     UNIFORM
-#define UNIFORM_CREW        UNIFORM
 #define UNIFORM_SNIPER      ARR_2("U_B_FullGhillie_sard","U_B_FullGhillie_lsh")
 
 

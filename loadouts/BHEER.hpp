@@ -3,10 +3,10 @@
 #include "components\ugl_vanilla.hpp"
 
 /* ###################### - UNIFORMS - ###################### */
-#define	UNIFORM_SINGLE      ARR_1("U_I_CombatUniform")        // Für Inventar
+#define	UNIFORM_SINGLE      ARR_1("rhsgref_uniform_olive")        // Für Inventar
 #define UNIFORM             ARR_2(UNIFORM_SINGLE,"U_I_CombatUniform_shortsleeve")      // Für Zufallsauswahl
 #define UNIFORM_COMPANY     ARR_1("U_I_OfficerUniform")  
-#define UNIFORM_RECON     ARR_1("xru_u_coveralls_urbancamo")
+#define UNIFORM_RECON       ARR_1("xru_u_coveralls_urbancamo")
 #define UNIFORM_DIVER       ARR_1("U_i_Wetsuit")
 #define UNIFORM_CREW        ARR_1("U_C_WorkerCoveralls")
 #define UNIFORM_HELICOPTER  ARR_1("u_i_helipilotcoveralls")
@@ -73,7 +73,7 @@
 
 /* ###################### - PRIMARY WEAPONS - ###################### */
 // STANDARD ISSUE ASSAULT RIFLE
-#define RIFLE           ARR_1("arifle_Mk20_F")
+#define RIFLE           ARR_1("hlc_rifle_auga3")
 #define RIFLE_UGL       ARR_1("arifle_Mk20_GL_F")
 #define RIFLE_RCO       WEAPON(RIFLE,LASERPOINTER,RCO,"")
 #define RIFLE_UGL_RCO   WEAPON(RIFLE_UGL,LASERPOINTER,RCO,"")
@@ -112,7 +112,7 @@
 
 
 /* ###################### - SIDEARMS - ###################### */
-#define PISTOL		WEAPON("hgun_ACPC2_F","","","")
+#define PISTOL		WEAPON("rhsusf_weap_glock17g4","","","")
 #define PISTOL_SF	WEAPON("hgun_ACPC2_F","muzzle_snds_acp","","")
 
 
@@ -203,8 +203,8 @@
 
 
 /* ###################### - NIGHT VISION DEVICES - ###################### */
-#define NVG	    ARR_1("NVGoggles_INDEP")
-#define NVG_SF  ARR_1("NVGoggles_OPFOR")
+#define NVG	    ARR_1("")
+#define NVG_SF  ARR_1("rhsusf_ANPVS_15")
 
 
 
@@ -216,8 +216,8 @@
 
 
 /* ###################### - RADIOS - ###################### */
-#define RADIO_HAND	ARR_1("ACRE_PRC152")
-#define RADIO_PACK 	ARR_1("ACRE_PRC117F")
+#define RADIO_HAND	ARR_1("ACRE_SEM52SL")
+#define RADIO_PACK 	ARR_1("ACRE_SEM70")
 
 
 

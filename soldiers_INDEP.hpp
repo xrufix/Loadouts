@@ -1,6 +1,6 @@
 #define GRENADES_BASIC  ARR_4("Chemlight_blue","Chemlight_yellow","SmokeShellBlue","SmokeShellYellow")
 
-#include "template.hpp"
+#include "common\template.hpp"
 
 // SOLDIER(company,co,)
 // SOLDIER(company,xo, )

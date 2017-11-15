@@ -1,13 +1,13 @@
 #define GRENADES_BASIC  ARR_4("ACE_Chemlight_Orange","ACE_Chemlight_White","SmokeShellOrange","SmokeShellPurple")
 
-#include "template.hpp"
+#include "common\template.hpp"
 
 // SOLDIER(company,co,)
 // SOLDIER(company,xo, )
 // SOLDIER(company,mio )
 // SOLDIER(company,colo )
 // SOLDIER(company,fo )
-
+/*
 SOLDIER(platoon,pl,b_officer_f)
 SOLDIER(platoon,psgt,b_t_officer_f)
 SOLDIER(platoon,uav,b_soldier_uav_f)
@@ -73,3 +73,4 @@ SOLDIER(logistics,common,b_soldier_repair_f)
 //SOLDIER(medevac,tl, )
 //SOLDIER(medevac,heli, )
 //SOLDIER(medevac,drv, )
+ */

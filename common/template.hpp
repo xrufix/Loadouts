@@ -1,13 +1,10 @@
-#define MAGS_COMMON ARR_7(MAG_PISTOL,3,MAG_RIFLE,7,MAG_RIFLE_TRACER,4,GRENADES_RGO)
-
 class COMMON : CommonDefault {
     side = QUOTE(SIDE);
     sideShort = QUOTE(SIDE_SHORT);
 #ifdef FACTION
     faction = QUOTE(FACTION);
 #endif
-    scope = 0;
-    
+
     uniform[] = {UNIFORM};
     vest[] = {VEST_EMPTY};
     backpack[] = {BACKPACK_ASSAULT};
@@ -43,9 +40,9 @@ class COMMON : CommonDefault {
 
 /* ###################### - Company Command - ###################### */
 class LOADOUT(company,common) : COMMON {
-    scope = 0;
-    uniform[] = {UNIFORM_COMMAND};
-    vest[] = {VEST_BELT};
+    uniform[] = {UNIFORM_COMPANY};
+    vest[] = {VEST_OFFICER};
+    backpack[] = {BACKPACK_RADIO};
     primary[] = {PDW};
     magazines[] = {
         MAG_PISTOL,3,
@@ -65,42 +62,33 @@ class LOADOUT(company,common) : COMMON {
 };
 //CO
 class LOADOUT(company,co) : LOADOUT(company,common) {
-    scope = 1;
     displayName = DN_CO_CO;
     headgear[] = {CAP_CO};
 };
 //XO
 class LOADOUT(company,xo) : LOADOUT(company,common) {
-    scope = 1;
-    displayName = DN_CO_XO;
     gps[] = {EASYTRACK_TABLET};
     headgear[] = {CAP_XO};
 };
 //MIO
 class LOADOUT(company,mio) : LOADOUT(company,common) {
-    scope = 1;
-    displayName = DN_CO_MIO;
     gps[] = {EASYTRACK_TABLET};
 };
 //CoLo
 class LOADOUT(company,colo) : LOADOUT(company,common) {
-    scope = 1;
-    displayName = DN_CO_COLO;
     items[] += {"CL_Logitracker"};
 };
 //FO
 class LOADOUT(company,fo) : LOADOUT(company,common) {
-    scope = 1;
-    displayName = DN_CO_FO;
     items[] += {"ACE_RangeTable_82mm"};
 };
 
 /* ###################### - Platoon Lead - ###################### */
 //PL Basis
 class LOADOUT(platoon,common): COMMON {
-    scope = 0;
     vest[] = {VEST_LIGHT};
-    primary[] = {CARBINE_HOLO};
+    backpack[] = {BACKPACK_RADIO};
+    primary[] = {CARBINE_CCO};
     magazines[] = {
         MAG_PISTOL,3,
         MAG_CARBINE,5,
@@ -117,30 +105,22 @@ class LOADOUT(platoon,common): COMMON {
 };
 //PL
 class LOADOUT(platoon,pl) : LOADOUT(platoon,common) {
-    scope = 1;
-    displayName = DN_PL_PL;
     lrRadios[] += {RADIO_PACK};
 };
 //PSgt
 class LOADOUT(platoon,psgt) : LOADOUT(platoon,common) {
-    scope = 1;
-    displayName = DN_PL_PS;
     gps[] = {EASYTRACK_TABLET};
     lrRadios[] += {RADIO_PACK};
 };
 //UAV Operator
 class LOADOUT(platoon,uav) : LOADOUT(platoon,common) {
-    scope = 1;
-    displayName = DN_PL_UAV;
     items[] += {"ACE_UAVBattery",TERMINAL};
 };
 //JTAC
 class LOADOUT(platoon,jtac) : LOADOUT(platoon,common) {
-    scope = 1;
-    displayName = DN_PL_JTAC;
     vest[] = {VEST_GRENADIER};
     backpack[] = {BACKPACK_KITBAG};
-    primary[] = {CARBINE_UGL_HOLO};
+    primary[] = {CARBINE_UGL_CCO};
     binoculars[] = {DESIGNATOR};
     lrRadios[] += {RADIO_PACK};
     magazines[] += {
@@ -152,8 +132,6 @@ class LOADOUT(platoon,jtac) : LOADOUT(platoon,common) {
 };
 //Platoon-Medic
 class LOADOUT(platoon,medic) : LOADOUT(platoon,common) {
-    scope = 1;
-    displayName = DN_PL_MED;
     vest[] = {VEST_MEDIC};
     backpack[] = {BACKPACK_KITBAG};
     items[] += {
@@ -173,8 +151,6 @@ class LOADOUT(platoon,medic) : LOADOUT(platoon,common) {
 /* ###################### - Rifle Squad - ###################### */
 //Squadleader
 class LOADOUT(squad,sl) : COMMON {
-    scope = 1;
-    displayName = DN_RS_SL;
     vest[] = {VEST_SL};
     gps[] = {EASYTRACK_PDA};
     binoculars[] = {RANGEFINDER};
@@ -199,18 +175,14 @@ class LOADOUT(squad,sl) : COMMON {
 };
 //Fireteam Leader (kein Granatwerfer!)
 class LOADOUT(squad,ftl) : COMMON {
-    scope = 1;
-    displayName = DN_RS_TL;
     vest[] = {VEST_TL};
     binoculars[] = {BINOCULAR};
     items[] += {"ACE_IR_Strobe_Item"};
 };
 //Automatic Rifleman
 class LOADOUT(squad,ar) : COMMON {
-    scope = 1;
-    displayName = DN_RS_AR;
     vest[] = {VEST_MG};
-    primary[] = {AUTORIFLE_RCO};
+    primary[] = {AUTORIFLE};
     magazines[] = {
         MAGS_AUTORIFLE,
         MAG_PISTOL,3,
@@ -220,16 +192,12 @@ class LOADOUT(squad,ar) : COMMON {
 };
 //Grenadier
 class LOADOUT(squad,gl) : COMMON {
-    scope = 1;
-    displayName = DN_RS_GRN;
     vest[] = {VEST_GRENADIER};
     primary[] = {RIFLE_UGL_CCO};
     magazines[] += {UGLS_GREN};
 };
 //Grenadier M32
 class LOADOUT(squad,gl2) : COMMON {
-    scope = 1;
-    displayName = DN_RS_M32;
     vest[] = {VEST_GRENADIER};
     primary[] = {"rhs_weap_m32"};
     magazines[] = {
@@ -242,15 +210,12 @@ class LOADOUT(squad,gl2) : COMMON {
 };
 //Rifleman (Light)
 class LOADOUT(squad,light) : COMMON {
-    scope = 1;
-    displayName = DN_RS_LITE;
     primary[] = {RIFLE_RCO};
     vest[] = {VEST_RIFLEMAN};
 };
 //Rifleman (Ass. Autorifleman)
 class LOADOUT(squad,aar) : COMMON {
-    scope = 1;
-    displayName = DN_RS_AC;
+    backpack[] = {BACKPACK_KITBAG};
     primary[] = {RIFLE_RCO};
     vest[] = {VEST_RIFLEMAN};
     magazines[] = {
@@ -261,8 +226,6 @@ class LOADOUT(squad,aar) : COMMON {
 };
 //Rifleman AT
 class LOADOUT(squad,lat) : COMMON {
-    scope = 1;
-    displayName = DN_RS_LAT;
     vest[] = {VEST_RIFLEMAN};
     backpack[] = {BACKPACK_AT_LIGHT};
     launcher[] = {AT_LIGHT};
@@ -270,8 +233,6 @@ class LOADOUT(squad,lat) : COMMON {
 };
 //Combat Medic
 class LOADOUT(squad,cm) : COMMON {
-    scope = 1;
-    displayName = DN_RS_CM;
     vest[] = {VEST_MEDIC};
     items[] += {
         "ACE_fieldDressing",10,
@@ -287,8 +248,6 @@ class LOADOUT(squad,cm) : COMMON {
 };
 //Squad Designated Marksman
 class LOADOUT(squad,dm) : COMMON {
-    scope = 1;
-    displayName = DN_RS_DM;
     vest[] = {VEST_DM};
     primary[] = {DMR};
     items[] += {"ACE_RangeCard"};
@@ -300,9 +259,7 @@ class LOADOUT(squad,dm) : COMMON {
 };
 //Combat Engineer
 class LOADOUT(squad,eng) : COMMON {
-    scope = 1;
-    displayName = DN_RS_ENG;
-    vest[] = {VEST_LIGHT};
+    vest[] = {VEST_RIFLEMAN};
     items[] += {"ToolKit"};
     preLoadout = TRAITS(0,1,false,false);
 };
@@ -311,26 +268,22 @@ class LOADOUT(squad,eng) : COMMON {
 /* ###################### - Weapon Squad - ###################### */
 //Common
 class LOADOUT(weapons,common): COMMON {
-    scope = 0;
+    backpack[] = {""};
     vest[] = {VEST_RIFLEMAN};
     magazines[] = {
         MAG_PISTOL,3,
-        MAG_RIFLE,7,
+        MAG_RIFLE,5,
         MAG_RIFLE_TRACER,2,
         GRENADES_RGO
     };
 };
 class LOADOUT(assistant,common): LOADOUT(weapons,common) {
-    scope = 0;
     backpack[] = {BACKPACK_KITBAG};
     binoculars[] = {BINOCULAR};
-}
+};
 //MMG
 class LOADOUT(weapons,mg) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_MMG;
     vest[] = {VEST_MG};
-    backpack[] = {""};
     primary[] = {MMG};
     magazines[] = {
         MAG_PISTOL,3,
@@ -341,95 +294,65 @@ class LOADOUT(weapons,mg) : LOADOUT(weapons,common) {
 };
 //MMG Assistant
 class LOADOUT(weapons,amg) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_MMGA;
     magazines[] += {MAGS_MMG_ASST,"ACE_SpareBarrel"};
 };
 //HMG
 class LOADOUT(weapons,hmg) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_HMG;
     backpack[] = {HMG_GUN};
 };
 //HMG Assistant
 class LOADOUT(weapons,ahmg) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_HMGA;
     backpack[] = {HMG_TRIPOD};
 };
 //GMG
 class LOADOUT(weapons,gmg) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_GMG;
     backpack[] = {GMG_GUN};
 };
 //GMG Assistant
 class LOADOUT(weapons,agmg) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_GMGA;
     backpack[] = {GMG_TRIPOD};
 };
 //MS AT
 class LOADOUT(weapons,at) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_AT;
-    backpack[] = {""};
+    backpack[] = {BACKPACK_AT_LIGHT};
     launcher[] = {AT_ROCKET};
 };
 //AMS AT
 class LOADOUT(weapons,aat) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_AAT;
     backpack[] = {BACKPACK_CARRYALL};
     magazines[] += {MAGS_AT_ROCKET_ASST};
 };
 //MS AT
 class LOADOUT(weapons,atgm) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_ATGM;
-    backpack[] = {""};
     launcher[] = {AT_MISSILE};
     magazines[] += {MAGS_AT_MISSILE};
 };
 //AMS AT
 class LOADOUT(weapons,aatgm) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_AATGM;
     backpack[] = {BACKPACK_CARRYALL};
     magazines[] += {MAGS_AT_MISSILE_ASST};
 };
 //MS AA
 class LOADOUT(weapons,aa) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_AA;
-    backpack[] = {""};
     launcher[] = {AA_MISSILE};
     magazines[] += {MAGS_AA_MISSILE};
 };
 //AMS AA
 class LOADOUT(weapons,aaa) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_AAA;
     magazines[] += {MAGS_AA_MISSILE_ASST};
 };
 //M252 Gunner
 class LOADOUT(weapons,mort) : LOADOUT(weapons,common) {
-    scope = 1;
-    displayName = DN_WS_MOR;
     backpack[] = {MORTAR_GUN};
     items[] += {"ACE_RangeTable_82mm"};
 };
 //M252 Assistant
 class LOADOUT(weapons,amort) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_MORA;
     backpack[] = {MORTAR_POD};
     items[] += {"ACE_RangeTable_82mm"};
 };
 
 class LOADOUT(weapons,acmort) : LOADOUT(assistant,common) {
-    scope = 1;
-    displayName = DN_WS_MORAC;
     items[] += {"ACE_1Rnd_82mm_Mo_HE",5};
     //"ACE_1Rnd_82mm_Mo_Smoke","ACE_1Rnd_82mm_Mo_Illum"
 };
@@ -437,16 +360,15 @@ class LOADOUT(weapons,acmort) : LOADOUT(assistant,common) {
 /* ###################### - Reconnaissance - ###################### */
 //Common Recon
 class LOADOUT(recon,common): COMMON {
-    scope = 0;
-    uniform[] = {UNIFORM_SPECIAL};
-    vest[] = {VEST_SF};
+    uniform[] = {UNIFORM_RECON};
+    vest[] = {VEST_RECON};
     backpack[] = {BACKPACK_RECON};
     secondary[] = {PISTOL_SF};
-    primary[] = {SF_CARBINE};
+    primary[] = {RIFLE_RECON};
     magazines[] = {
         MAG_PISTOL_SF,3,
-        MAG_CARBINE_SF,9,
-        MAG_CARBINE_SF_TRACER,2,
+        MAG_RIFLE_RECON,9,
+        MAG_RIFLE_RECON_TRACER,2,
         GRENADES_RGO
     };
     items[] += {
@@ -462,18 +384,14 @@ class LOADOUT(recon,common): COMMON {
 };
 //Operator
 class LOADOUT(recon,rm) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_RM;
     items[] += {
         "ACE_wirecutter"
     };
 };
 //Teamlead
 class LOADOUT(recon,tl) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_TL;
-    vest[] = {VEST_SF_TL};
-    primary[] = {SF_CARBINE_UGL};
+    vest[] = {VEST_RECON_TL};
+    primary[] = {RIFLE_UGL_RECON};
     magazines[] += {
         UGL_HE,10,
         UGL_SMK,2,
@@ -495,37 +413,28 @@ class LOADOUT(recon,tl) : LOADOUT(recon,common) {
 };
 //AR
 class LOADOUT(recon,ar) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_AR;
-    vest[] = {VEST_SF_MG};
-    primary[] = {AUTORIFLE_SF};
+    vest[] = {VEST_RECON_MG};
+    primary[] = {AUTORIFLE_RECON};
     magazines[] = {
         MAG_PISTOL_SF,3,
-        MAGS_AUTORIFLE_SF,
+        MAGS_AUTORIFLE_RECON,
         GRENADES_RGO
     };
-    items[] += {LASERPOINTER};
     goggles[] = {GOGGLES_SF_FULL};
 };
 //Grenadier
 class LOADOUT(recon,gl) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_GRN;
-    vest[] = {VEST_SF_GR};
-    primary[] = {SF_CARBINE_UGL};
+    vest[] = {VEST_RECON_GR};
+    primary[] = {RIFLE_UGL_RECON};
     magazines[] += {UGLS_GREN};
 };
 //LAT
 class LOADOUT(recon,lat) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_LAT;
     launcher[] = {AT_LIGHT};
     magazines[] += {MAGS_AT_LIGHT};
 };
 //CM
 class LOADOUT(recon,cm) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_MED;
     items[] += {
         "ACE_fieldDressing",10,
         "ACE_elasticBandage",30,
@@ -540,20 +449,16 @@ class LOADOUT(recon,cm) : LOADOUT(recon,common) {
 };
 //Marksman
 class LOADOUT(recon,dm) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_DM;
-    primary[] = {DMR_SF};
+    primary[] = {DMR_RECON};
     magazines[] = {
         MAG_PISTOL_SF,3,
-        MAG_DMR_SF,10,
+        MAG_DMR_RECON,10,
         GRENADES_RGO
     };
     items[] += {DMR_BIPOD};
 };
 //Explosive Specialist
 class LOADOUT(recon,exp) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SF_EXP;
     backpack[] = {BACKPACK_KITBAG};
     secondary[] = {"ACE_VMM3"};
     magazines[] += {
@@ -573,17 +478,15 @@ class LOADOUT(recon,exp) : LOADOUT(recon,common) {
 
 /* ###################### - Diver - ###################### */
 class LOADOUT(diver,common) : LOADOUT(recon,common) {
-    scope = 0;
-    displayName = DN_DV_RM;
     uniform[] = {UNIFORM_DIVER};
     vest[] = {VEST_BREATHER};
     backpack[] = {BACKPACK_DIVER};
-    primary[] = {SF_CARBINE_DIVER};
+    primary[] = {RIFLE_DIVER};
     secondary[] = {PISTOL_SF};
     gps[] = {EASYTRACK_PDA};
     magazines[] = {
         MAG_PISTOL,3,
-        MAG_CARBINE_SF,10,
+        MAG_RIFLE_RECON,10,
         GRENADES_BASIC,
         "ACE_M84",4
     };
@@ -596,13 +499,9 @@ class LOADOUT(diver,common) : LOADOUT(recon,common) {
     nvgs[] = {"NVGoggles_OPFOR"};
 };
 //Assault Diver
-class LOADOUT(diver,rm) : LOADOUT(diver,common) {
-    scope = 1;
-};
+class LOADOUT(diver,rm) : LOADOUT(diver,common) {};
 //Diver Team Lead
 class LOADOUT(diver,tl) : LOADOUT(diver,common) {
-    scope = 1;
-    displayName = DN_DV_TL;
     binoculars[] = {RANGEFINDER};
     lrRadios[] = {RADIO_HAND};
     map[] = {"ItemMap"};
@@ -611,8 +510,6 @@ class LOADOUT(diver,tl) : LOADOUT(diver,common) {
 };
 //Diver Explosive Specialist
 class LOADOUT(diver,exp) : LOADOUT(diver,common) {
-    scope = 1;
-    displayName = DN_DV_EXP;
     magazines[] += {"DemoCharge_Remote_Mag",4};
     items[] += {
         "ACE_Clacker",
@@ -625,8 +522,6 @@ class LOADOUT(diver,exp) : LOADOUT(diver,common) {
 };
 // Diver Medic
 class LOADOUT(diver,cm) : LOADOUT(diver,common) {
-    scope = 1;
-    displayName = DN_DV_MED;
     items[] += {
         "W_Defibrillator",
         "ACE_fieldDressing",5,
@@ -643,12 +538,10 @@ class LOADOUT(diver,cm) : LOADOUT(diver,common) {
 };
 // Marksman
 class LOADOUT(diver,dm) : LOADOUT(diver,common) {
-    scope = 1;
-    displayName = DN_DV_DM;
     primary[] = {DMR_DIVER};
     magazines[] = {
         MAG_PISTOL_SF,3,
-        MAG_DMR_SF,10,
+        MAG_DMR_RECON,10,
         GRENADES_RGO,
         "ACE_M84",4
     };
@@ -656,9 +549,7 @@ class LOADOUT(diver,dm) : LOADOUT(diver,common) {
 };
 // Diver TL/JTAC
 class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
-    scope = 1;
-    displayName = DN_DV_JTAC;
-    primary[] = {SF_CARBINE_DIVER_UGL};
+    primary[] = {RIFLE_UGL_DIVER};
     binoculars[] = {DESIGNATOR};
     magazines[] += {
         "Laserbatteries",
@@ -669,27 +560,24 @@ class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
 /* ###################### - Sniper - ###################### */
 //Spotter
 class LOADOUT(sniper,common) : LOADOUT(recon,common) {
-    scope = 0;
     uniform[] = {UNIFORM_SNIPER};
     map[] = {"ItemMap"};
     items[] += {
         SNIPER_OPTIC_NV,
         "ACE_Rangecard"
     };
-}
+};
 class LOADOUT(sniper,spot) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SN_SPOT;
     uniform[] = {UNIFORM_SNIPER};
-    primary[] = {SF_CARBINE_UGL_TN};
+    primary[] = {RIFLE_UGL_RECON_TAN};
     gps[] = {EASYTRACK_PDA};
     binoculars[] = {RANGEFINDER};
     magazines[] = {
         MAG_PISTOL_SF,3,
         GRENADE_IR,
         GRENADES_RGO,
-        MAG_CARBINE_SF,8,
-        MAG_CARBINE_SF_TRACER,2,
+        MAG_RIFLE_RECON,8,
+        MAG_RIFLE_RECON_TRACER,2,
         UGL_HE,10,
         UGL_SMK,4
         #ifdef HUNTIR
@@ -711,8 +599,6 @@ class LOADOUT(sniper,spot) : LOADOUT(recon,common) {
 };
 //Sniper Anti-Personel
 class LOADOUT(sniper,ap): LOADOUT(sniper,common) {
-    scope = 1;
-    displayName = DN_SN_AP;
     primary[] = {SR_AP};
     magazines[] = {
         MAG_PISTOL_SF,3,
@@ -722,8 +608,6 @@ class LOADOUT(sniper,ap): LOADOUT(sniper,common) {
 };
 //Sniper Anti-Materiel
 class LOADOUT(sniper,am) : LOADOUT(sniper,common) {
-    scope = 1;
-    displayName = DN_SN_AM;
     primary[] = {SR_AM};
     magazines[] = {
         MAG_PISTOL_SF,3,
@@ -733,10 +617,8 @@ class LOADOUT(sniper,am) : LOADOUT(sniper,common) {
 };
 //Explosives
 class LOADOUT(sniper,exp) : LOADOUT(recon,common) {
-    scope = 1;
-    displayName = DN_SN_EXP;
     uniform[] = {UNIFORM_SNIPER};
-    primary[] = {SF_CARBINE_TN};
+    primary[] = {RIFLE_RECON_TAN};
     magazines[] += {
         "APERSTripMine_Wire_mag",2,
         "ClaymoreDirectionalMine_Remote_mag",2
@@ -754,8 +636,6 @@ class LOADOUT(sniper,exp) : LOADOUT(recon,common) {
 /* ###################### - Tank - ###################### */
 //Crewman (Driver, Gunner)
 class LOADOUT(crew,common) : COMMON {
-    scope = 1;
-    displayName = DN_VE_CRW;
     uniform[] = {UNIFORM_CREW};
     backpack[] = {""};
     vest[] = {VEST_CREW};
@@ -773,8 +653,6 @@ class LOADOUT(crew,common) : COMMON {
 };
 //Tank Commander
 class LOADOUT(crew,cmd) : LOADOUT(crew,common) {
-    scope = 1;
-    displayName = DN_VE_CMD;
     backpack[] = {BACKPACK_RADIO};
     lrRadios[] += {RADIO_PACK};
     gps[] = {EASYTRACK_PDA};
@@ -784,8 +662,6 @@ class LOADOUT(crew,cmd) : LOADOUT(crew,common) {
 /* ###################### - Aircraft - ###################### */
 //Jetpilot
 class LOADOUT(crew,jet) : COMMON {
-    scope = 1;
-    displayName = DN_VE_JET;
     uniform[] = {UNIFORM_JET};
     vest[] = {""};
     backpack[] = {""};
@@ -804,8 +680,6 @@ class LOADOUT(crew,jet) : COMMON {
 };
 //HeliCrew
 class LOADOUT(crew,heli) : LOADOUT(crew,common) {
-    scope = 1;
-    displayName = DN_VE_HCRW;
     uniform[] = {UNIFORM_HELICOPTER};
     headgear[] = {HELMET_HELI_CREW};
     map[] = {""};
@@ -813,22 +687,18 @@ class LOADOUT(crew,heli) : LOADOUT(crew,common) {
 };
 //HeliPilot
 class LOADOUT(crew,helipilot) : LOADOUT(crew,heli) {
-    scope = 1;
-    displayName = DN_VE_HPL;
     backpack[] = {BACKPACK_ASSAULT};
     map[] = {"itemMap"};
     gps[] = {EASYTRACK_PDA};
     goggles[] = {GOGGLES_PILOT};
     lrRadios[] = {RADIO_PACK};
     headgear[] = {HELMET_HELICOPTER};
-    nvgs[] = {NVG_SF};
+    nvgs[] = {"NVGoggles_OPFOR"};
 };
 
 /* ###################### - Logistik - ###################### */
 //Logistiker
 class LOADOUT(logistics,common) : COMMON {
-    scope = 1;
-    displayName = DN_SP_LOG;
     vest[] = {VEST_LIGHT};
     backpack[] = {BACKPACK_KITBAG};
     primary[] = {CARBINE};
@@ -849,9 +719,8 @@ class LOADOUT(logistics,common) : COMMON {
 /* ###################### - MEDEVAC - ###################### */
 //Common MEDEVAC
 class LOADOUT(medevac,common): COMMON {
-    scope = 0;
     primary[] = {""};
-    secondary[] = {PISTOL};
+    secondary[] = {""};
     magazines[] = {GRENADES_BASIC};
     items[] += {"CL_Logitracker"};
     headgear[] = {HELMET_BARE};
@@ -862,8 +731,6 @@ class LOADOUT(medevac,common): COMMON {
 
 //Doctor
 class LOADOUT(medevac,doc) : LOADOUT(medevac,common) {
-    scope = 1;
-    displayName = DN_ME_DCT;
     backpack[] = {BACKPACK_KITBAG};
     items[] += {
         "ACE_personalAidKit",4,
@@ -880,15 +747,11 @@ class LOADOUT(medevac,doc) : LOADOUT(medevac,common) {
 };
 //Doctor TL
 class LOADOUT(medevac,tl) : LOADOUT(medevac,doc) {
-    scope = 1;
-    displayName = DN_ME_TL;
     gps[] = {EASYTRACK_PDA};
     lrRadios[] = {RADIO_HAND};
 };
 //MEDEVAC Pilot
 class LOADOUT(medevac,heli) : LOADOUT(medevac,common) {
-    scope = 1;
-    displayName = DN_ME_PIL;
     uniform[] = {UNIFORM_HELICOPTER};
     map[] = {"itemMap"};
     gps[] = {EASYTRACK_PDA};
@@ -899,9 +762,9 @@ class LOADOUT(medevac,heli) : LOADOUT(medevac,common) {
 };
 //MEDEVAC Driver
 class LOADOUT(medevac,drv) : LOADOUT(medevac,common) {
-    scope = 1;
-    displayName = DN_ME_DRV;
     items[] += {"ACE_Banana"};
 };
 
-#undef HUNTIR
+#ifdef HUNTIR
+    #undef HUNTIR
+#endif

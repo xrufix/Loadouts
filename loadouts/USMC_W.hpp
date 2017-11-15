@@ -1,16 +1,11 @@
 #include "USMC_D.hpp"
 // Definiere hier nur, was von USMC Desert abweicht!
 
-/* ###################### - DISPLAY NAMES - ###################### */
-/* Wie Desert */
-
-
-
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      "rhs_uniform_FROG01_wd"
 #define UNIFORM             ARR_1(UNIFORM_SINGLE)
-#define UNIFORM_COMMAND     UNIFORM
-#define UNIFORM_SPECIAL     UNIFORM
+#define UNIFORM_COMPANY     UNIFORM
+#define UNIFORM_RECON     UNIFORM
 #define UNIFORM_DIVER       ARR_1("U_I_Wetsuit")
 #define UNIFORM_CREW        UNIFORM
 #define UNIFORM_HELICOPTER  ARR_1("U_B_HeliPilotCoveralls")
@@ -22,19 +17,9 @@
 /* ###################### - VESTS - ###################### */
 /* Wie Desert */
 
-#define VEST_SF				VEST_RIFLEMAN
-#define VEST_SF_TL			VEST_TL
-#define VEST_SF_MG			VEST_MG
-#define VEST_SF_GR			VEST_GRENADIER
-
-#define VEST_BREATHER		ARR_1("V_RebreatherB")
-#define VEST_DIVER			"VSM_LBT1961_Black"
-
-
-
 /* ###################### - BACKPACKS - ###################### */
-#define BACKPACK_ASSAULT    ARR_3("B_AssaultPack_rgr","B_AssaultPack_khk","rhsusf_falconii")
-#define BACKPACK_KITBAG     ARR_2("B_Kitbag_rgr","B_Kitbag_cbr")
+#define BACKPACK_ASSAULT    ARR_2("B_AssaultPack_rgr","rhsusf_falconii")
+#define BACKPACK_KITBAG     ARR_1("B_Kitbag_rgr")
 #define BACKPACK_CARRYALL   ARR_1("B_Carryall_oli")
 #define BACKPACK_RADIO      BACKPACK_ASSAULT
 
@@ -56,23 +41,22 @@
 /* Wie Desert */
 
 // SF CARBINES
-#define SF_CARBINE ARR_4(	                                                                        \
-    WEAPON("rhs_weap_mk18_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),   	\
-    WEAPON("rhs_weap_mk18","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),        	\
-    WEAPON("rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD"),	\
-    WEAPON("rhs_weap_mk18_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD")   	\
-)
-#define SF_CARBINE_UGL ARR_3(	                                                                            \
-    WEAPON("rhs_weap_m4a1_blockII_M203","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),	    \
-    WEAPON("rhs_weap_m4a1_blockII_M203_bk","rhsusf_acc_nt4_black",LASERPOINTER_BK,"rhsusf_acc_SpecterDR"),	\
-    WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_nt4_tan",LASERPOINTER_BK,"rhsusf_acc_SpecterDR_OD")	\
-)
-#define SF_CARBINE_TN ARR_2(	                                                                    \
-    WEAPON("rhs_weap_mk18_KAC_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD"),	\
-    WEAPON("rhs_weap_mk18_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD")	    \
-)
-#define SF_CARBINE_UGL_TN		WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_nt4_tan",LASERPOINTER_TN,"rhsusf_acc_SpecterDR_OD")
-/* Wie Desert */
+#define RIFLE_RECON ARR_4(	                                                                        \
+    WEAPON("rhs_weap_m4a1_blockII_wd","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"),   	\
+    WEAPON("rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"),        	\
+    WEAPON("rhs_weap_m4a1_blockII","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"),	\
+    WEAPON("rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"))
+#define RIFLE_UGL_RECON ARR_2(	                                                                            \
+    WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_g33_xps3","rhsusf_acc_anpeq15side_bk","rhsusf_acc_nt4_tan"),	    \
+    WEAPON("rhs_weap_m4a1_blockII_M203","rhsusf_acc_g33_xps3","rhsusf_acc_anpeq15side_bk","rhsusf_acc_nt4_tan"))
+
+#define RIFLE_RECON_TAN ARR_2( \
+    WEAPON("rhs_weap_m4a1_blockII_wd","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"), \
+    WEAPON("rhs_weap_m4a1_blockII_KAC_wd","rhsusf_acc_SpecterDR_OD","rhsusf_acc_anpeq15_bk","rhsusf_acc_nt4_tan"))
+#define RIFLE_UGL_RECON_TAN \
+    WEAPON("rhs_weap_m4a1_blockII_M203_wd","rhsusf_acc_g33_xps3","rhsusf_acc_anpeq15side_bk","rhsusf_acc_nt4_tan")
+
+/* Diver wie Desert */
 
 // DESIGNATED MARKSMAN RIFLES & SNIPER RIFLES
 /* Wie Desert */
@@ -118,8 +102,7 @@
     "rhsusf_mich_bare_norotos_alt_headset"	\
 )
 // SPECIAL FORCES INFANTRY
-#define HELMET_SF ARR_6(        	\
-    "rhsusf_opscore_aor2_pelt", 	\
+#define HELMET_SF ARR_5(        	\
     "rhsusf_opscore_fg_pelt",   	\
     "rhsusf_opscore_fg_pelt_cam",	\
     "rhsusf_opscore_paint_pelt",	\
@@ -131,7 +114,7 @@
     "rhsusf_protech_helmet"	    	\
 )
 // VEHICLE CREWS
-#define HELMET_CREW 		ARR_1("rhsusf_cvc_green_helmet")
+#define HELMET_CREW 		ARR_2("rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet")
 #define HELMET_HELICOPTER	ARR_2("rhsusf_hgu56p","rhsusf_hgu56p_visor")
 #define HELMET_HELI_CREW	ARR_6("rhsusf_hgu56p_mask","rhsusf_hgu56p_mask_mo","rhsusf_hgu56p_mask_skull","rhsusf_hgu56p_visor_mask","rhsusf_hgu56p_visor_mask_mo","rhsusf_hgu56p_visor_mask_skull")
 #define HELMET_JET			ARR_1("H_PilotHelmetFighter_B")
@@ -162,24 +145,10 @@
 
 /* ###################### - INSIGNIA - ###################### */
 // Kann in CfgLoadouts.hpp überschrieben werden.
-#ifndef INSIGNIA_COMMON
-    #define INSIGNIA_COMMON ARR_1("")
-#endif
-#ifndef INSIGNIA_SF
-    #define INSIGNIA_SF INSIGNIA_COMMON
-#endif
-#ifndef INSIGNIA_TNK
-    #define INSIGNIA_TNK INSIGNIA_COMMON
-#endif
-#ifndef INSIGNIA_HELI
-    #define INSIGNIA_HELI INSIGNIA_COMMON
-#endif
-#ifndef INSIGNIA_JET
-    #define INSIGNIA_JET INSIGNIA_COMMON
-#endif
-#ifndef INSIGNIA_MEV
-    #define INSIGNIA_MEV INSIGNIA_COMMON
-#endif
-#ifndef INSIGNIA_SUPPORT
-    #define INSIGNIA_SUPPORT INSIGNIA_COMMON
-#endif
+#define INSIGNIA_COMMON ARR_1("")
+#define INSIGNIA_SF INSIGNIA_COMMON
+#define INSIGNIA_TNK INSIGNIA_COMMON
+#define INSIGNIA_HELI INSIGNIA_COMMON
+#define INSIGNIA_JET INSIGNIA_COMMON
+#define INSIGNIA_MEV INSIGNIA_COMMON
+#define INSIGNIA_SUPPORT INSIGNIA_COMMON

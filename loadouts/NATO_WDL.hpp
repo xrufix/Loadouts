@@ -88,7 +88,7 @@
 
 // AUTOMATIC RIFLES & MACHINE GUNS
 #define AUTORIFLE   WEAPON("LMG_03_F",LASERPOINTER,CCO,"")
-#define MAGS_AUTORIFLE      ARR_4("200Rnd_556x45_Box_Red_F",4,"200Rnd_556x45_Box_Tracer_Red_F")
+#define MAGS_AUTORIFLE      ARR_3("200Rnd_556x45_Box_Red_F",4,"200Rnd_556x45_Box_Tracer_Red_F")
 #define MAGS_AUTORIFLE_ASST ARR_2("200Rnd_556x45_Box_Red_F",2)
 
 #define AUTORIFLE_RECON    ARR_2(\

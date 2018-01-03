@@ -128,10 +128,9 @@
 
 
 // PDW
-#define PDW ARR_3( \
+#define PDW ARR_2( \
     WEAPON("hgun_pdw2000_f","","",""), \
-    WEAPON("smg_02_f","optic_aco_grn_smg","",""), \
-    WEAPON("smg_05_f","","",""))
+    WEAPON("smg_02_f","optic_aco_grn_smg","",""))
 #define MAG_PDW ARR_1("30Rnd_9x21_Mag")
 
 

@@ -179,7 +179,7 @@
 #define GOGGLES         ARR_1("")
 #define GOGGLES_OFFICER ARR_3("","G_Spectacles","G_Aviator")
 #define GOGGLES_FULL    ARR_2("G_Combat","G_Balaclava_combat")
-#define GOGGLES_SF		ARR_8("","G_Balaclava_blk","G_Balaclava_lowprofile","g_bandana_shades","g_bandanna_blk","G_Squares","G_Tactical_Clear","G_Tactical_black")
+#define GOGGLES_SF		ARR_8("","G_Balaclava_blk","G_Balaclava_lowprofile","g_bandanna_shades","g_bandanna_blk","G_Squares","G_Tactical_Clear","G_Tactical_black")
 #define GOGGLES_SF_FULL GOGGLES_SF
 #define GOGGLES_DIVER	ARR_1("G_i_Diving")
 #define GOGGLES_PILOT	ARR_1("G_Aviator")

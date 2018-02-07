@@ -13,7 +13,7 @@
 
 /* ###################### - VESTS - ###################### */
 #define VEST_EMPTY      ARR_1("V_PlateCarrier1_rgr")
-#define VEST_RIFLEMAN   ARR_1("V_PlateCarrier2_rgr")
+#define VEST_RM         ARR_1("V_PlateCarrier2_rgr")
 #define VEST_SL         ARR_1("V_PlateCarrierGL_rgr")
 
 

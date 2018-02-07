@@ -2,6 +2,9 @@
 #include "components\blufor.hpp"
 #include "components\ugl_vanilla.hpp"
 
+// #define EASYTRACK
+// #define HUNTIR
+
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      ARR_1("tfa_bel_wdl")          // Für Inventar
 #define UNIFORM             ARR_2(UNIFORM_SINGLE,"tfa_bel_wdl_rs")     // Für Zufallsauswahl

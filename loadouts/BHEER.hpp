@@ -2,6 +2,9 @@
 #include "components\indep.hpp"
 #include "components\ugl_vanilla.hpp"
 
+#define EASYTRACK
+// #define HUNTIR
+
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      ARR_1("rhs_uniform_g3_mc")          // Für Inventar
 #define UNIFORM             ARR_1("rhsgref_uniform_olive")     // Für Zufallsauswahl

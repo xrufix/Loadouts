@@ -175,9 +175,6 @@ class LOADOUT(squad,sl) : COMMON {
     binoculars[] = {RANGEFINDER};
     primary[] = {RIFLE_UGL_CCO};
     magazines[] += {
-        #ifdef HUNTIR
-            "ACE_HuntIR_M203",4,
-        #endif
         UGL_HE,10,
         UGL_SMK,2,
         UGLS_COL1,
@@ -186,9 +183,6 @@ class LOADOUT(squad,sl) : COMMON {
     items[] += {
         "ACE_microDAGR",
         "ACE_IR_Strobe_Item"
-        #ifdef HUNTIR
-            ,"ACE_HuntIR_monitor"
-        #endif
     };
     lrRadios[] = {RADIO_HAND};
     map[] = {"ItemMap"};

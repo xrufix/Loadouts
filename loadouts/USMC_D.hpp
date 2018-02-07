@@ -100,7 +100,7 @@
 #define RIFLE_CCO RIFLE_RCO
 #define RIFLE_UGL_CCO RIFLE_UGL_RCO
 
-#define MAG_RIFLE			"30Rnd_556x45_Stanag"
+#define MAG_RIFLE			"30Rnd_556x45_Stanag_red"
 #define MAG_RIFLE_TRACER	"30Rnd_556x45_Stanag_Tracer_Red"
 
 // PDW

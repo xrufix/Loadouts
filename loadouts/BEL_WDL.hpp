@@ -84,7 +84,7 @@
 #define RIFLE_CCO       WEAPON(RIFLE,FLASHLIGHT,CCO,"")
 #define RIFLE_UGL_CCO   WEAPON(RIFLE_UGL,FLASHLIGHT,CCO,"")
 
-#define MAG_RIFLE		 ARR_1("30Rnd_556x45_Stanag")
+#define MAG_RIFLE		 ARR_1("30Rnd_556x45_Stanag_red")
 #define MAG_RIFLE_TRACER ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
 
 // PDW

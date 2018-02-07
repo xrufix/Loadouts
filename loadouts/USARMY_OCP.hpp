@@ -100,7 +100,7 @@
     WEAPON(RIFLE_2,LASERPOINTER,CCO,""))
 #define RIFLE_UGL_CCO ARR_1(                  \
     WEAPON(RIFLE_UGL,LASERPOINTER,CCO,""))
-#define MAG_RIFLE			ARR_1("30Rnd_556x45_Stanag")
+#define MAG_RIFLE			ARR_1("30Rnd_556x45_Stanag_red")
 #define MAG_RIFLE_TRACER	ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
 
 // PDW

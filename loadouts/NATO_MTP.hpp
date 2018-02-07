@@ -165,8 +165,8 @@
 
 //  SF CARBINE
 
-#define MAG_RIFLE_RECON          ARR_1("30Rnd_556x45_Stanag")
-#define MAG_RIFLE_RECON_TRACER   ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
+#define MAG_RIFLE_RECON          ARR_1("30Rnd_556x45_Stanag_red")
+#define MAG_RIFLE_RECON_TRACER   ARR_1("ACE_30Rnd_556x45_Stanag_Tracer_Dim")
 
 //  AR & MG
 #define MAGS_AUTORIFLE      ARR_4("100Rnd_65x39_caseless_mag",7,"100Rnd_65x39_caseless_mag_Tracer",3)

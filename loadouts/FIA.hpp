@@ -111,7 +111,7 @@
     WEAPON(RIFLE_UGL_3,"optic_aco_grn_smg","",LIGHT))
 
 #define MAG_RIFLE           ARR_1("30Rnd_556x45_Stanag")
-#define MAG_RIFLE_TRACER    ARR_1("30Rnd_556x45_Stanag_Tracer_Green")
+#define MAG_RIFLE_TRACER    ARR_1("30Rnd_556x45_Stanag_Tracer_yellow")
 
 
 // CARBINE
@@ -157,7 +157,7 @@
 #define RIFLE_UGL_DIVER 	RIFLE_UGL_RECON
 
 #define MAG_RIFLE_RECON          MAG_CARBINE
-#define MAG_RIFLE_RECON_TRACER   MAG_CARBINE_TRACER
+#define MAG_RIFLE_RECON_TRACER   ARR_1("ACE_30Rnd_556x45_Stanag_Tracer_Dim")
 
 
 // DESIGNATED MARKSMAN RIFLES & SNIPER RIFLES

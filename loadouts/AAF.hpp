@@ -84,7 +84,7 @@
 #define RIFLE_UGL_CCO   WEAPON(RIFLE_UGL,LASERPOINTER,CCO,"")
 
 #define MAG_RIFLE			ARR_1("30Rnd_556x45_Stanag")
-#define MAG_RIFLE_TRACER	ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
+#define MAG_RIFLE_TRACER	ARR_1("30Rnd_556x45_Stanag_Tracer_yellow")
 
 // PDW
 #define PDW         WEAPON("hgun_PDW2000_F","","","")

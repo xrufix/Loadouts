@@ -139,14 +139,14 @@
 
 /* ###################### - MAGAZINES - ###################### */
 //  RIFLE & CARBINE
-#define MAG_RIFLE			    ARR_1("30Rnd_556x45_Stanag")
+#define MAG_RIFLE			    ARR_1("30Rnd_556x45_Stanag_red")
 #define MAG_RIFLE_TRACER	    ARR_1("30Rnd_556x45_Stanag_Tracer_Red")
 
 #define MAG_CARBINE             MAG_RIFLE
 #define MAG_CARBINE_TRACER      MAG_RIFLE_TRACER
 
 #define MAG_RIFLE_RECON          MAG_RIFLE
-#define MAG_RIFLE_RECON_TRACER   MAG_RIFLE_TRACER
+#define MAG_RIFLE_RECON_TRACER   ARR_1("ACE_30Rnd_556x45_Stanag_Tracer_Dim")
 
 //  AR & MG
 #define MAG_AUTORIFLE       ARR_1("150Rnd_762x54_Box")

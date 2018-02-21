@@ -359,11 +359,13 @@ class LOADOUT(weapons,aaa) : LOADOUT(assistant,common) {
 class LOADOUT(weapons,mort) : LOADOUT(weapons,common) {
     backpack[] = {MORTAR_GUN};
     items[] += {"ACE_RangeTable_82mm"};
+    map[] = {"ItemMap"};
 };
 //M252 Assistant
 class LOADOUT(weapons,amort) : LOADOUT(assistant,common) {
     backpack[] = {MORTAR_POD};
     items[] += {"ACE_RangeTable_82mm"};
+    map[] = {"ItemMap"};
 };
 
 class LOADOUT(weapons,acmort) : LOADOUT(assistant,common) {

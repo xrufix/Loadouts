@@ -66,7 +66,7 @@
 #define FLASHLIGHT   "UK3CB_BAF_LLM_Flashlight_Tan"
 
 #define RCO     "UK3CB_BAF_TA31F"
-#define CCO     "UK3CB_BAF_SUSAT"
+#define CCO     RCO
 
 #define SNIPER_OPTIC    "RKSL_optic_PMII_525_wdl"
 #define SNIPER_OPTIC_NV "UK3CB_BAF_MaxiKite"
@@ -123,7 +123,7 @@
 #define MAG_DMR_RECON MAG_DMR
 
 #define SR_AP         WEAPON("UK3CB_BAF_L115A3_DE_Ghillie","",SNIPER_OPTIC,"")
-#define MAGS_SR_AP    ARR_4("UK3CB_BAF_338_5Rnd",10)
+#define MAGS_SR_AP    ARR_2("UK3CB_BAF_338_5Rnd",10)
 
 #define SR_AM         WEAPON("rhs_weap_m82a1","rhsusf_acc_premier","","")
 #define MAGS_SR_AM    ARR_2("rhsusf_mag_10Rnd_STD_50BMG_M33",6)
@@ -165,7 +165,7 @@
 
 /* ###################### - HEADGEAR - ###################### */
 // GENERAL INFANTRY
-#define HELMET ARR_2( \
+#define HELMET ARR_3( \
     ARR_6("UK3CB_BAF_H_Mk7_Camo_A","UK3CB_BAF_H_Mk7_Camo_B","UK3CB_BAF_H_Mk7_Camo_C","UK3CB_BAF_H_Mk7_Camo_D","UK3CB_BAF_H_Mk7_Camo_E","UK3CB_BAF_H_Mk7_Camo_F"), \
     ARR_4("UK3CB_BAF_H_Mk7_Net_A","UK3CB_BAF_H_Mk7_Net_B","UK3CB_BAF_H_Mk7_Net_C","UK3CB_BAF_H_Mk7_Net_D"), \
     ARR_3("UK3CB_BAF_H_Mk7_Scrim_A","UK3CB_BAF_H_Mk7_Scrim_B","UK3CB_BAF_H_Mk7_Scrim_C") \

@@ -2,8 +2,8 @@
 
 /* ###################### - UNIFORMS - ###################### */
 #define	UNIFORM_SINGLE      ARR_1("UK3CB_BAF_U_CombatUniform_DPMW_ShortSleeve")          // Für Inventar
-#define UNIFORM             ARR_2(UNIFORM_SINGLE, "UK3CB_BAF_U_CombatUniform_DPMW")     // Für Zufallsauswahl
-#define UNIFORM_COMPANY     "UK3CB_BAF_U_RolledUniform_DPMW"
+#define UNIFORM             ARR_2(UNIFORM_SINGLE, UNIFORM_COMPANY)     // Für Zufallsauswahl
+#define UNIFORM_COMPANY     "UK3CB_BAF_U_CombatUniform_DPMW"
 #define UNIFORM_RECON       UNIFORM
 #define UNIFORM_DIVER       ARR_1("U_B_Wetsuit")
 #define UNIFORM_CREW        "UK3CB_BAF_U_JumperUniform_DPMW"
@@ -117,13 +117,13 @@
 // AUTOMATIC RIFLES & MACHINE GUNS
 #define AUTORIFLE            DMR
 #define MAGS_AUTORIFLE       ARR_4(MAG_RIFLE,12,MAG_RIFLE_TRACER,4)
-#define MAGS_AUTORIFLE_ASST  ARR_2(MAG_RIFLE,6,MAG_RIFLE_TRACER,3)
+#define MAGS_AUTORIFLE_ASST  ARR_4(MAG_RIFLE,6,MAG_RIFLE_TRACER,3)
 
 #define AUTORIFLE_RECON      DMR_RECON
 #define MAGS_AUTORIFLE_RECON MAGS_AUTORIFLE
 
 #define MMG           WEAPON("UK3CB_BAF_L7A2",RCO,"","")
-#define MAGS_MMG      ARR_3("UK3CB_BAF_762_100Rnd",2,"UK3CB_BAF_762_100Rnd_T")
+#define MAGS_MMG      ARR_2("UK3CB_BAF_762_100Rnd",2)
 #define MAGS_MMG_ASST ARR_2("UK3CB_BAF_762_100Rnd",2)
 
 /* ###################### - SIDEARMS - ###################### */

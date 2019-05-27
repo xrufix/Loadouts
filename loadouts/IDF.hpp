@@ -20,7 +20,7 @@
 
 /* ###################### - VESTS - ###################### */
 #define VEST_EMPTY      ARR_1("VSM_LBT1961_OGA_OD")
-#define VEST_OFFICER       ARR_1("V_Rangemaster_belt")
+#define VEST_OFFICER    ARR_1("V_Rangemaster_belt")
 #define VEST_LIGHT      ARR_3("V_Chestrig_rgr","V_Chestrig_khk","V_Chestrig_oli")
 #define VEST_RM         ARR_3("V_TacVest_oli","V_TacVest_khk","V_TacVest_brn")
 #define VEST_GR         ARR_1("V_PlateCarrier1_rgr_noflag_F")
@@ -40,7 +40,7 @@
 #define VEST_BREATHER	ARR_1("V_RebreatherB")
 #define VEST_DIVER		ARR_1("VSM_LBT1961_Black")
 
-
+#define VEST_PROTECTED  "W_V_EOD_white_ICRC"
 
 /* ###################### - BACKPACKS - ###################### */
 #define BACKPACK_ASSAULT    ARR_3("B_FieldPack_oli","B_FieldPack_khk","B_FieldPack_cbr")
@@ -64,7 +64,8 @@
 /* ###################### - ATTACHMENTS- ###################### */
 #define LASERPOINTER "acc_pointer_ir"
 
-#define RCO "optic_Holosight_blk_F"
+#define CCO "optic_aco"
+#define RCO "optic_holosight_blk_f"
 
 #define SNIPER_OPTIC "optic_LRPS"
 #define SNIPER_OPTIC_NV "optic_NVS"
@@ -75,64 +76,64 @@
 
 /* ###################### - PRIMARY WEAPONS - ###################### */
 // STANDARD ISSUE ASSAULT RIFLE
-#define RIFLE "arifle_TRG21_F"
-#define RIFLE_UGL "arifle_TRG21_GL_F"
-#define RIFLE_RCO WEAPON(RIFLE,"",RCO,"")
-#define RIFLE_UGL_RCO WEAPON(RIFLE_UGL,"",RCO,"")
-#define RIFLE_CCO RIFLE_RCO
-#define RIFLE_UGL_CCO RIFLE_UGL_RCO
+#define RIFLE "w_arifle_trg21_black"
+#define RIFLE_UGL "w_arifle_trg21_gl_black"
+#define RIFLE_RCO WEAPON_OLD(RIFLE,"",RCO,"")
+#define RIFLE_UGL_RCO WEAPON_OLD(RIFLE_UGL,"",RCO,"")
+#define RIFLE_CCO WEAPON_OLD(RIFLE,"",CCO,"")
+#define RIFLE_UGL_CCO WEAPON_OLD(RIFLE_UGL,"",CCO,"")
 
 // CARBINE & PDW
-#define PDW WEAPON("hgun_PDW2000_F","","","")
+#define PDW WEAPON_OLD("hgun_PDW2000_F","","","")
 #define CARBINE_1 "arifle_TRG20_F"
 #define CARBINE_UGL	RIFLE_UGL
 
 #define CARBINE ARR_1(CARBINE_1)
-#define CARBINE_CCO WEAPON(CARBINE_1,RCO,"","")
-#define CARBINE_UGL_CCO WEAPON(CARBINE_UGL,RCO,"","")
+#define CARBINE_CCO WEAPON_OLD(CARBINE_1,CCO,"","")
+#define CARBINE_UGL_CCO WEAPON_OLD(CARBINE_UGL,CCO,"","")
 
 // SF CARBINES
 #define RIFLE_RECON ARR_2(\
-    WEAPON(RIFLE,LASERPOINTER,RCO,"rhsusf_acc_nt4_tan"),\
-    WEAPON(RIFLE,LASERPOINTER,RCO,"rhsusf_acc_nt4_black")\
+    WEAPON_OLD("arifle_TRG20_F",LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_tan"),\
+    WEAPON_OLD("arifle_TRG20_F",LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_black")\
 )
 #define RIFLE_UGL_RECON ARR_2(\
-    WEAPON(RIFLE_UGL,LASERPOINTER,RCO,"rhsusf_acc_nt4_tan"),\
-    WEAPON(RIFLE_UGL,LASERPOINTER,RCO,"rhsusf_acc_nt4_black")\
+    WEAPON_OLD("arifle_TRG21_GL_F",LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_tan"),\
+    WEAPON_OLD("arifle_TRG21_GL_F",LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_black")\
 )
-#define RIFLE_RECON_TAN           RIFLE_RECON
-#define RIFLE_UGL_RECON_TAN		RIFLE_UGL_RECON
-#define RIFLE_DIVER 		RIFLE_RECON
-#define RIFLE_UGL_DIVER 	RIFLE_UGL_RECON
+#define RIFLE_RECON_TAN     RIFLE_RECON
+#define RIFLE_UGL_RECON_TAN	RIFLE_UGL_RECON
+#define RIFLE_DIVER 		WEAPON_OLD(RIFLE,LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_black")
+#define RIFLE_UGL_DIVER 	WEAPON_OLD(RIFLE_UGL,LASERPOINTER,"optic_erco_blk_f","rhsusf_acc_nt4_black")
 
 // DESIGNATED MARKSMAN RIFLES & SNIPER RIFLES
-#define DMR WEAPON("rhs_weap_sr25",DMR_BIPOD,LASERPOINTER,"rhsusf_acc_ACOG3")
+#define DMR WEAPON_OLD("rhs_weap_sr25",DMR_BIPOD,LASERPOINTER,"rhsusf_acc_ACOG3")
 #define DMR_RECON ARR_3(                                                                     	\
-    WEAPON("rhs_weap_sr25_ec","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG3"),         	\
-    WEAPON("rhs_weap_sr25_ec_wd","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG_wd"),	\
-    WEAPON("rhs_weap_sr25_ec_d","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG_d")	\
+    WEAPON("rhs_weap_sr25_ec","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG3","bipod_03_f_blk"),         	\
+    WEAPON("rhs_weap_sr25_ec_wd","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG_wd","bipod_03_f_oli"),	\
+    WEAPON("rhs_weap_sr25_ec_d","rhsusf_acc_sr25S",LASERPOINTER,"rhsusf_acc_ACOG_d","bipod_02_f_hex")	\
 )
 #define DMR_DIVER DMR_RECON
-#define SR_AP WEAPON("rhs_weap_m24sws_ghillie",SNIPER_OPTIC,"rhsusf_acc_harris_swivel","")
-#define SR_AM WEAPON("rhs_weap_m82a1",SNIPER_OPTIC,"","")
+#define SR_AP WEAPON_OLD("rhs_weap_m24sws_ghillie",SNIPER_OPTIC,"rhsusf_acc_harris_swivel","")
+#define SR_AM WEAPON_OLD("rhs_weap_m82a1",SNIPER_OPTIC,"","")
 
 // AUTOMATIC RIFLES & MACHINE GUNS
-#define AUTORIFLE WEAPON("LMG_Zafir_F","",RCO,"")
-#define AUTORIFLE_RECON WEAPON("LMG_Zafir_F",LASERPOINTER,RCO,"")
+#define AUTORIFLE WEAPON_OLD("LMG_Zafir_F","",RCO,"")
+#define AUTORIFLE_RECON WEAPON_OLD("LMG_Zafir_F",LASERPOINTER,RCO,"")
 #define MMG AUTORIFLE_RECON
 
 
 
 /* ###################### - SIDEARMS - ###################### */
-#define PISTOL		WEAPON("rhsusf_weap_m9","","","")
-#define PISTOL_SF	WEAPON("rhsusf_weap_glock17g4","","","")
+#define PISTOL		WEAPON_OLD("rhsusf_weap_m9","","","")
+#define PISTOL_SF	WEAPON_OLD("rhsusf_weap_glock17g4","","","")
 
 
 
 /* ###################### - LAUNCHERS - ###################### */
-#define AT_LIGHT	WEAPON("rhs_weap_m72a7","","","")
-#define AT_ROCKET	WEAPON("CUP_launch_M47","","","")
-#define AA_MISSILE	WEAPON("rhs_weap_fim92","","","")   // Nicht nutzen!
+#define AT_LIGHT	WEAPON_OLD("rhs_weap_m72a7","","","")
+#define AT_ROCKET	WEAPON_OLD("CUP_launch_M47","","","")
+#define AA_MISSILE	WEAPON_OLD("rhs_weap_fim92","","","")   // Nicht nutzen!
 #define AT_MISSILE AT_ROCKET
 
 
@@ -153,12 +154,12 @@
 #define MAGS_AUTORIFLE      ARR_2(MAG_AUTORIFLE,3)
 #define MAGS_AUTORIFLE_ASST ARR_2(MAG_AUTORIFLE,2)
 #define MAGS_MMG            MAGS_AUTORIFLE
-#define MAGS_MMG_ASST       ARR_2(MAG_AUTORIFLE,5)
+#define MAGS_MMG_ASST       ARR_2(MAG_AUTORIFLE,4)
 #define MAGS_AUTORIFLE_RECON   ARR_2(MAG_AUTORIFLE,5)
 
 //  DMR & SR
-#define MAG_DMR     ARR_1("rhsusf_20Rnd_762x51_m118_special_Mag")
-#define MAG_DMR_RECON  ARR_1("rhsusf_20Rnd_762x51_m118_special_Mag")
+#define MAG_DMR     ARR_1("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
+#define MAG_DMR_RECON  ARR_1("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
 #define MAGS_SR_AP  ARR_2("rhsusf_5Rnd_762x51_m118_special_Mag",10)
 #define MAGS_SR_AM  ARR_4("rhsusf_mag_10Rnd_STD_50BMG_M33",3,"rhsusf_mag_10Rnd_STD_50BMG_mk211",1)
 
@@ -183,10 +184,7 @@
 
 /* ###################### - HEADGEAR - ###################### */
 // GENERAL INFANTRY
-#define HELMET ARR_2(                \
-    "rhsgref_helmet_M1_bare_alt01",  \
-    "rhsgref_helmet_M1_bare"         \
-)
+#define HELMET "rhsusf_ach_bare"
 // NON-COMBAT INFANTRY
 #define HELMET_BARE HELMET
 // SPECIAL FORCES INFANTRY
@@ -227,7 +225,7 @@
 
 
 /* ###################### - NIGHT VISION DEVICES - ###################### */
-#define NVG	    ARR_1("")
+#define NVG	    ARR_8("dzn_NVG_IDF_Mitznefet_Cover","dzn_NVG_IDF_Mitznefet_Cover_Desert","dzn_NVG_IDF_Mitznefet_Cover2","dzn_NVG_IDF_Mitznefet_Cover2_Desert","dzn_NVG_IDF_Mitznefet_Cover3","dzn_NVG_IDF_Mitznefet_Cover3_Desert","dzn_NVG_IDF_Mitznefet_Cover4","dzn_NVG_IDF_Mitznefet_Cover4_Desert")
 #define NVG_SF	ARR_1("NVGoggles_OPFOR")
 
 
@@ -242,6 +240,7 @@
 /* ###################### - RADIOS - ###################### */
 #define RADIO_HAND	ARR_1("ACRE_PRC148")
 #define RADIO_PACK 	ARR_1("ACRE_PRC117F")
+#define RADIO_SR "ACRE_PRC343"
 
 
 /* ###################### - INSIGNIA - ###################### */

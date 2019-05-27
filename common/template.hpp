@@ -17,7 +17,8 @@ class COMMON : CommonDefault {
     items[] = {
         "ACE_EarPlugs",
         "ACE_fieldDressing",10,
-        "ACE_tourniquet"
+        "ACE_tourniquet",
+        "ACE_CableTie"
     };
 
     headgear[] = {HELMET};
@@ -31,6 +32,7 @@ class COMMON : CommonDefault {
     watch[] = {"ItemWatch"};
 
     lrRadios[] = {""};
+    srRadio = RADIO_SR;
     insignia[] = {INSIGNIA_COMMON};
 
     preLoadout = TRAITS(0,0,false,false);
@@ -82,9 +84,7 @@ class LOADOUT(company,mio) : LOADOUT(company,common) {
     #endif
 };
 //CoLo
-class LOADOUT(company,colo) : LOADOUT(company,common) {
-    items[] += {"CL_Logitracker"};
-};
+class LOADOUT(company,colo) : LOADOUT(company,common) {};
 //FO
 class LOADOUT(company,fo) : LOADOUT(company,common) {
     items[] += {"ACE_RangeTable_82mm"};
@@ -195,6 +195,7 @@ class LOADOUT(squad,ftl) : COMMON {
         "ACE_microDAGR",
         "ACE_IR_Strobe_Item"
     };
+    map[] = {"ItemMap"};
 };
 //Automatic Rifleman
 class LOADOUT(squad,ar) : COMMON {
@@ -329,7 +330,7 @@ class LOADOUT(weapons,agmg) : LOADOUT(assistant,common) {
 class LOADOUT(weapons,at) : LOADOUT(weapons,common) {
     backpack[] = {BACKPACK_AT_LIGHT};
     launcher[] = {AT_ROCKET};
-    magazines[] += {MAGS_AT_ROCKET};    
+    magazines[] += {MAGS_AT_ROCKET};
 };
 //ARS AT
 class LOADOUT(weapons,aat) : LOADOUT(assistant,common) {
@@ -410,7 +411,7 @@ class LOADOUT(recon,tl) : LOADOUT(recon,common) {
     vest[] = {VEST_RECON_TL};
     primary[] = {RIFLE_UGL_RECON};
     magazines[] += {
-        UGL_HE,10,
+        UGL_HE,6,
         UGL_SMK,2,
         UGLS_COL1,
         GRENADE_IR,
@@ -454,6 +455,7 @@ class LOADOUT(recon,lat) : LOADOUT(recon,common) {
 };
 //CM
 class LOADOUT(recon,cm) : LOADOUT(recon,common) {
+    backpack[] = {BACKPACK_KITBAG};
     items[] += {
         "ACE_fieldDressing",10,
         "ACE_elasticBandage",30,
@@ -475,7 +477,6 @@ class LOADOUT(recon,dm) : LOADOUT(recon,common) {
         GRENADES_RGO
     };
     items[] += {
-        DMR_BIPOD,
         "ACE_RangeCard"
     };
 };
@@ -569,7 +570,9 @@ class LOADOUT(diver,dm) : LOADOUT(diver,common) {
         GRENADES_RGO,
         "ACE_M84",4
     };
-    items[] += {DMR_BIPOD};
+    items[] += {
+        "ACE_RangeCard"
+    };
 };
 // Diver TL/JTAC
 class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
@@ -582,21 +585,24 @@ class LOADOUT(diver,jtac) : LOADOUT(diver,tl) {
 };
 
 /* ###################### - Sniper - ###################### */
-//Spotter
 class LOADOUT(sniper,common) : LOADOUT(recon,common) {
     uniform[] = {UNIFORM_SNIPER};
     map[] = {"ItemMap"};
     items[] += {
-        SNIPER_OPTIC_NV,
+        #ifdef SNIPER_OPTIC_NV
+            SNIPER_OPTIC_NV,
+        #endif
         "ACE_Rangecard"
     };
 };
+//Spotter
 class LOADOUT(sniper,spot) : LOADOUT(recon,common) {
     uniform[] = {UNIFORM_SNIPER};
+    backpack[] = {BACKPACK_KITBAG};
     primary[] = {RIFLE_UGL_RECON_TAN};
     #ifdef EASYTRACK
         gps[] = {EASYTRACK_PDA};
-    #endif    
+    #endif
     binoculars[] = {RANGEFINDER};
     magazines[] = {
         MAG_PISTOL_SF,3,
@@ -706,7 +712,7 @@ class LOADOUT(crew,jet) : COMMON {
     map[] = {"itemMap"};
     #ifdef EASYTRACK
         gps[] = {EASYTRACK_PDA};
-    #endif    
+    #endif
     nvgs[] = {""};
     watch[] = {"ACE_Altimeter"};
     goggles[] = {GOGGLES_PILOT};
@@ -755,7 +761,6 @@ class LOADOUT(logistics,common) : COMMON {
     items[] += {
         "ACE_microDAGR",
         "ACE_MapTools",
-        "CL_Logitracker",
         "ToolKit"
     };
     lrRadios[] = {RADIO_PACK,RADIO_HAND};
@@ -770,10 +775,10 @@ class LOADOUT(logistics,common) : COMMON {
 /* ###################### - MEDEVAC - ###################### */
 //Common MEDEVAC
 class LOADOUT(medevac,common): COMMON {
+    vest[] = {VEST_PROTECTED};
     primary[] = {""};
     secondary[] = {""};
     magazines[] = {GRENADES_BASIC};
-    items[] += {"CL_Logitracker"};
     headgear[] = {HELMET_BARE};
     goggles[] = {GOGGLES_OFFICER};
     insignia[] = {INSIGNIA_MEV};
@@ -784,7 +789,6 @@ class LOADOUT(medevac,common): COMMON {
 class LOADOUT(medevac,doc) : LOADOUT(medevac,common) {
     backpack[] = {BACKPACK_KITBAG};
     items[] += {
-        "ACE_personalAidKit",4,
         "ACE_salineIV_500",10,
         "ACE_surgicalKit",
         "W_Defibrillator",
@@ -804,8 +808,7 @@ class LOADOUT(medevac,tl) : LOADOUT(medevac,doc) {
     lrRadios[] = {RADIO_HAND};
     items[] += {
         "ACE_microDAGR",
-        "ACE_MapTools",
-        "CL_Logitracker"
+        "ACE_MapTools"
     };
 };
 //MEDEVAC Pilot
@@ -830,4 +833,7 @@ class LOADOUT(medevac,drv) : LOADOUT(medevac,common) {
 #endif
 #ifdef EASYTRACK
     #undef EASYTRACK
+#endif
+#ifdef SNIPER_OPTIC_NV
+    #undef SNIPER_OPTIC_NV
 #endif

@@ -1,0 +1,3559 @@
+class CommonDefault;
+class CommonIndependant: CommonDefault
+{
+	side="Independant";
+	sideShort="i";
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket1_01",
+		"CUP_V_OI_TKI_Jacket1_02",
+		"CUP_V_OI_TKI_Jacket1_03",
+		"CUP_V_OI_TKI_Jacket1_04",
+		"CUP_V_OI_TKI_Jacket1_05",
+		"CUP_V_OI_TKI_Jacket1_06"
+	};
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak103",
+		"rhs_weap_akms",
+		"rhs_weap_akm"
+	};
+	secondary[]=
+	{
+		
+		{
+			"rhs_weap_makarov_pm",
+			"",
+			"",
+			""
+		}
+	};
+	launcher[]=
+	{
+		""
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		7,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet"
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	goggles[]=
+	{
+		""
+	};
+	nvgs[]=
+	{
+		""
+	};
+	binoculars[]=
+	{
+		""
+	};
+	map[]=
+	{
+		""
+	};
+	gps[]=
+	{
+		""
+	};
+	compass[]=
+	{
+		"ItemCompass"
+	};
+	watch[]=
+	{
+		"ItemWatch"
+	};
+	lrRadios[]=
+	{
+		""
+	};
+	insignia[]=
+	{
+		""
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_company_common: CommonIndependant
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket1_01",
+		"CUP_V_OI_TKI_Jacket1_02",
+		"CUP_V_OI_TKI_Jacket1_03",
+		"CUP_V_OI_TKI_Jacket1_04",
+		"CUP_V_OI_TKI_Jacket1_05",
+		"CUP_V_OI_TKI_Jacket1_06"
+	};
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	primary[]=
+	{
+		"rhs_weap_aks74u",
+		"rhs_weap_aks74un"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_545x39_Mag_F",
+		3
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools"
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	goggles[]=
+	{
+		""
+	};
+	nvgs[]=
+	{
+		""
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+};
+class i_company_co: i_company_common
+{
+	displayName="DN_CO_CO";
+	headgear[]=
+	{
+		""
+	};
+};
+class i_company_xo: i_company_common
+{
+	headgear[]=
+	{
+		""
+	};
+};
+class i_company_mio: i_company_common
+{
+};
+class i_company_colo: i_company_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"CL_Logitracker"
+	};
+};
+class i_company_fo: i_company_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"ACE_RangeTable_82mm"
+	};
+};
+class i_platoon_common: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket1_01",
+		"CUP_V_OI_TKI_Jacket1_02",
+		"CUP_V_OI_TKI_Jacket1_03",
+		"CUP_V_OI_TKI_Jacket1_04",
+		"CUP_V_OI_TKI_Jacket1_05",
+		"CUP_V_OI_TKI_Jacket1_06"
+	};
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak74",
+		"rhs_weap_aks74",
+		"rhs_weap_aks74_2"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_545x39_Mag_F",
+		5,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools"
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	goggles[]=
+	{
+		""
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+};
+class i_platoon_pl: i_platoon_common
+{
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL",
+		"ACRE_SEM52SL"
+	};
+};
+class i_platoon_psgt: i_platoon_common
+{
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL",
+		"ACRE_SEM52SL"
+	};
+};
+class i_platoon_uav: i_platoon_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"ACE_UAVBattery"
+	};
+	gps[]=
+	{
+		"i_UavTerminal"
+	};
+};
+class i_platoon_jtac: i_platoon_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	primary[]=
+	{
+		"rhs_weap_aks74_gp25",
+		"rhs_weap_ak74_gp25"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL",
+		"ACRE_SEM52SL"
+	};
+	gps[]=
+	{
+		""
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_545x39_Mag_F",
+		5,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"Laserbatteries",
+		"rhs_GRD40_White",
+		2,
+		"rhs_GRD40_Green",
+		2,
+		"rhs_GRD40_Red",
+		2,
+		"rhs_VG40MD_Green",
+		2,
+		"rhs_VG40MD_Red",
+		2,
+		"rhs_VG40MD_White",
+		2,
+		"rhs_VG40OP_white",
+		2,
+		"rhs_VG40OP_green",
+		2,
+		"rhs_VG40OP_red",
+		2
+	};
+};
+class i_platoon_medic: i_platoon_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	gps[]=
+	{
+		""
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"ACE_salineIV_500",
+		10,
+		"ACE_surgicalKit",
+		"W_Defibrillator",
+		"ACE_elasticBandage",
+		50,
+		"ACE_quikclot",
+		30,
+		"ACE_tourniquet",
+		6,
+		"ACE_morphine",
+		15,
+		"ACE_epinephrine",
+		30
+	};
+	lrRadios[]=
+	{
+		""
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  2,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_squad_sl: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak103_gp25",
+		"rhs_weap_akms_gp25",
+		"rhs_weap_akm_gp25"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		7,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_VOG25",
+		10,
+		"rhs_GRD40_White",
+		2,
+		"rhs_GRD40_Green",
+		"rhs_GRD40_Red",
+		"rhs_VG40MD_Green",
+		"rhs_VG40MD_Red",
+		"rhs_VG40MD_White",
+		"rhs_VG40OP_white",
+		2,
+		"rhs_VG40OP_green",
+		2,
+		"rhs_VG40OP_red",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+};
+class i_squad_ftl: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item"
+	};
+};
+class i_squad_ar: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_pkm",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_100Rnd_762x54mmR",
+		4,
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"MiniGrenade",
+		"SmokeShell",
+		2
+	};
+	goggles[]=
+	{
+		""
+	};
+};
+class i_squad_gl: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak103_gp25",
+		"rhs_weap_akms_gp25",
+		"rhs_weap_akm_gp25"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		7,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_VOG25",
+		16,
+		"rhs_VOG25P",
+		6,
+		"rhs_VG40TB",
+		4,
+		"rhs_GRD40_White",
+		6,
+		"rhs_GDM40",
+		2
+	};
+};
+class i_squad_gl2: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		"rhs_weap_m32"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		5,
+		"rhsusf_mag_6Rnd_M433_HEDP",
+		5,
+		"rhsusf_mag_6Rnd_M714_white",
+		1,
+		"rhsusf_mag_6Rnd_M576_Buckshot",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+};
+class i_squad_light: CommonIndependant
+{
+	primary[]=
+	{
+		"rhs_weap_ak103",
+		"rhs_weap_akms",
+		"rhs_weap_akm"
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+};
+class i_squad_aar: CommonIndependant
+{
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak103",
+		"rhs_weap_akms",
+		"rhs_weap_akm"
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	magazines[]=
+	{
+		"ACE_SpareBarrel",
+		"rhs_100Rnd_762x54mmR",
+		2,
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		7,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+};
+class i_squad_lat: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	backpack[]=
+	{
+		"rhs_rpg_empty"
+	};
+	launcher[]=
+	{
+		
+		{
+			"rhs_weap_rpg7",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		7,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		3
+	};
+};
+class i_squad_cm: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_fieldDressing",
+		20,
+		"ACE_elasticBandage",
+		40,
+		"ACE_quikclot",
+		20,
+		"ACE_tourniquet",
+		4
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  1,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_squad_dm: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"hlc_rifle_FAL5000",
+			"hlc_optic_suit",
+			"",
+			""
+		}
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_RangeCard"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"hlc_20Rnd_762x51_B_fal",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+};
+class i_squad_eng: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ToolKit"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_weapons_common: CommonIndependant
+{
+	backpack[]=
+	{
+		""
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+};
+class i_assistant_common: i_weapons_common
+{
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+};
+class i_weapons_mg: i_weapons_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_pkm",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"rhs_100Rnd_762x54mmR",
+		3,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	goggles[]=
+	{
+		""
+	};
+};
+class i_weapons_amg: i_assistant_common
+{
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_100Rnd_762x54mmR",
+		3,
+		"ACE_SpareBarrel"
+	};
+};
+class i_weapons_hmg: i_weapons_common
+{
+	backpack[]=
+	{
+		"RHS_DShkM_Gun_Bag"
+	};
+};
+class i_weapons_ahmg: i_assistant_common
+{
+	backpack[]=
+	{
+		"RHS_DShkM_TripodLow_Bag"
+	};
+};
+class i_weapons_gmg: i_weapons_common
+{
+	backpack[]=
+	{
+		"RHS_AGS30_Gun_Bag"
+	};
+};
+class i_weapons_agmg: i_assistant_common
+{
+	backpack[]=
+	{
+		"RHS_AGS30_Tripod_Bag"
+	};
+};
+class i_weapons_at: i_weapons_common
+{
+	backpack[]=
+	{
+		"rhs_rpg_empty"
+	};
+	launcher[]=
+	{
+		
+		{
+			"rhs_weap_rpg7",
+			"rhs_acc_pgo7v",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		1
+	};
+};
+class i_weapons_aat: i_assistant_common
+{
+	backpack[]=
+	{
+		"rhsgref_ttsko_alicepack",
+		"rhsgref_hidf_alicepack"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		4
+	};
+};
+class i_weapons_atgm: i_weapons_common
+{
+	launcher[]=
+	{
+		
+		{
+			"rhs_weap_rpg7",
+			"rhs_acc_pgo7v",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		1
+	};
+};
+class i_weapons_aatgm: i_assistant_common
+{
+	backpack[]=
+	{
+		"rhsgref_ttsko_alicepack",
+		"rhsgref_hidf_alicepack"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		4
+	};
+};
+class i_weapons_aa: i_weapons_common
+{
+	launcher[]=
+	{
+		
+		{
+			"rhs_weap_igla",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_mag_9k38_rocket"
+	};
+};
+class i_weapons_aaa: i_assistant_common
+{
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_762x39_Mag_Green_F",
+		5,
+		"30Rnd_762x39_Mag_Tracer_Green_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_mag_9k38_rocket",
+		2
+	};
+};
+class i_weapons_mort: i_weapons_common
+{
+	backpack[]=
+	{
+		"RHS_Podnos_Gun_Bag"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_RangeTable_82mm"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+};
+class i_weapons_amort: i_assistant_common
+{
+	backpack[]=
+	{
+		"RHS_Podnos_Bipod_Bag"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_RangeTable_82mm"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+};
+class i_weapons_acmort: i_assistant_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_1Rnd_82mm_Mo_HE",
+		5
+	};
+};
+class i_recon_common: CommonIndependant
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	secondary[]=
+	{
+		
+		{
+			"rhs_weap_tt33",
+			"",
+			"",
+			""
+		}
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak105",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_2mag",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_camo",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74_2",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2
+	};
+	goggles[]=
+	{
+		""
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	nvgs[]=
+	{
+		""
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	insignia[]=
+	{
+		""
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  1,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_recon_rm: i_recon_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_wirecutter"
+	};
+};
+class i_recon_tl: i_recon_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak74_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_fullplum_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_VOG25",
+		10,
+		"rhs_GRD40_White",
+		2,
+		"rhs_GRD40_Green",
+		"rhs_GRD40_Red",
+		"rhs_VG40MD_Green",
+		"rhs_VG40MD_Red",
+		"rhs_VG40MD_White",
+		"i_ir_grenade",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_IR_Strobe_Item"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+};
+class i_recon_ar: i_recon_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_pkm",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"rhs_100Rnd_762x54mmR",
+		4,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+	goggles[]=
+	{
+		""
+	};
+};
+class i_recon_gl: i_recon_common
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket2_01",
+		"CUP_V_OI_TKI_Jacket2_02",
+		"CUP_V_OI_TKI_Jacket2_03",
+		"CUP_V_OI_TKI_Jacket2_04",
+		"CUP_V_OI_TKI_Jacket2_05",
+		"CUP_V_OI_TKI_Jacket2_06",
+		"CUP_V_OI_TKI_Jacket3_01",
+		"CUP_V_OI_TKI_Jacket3_02",
+		"CUP_V_OI_TKI_Jacket3_03",
+		"CUP_V_OI_TKI_Jacket3_04",
+		"CUP_V_OI_TKI_Jacket3_05",
+		"CUP_V_OI_TKI_Jacket3_06",
+		"CUP_V_OI_TKI_Jacket4_01",
+		"CUP_V_OI_TKI_Jacket4_02",
+		"CUP_V_OI_TKI_Jacket4_03",
+		"CUP_V_OI_TKI_Jacket4_04",
+		"CUP_V_OI_TKI_Jacket4_05",
+		"CUP_V_OI_TKI_Jacket4_06",
+		"CUP_V_OI_TKI_Jacket5_01",
+		"CUP_V_OI_TKI_Jacket5_02",
+		"CUP_V_OI_TKI_Jacket5_03",
+		"CUP_V_OI_TKI_Jacket5_04",
+		"CUP_V_OI_TKI_Jacket5_05",
+		"CUP_V_OI_TKI_Jacket5_06",
+		"CUP_V_OI_TKI_Jacket6_01",
+		"CUP_V_OI_TKI_Jacket6_02",
+		"CUP_V_OI_TKI_Jacket6_03",
+		"CUP_V_OI_TKI_Jacket6_04",
+		"CUP_V_OI_TKI_Jacket6_05",
+		"CUP_V_OI_TKI_Jacket6_06"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak74_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_fullplum_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_VOG25",
+		16,
+		"rhs_VOG25P",
+		6,
+		"rhs_VG40TB",
+		4,
+		"rhs_GRD40_White",
+		6,
+		"rhs_GDM40",
+		2
+	};
+};
+class i_recon_lat: i_recon_common
+{
+	launcher[]=
+	{
+		
+		{
+			"rhs_weap_rpg7",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"rhs_rpg7_PG7V_mag",
+		3
+	};
+};
+class i_recon_cm: i_recon_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_fieldDressing",
+		10,
+		"ACE_elasticBandage",
+		30,
+		"ACE_quikclot",
+		20,
+		"ACE_tourniquet",
+		3,
+		"ACE_morphine",
+		6,
+		"ACE_epinephrine",
+		12,
+		"ACE_salineIV_500",
+		3,
+		"ACE_surgicalKit"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  2,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_recon_dm: i_recon_common
+{
+	primary[]=
+	{
+		
+		{
+			"hlc_rifle_FAL5000",
+			"hlc_optic_suit",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"hlc_20Rnd_762x51_B_fal",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ace_banana",
+		"ACE_RangeCard"
+	};
+};
+class i_recon_exp: i_recon_common
+{
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	secondary[]=
+	{
+		"ACE_VMM3"
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"DemoCharge_Remote_Mag",
+		4,
+		"SatchelCharge_Remote_Mag",
+		"SLAMDirectionalMine_Wire_Mag",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_Clacker",
+		"ACE_SpraypaintRed",
+		"ACE_SpraypaintGreen",
+		"ACE_DefusalKit",
+		"ACE_DeadManSwitch"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true]; (_this select 0) setVariable [""ACE_isEOD"", true, true]; (_this select 0) setCaptive false;";
+};
+class i_diver_common: i_recon_common
+{
+	uniform[]=
+	{
+		"U_B_Wetsuit"
+	};
+	vest[]=
+	{
+		"V_RebreatherB"
+	};
+	backpack[]=
+	{
+		"xru_Carryall_blk"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak105",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_2mag",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_camo",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74_2",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	secondary[]=
+	{
+		
+		{
+			"rhs_weap_tt33",
+			"",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"ACE_M84",
+		4
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"V_TacVestIR_blk",
+		"CUP_O_TKI_Khet_Jeans_04"
+	};
+	goggles[]=
+	{
+		""
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	nvgs[]=
+	{
+		"NVGoggles_OPFOR"
+	};
+};
+class i_diver_rm: i_diver_common
+{
+};
+class i_diver_tl: i_diver_common
+{
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"ACE_M84",
+		4,
+		"MiniGrenade",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"V_TacVestIR_blk",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"ACE_MapTools"
+	};
+};
+class i_diver_exp: i_diver_common
+{
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"ACE_M84",
+		4,
+		"DemoCharge_Remote_Mag",
+		4
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"V_TacVestIR_blk",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"ACE_Clacker",
+		"ACE_SpraypaintRed",
+		"ACE_SpraypaintGreen",
+		"ACE_DefusalKit",
+		"ACE_DeadManSwitch"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true]; (_this select 0) setVariable [""ACE_isEOD"", true, true]; (_this select 0) setCaptive false;";
+};
+class i_diver_cm: i_diver_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"V_TacVestIR_blk",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"W_Defibrillator",
+		"ACE_surgicalKit",
+		"ACE_salineIV",
+		4,
+		"ACE_elasticBandage",
+		15,
+		"ACE_fieldDressing",
+		5,
+		"ACE_quikclot",
+		15,
+		"ACE_tourniquet",
+		3,
+		"ACE_morphine",
+		10,
+		"ACE_epinephrine",
+		10
+	};
+	binoculars[]=
+	{
+		"ACE_MX2A"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  2,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_diver_dm: i_diver_common
+{
+	primary[]=
+	{
+		
+		{
+			"hlc_rifle_FAL5000",
+			"hlc_optic_suit",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"hlc_20Rnd_762x51_B_fal",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"ACE_M84",
+		4
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"V_TacVestIR_blk",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"ace_banana"
+	};
+};
+class i_diver_jtac: i_diver_tl
+{
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak74_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_fullplum_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"ACE_M84",
+		4,
+		"MiniGrenade",
+		2,
+		"Laserbatteries",
+		"rhs_GRD40_Green",
+		2,
+		"rhs_GRD40_Red",
+		2,
+		"rhs_VG40MD_Green",
+		2,
+		"rhs_VG40MD_Red",
+		2,
+		"rhs_VG40MD_White",
+		2
+	};
+};
+class i_sniper_common: i_recon_common
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ace_banana",
+		"ACE_Rangecard"
+	};
+};
+class i_sniper_spot: i_recon_common
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak74_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_fullplum_gp25",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"i_ir_grenade",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"30Rnd_545x39_Mag_F",
+		8,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"rhs_VOG25",
+		10,
+		"rhs_GRD40_White",
+		4
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_SpottingScope",
+		"ACE_Tripod",
+		"ACE_ATragMX",
+		"ACE_IR_Strobe_Item",
+		"ACE_Rangecard",
+		"ACE_Kestrel4500"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+};
+class i_sniper_ap: i_sniper_common
+{
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_svdp",
+			"rhs_acc_pso1m21",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"rhs_10Rnd_762x54mmR_7N1",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+};
+class i_sniper_am: i_sniper_common
+{
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_svdp",
+			"rhs_acc_pso1m21",
+			"",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"rhs_10Rnd_762x54mmR_7N1",
+		10,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+};
+class i_sniper_exp: i_recon_common
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	primary[]=
+	{
+		
+		{
+			"rhs_weap_ak74_3",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_camo",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		},
+		
+		{
+			"rhs_weap_ak74m_desert",
+			"rhs_acc_dtk",
+			"rhs_acc_2dpZenit",
+			""
+		}
+	};
+	magazines[]=
+	{
+		"rhs_mag_762x25_8",
+		3,
+		"30Rnd_545x39_Mag_F",
+		9,
+		"30Rnd_545x39_Mag_Tracer_F",
+		2,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow",
+		"HandGrenade",
+		2,
+		"SmokeShell",
+		2,
+		"APERSTripMine_Wire_mag",
+		2,
+		"ClaymoreDirectionalMine_Remote_mag",
+		2
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_IR_Strobe_Item",
+		"ACE_CableTie",
+		2,
+		"ACE_Clacker",
+		"ACE_SpraypaintRed",
+		"ACE_SpraypaintGreen",
+		"ACE_DefusalKit",
+		"ACE_DeadManSwitch"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  1,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", true, true]; (_this select 0) setCaptive false;";
+};
+class i_crew_common: CommonIndependant
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	backpack[]=
+	{
+		""
+	};
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket1_01",
+		"CUP_V_OI_TKI_Jacket1_02",
+		"CUP_V_OI_TKI_Jacket1_03",
+		"CUP_V_OI_TKI_Jacket1_04",
+		"CUP_V_OI_TKI_Jacket1_05",
+		"CUP_V_OI_TKI_Jacket1_06"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak74",
+		"rhs_weap_aks74",
+		"rhs_weap_aks74_2"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_545x39_Mag_F",
+		6,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	headgear[]=
+	{
+		"rhs_tsh4",
+		"rhs_tsh4_ess"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	insignia[]=
+	{
+		""
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 1, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_crew_cmd: i_crew_common
+{
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL",
+		"ACRE_SEM52SL"
+	};
+	binoculars[]=
+	{
+		"Binocular"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools"
+	};
+};
+class i_crew_jet: CommonIndependant
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	vest[]=
+	{
+		""
+	};
+	backpack[]=
+	{
+		""
+	};
+	primary[]=
+	{
+		""
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	headgear[]=
+	{
+		"rhs_tsh4",
+		"rhs_tsh4_ess"
+	};
+	map[]=
+	{
+		"itemMap"
+	};
+	nvgs[]=
+	{
+		""
+	};
+	watch[]=
+	{
+		"ACE_Altimeter"
+	};
+	goggles[]=
+	{
+		""
+	};
+	insignia[]=
+	{
+		""
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools"
+	};
+};
+class i_crew_heli: i_crew_common
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	headgear[]=
+	{
+		"rhs_tsh4",
+		"rhs_tsh4_ess"
+	};
+	map[]=
+	{
+		""
+	};
+	insignia[]=
+	{
+		""
+	};
+};
+class i_crew_helipilot: i_crew_heli
+{
+	backpack[]=
+	{
+		"B_FieldPack_blk",
+		"B_FieldPack_cbr",
+		"B_FieldPack_khk",
+		"B_FieldPack_oli"
+	};
+	map[]=
+	{
+		"itemMap"
+	};
+	goggles[]=
+	{
+		""
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	headgear[]=
+	{
+		"rhs_tsh4",
+		"rhs_tsh4_ess"
+	};
+	nvgs[]=
+	{
+		"NVGoggles_OPFOR"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools"
+	};
+};
+class i_logistics_common: CommonIndependant
+{
+	vest[]=
+	{
+		"CUP_V_OI_TKI_Jacket1_01",
+		"CUP_V_OI_TKI_Jacket1_02",
+		"CUP_V_OI_TKI_Jacket1_03",
+		"CUP_V_OI_TKI_Jacket1_04",
+		"CUP_V_OI_TKI_Jacket1_05",
+		"CUP_V_OI_TKI_Jacket1_06"
+	};
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	primary[]=
+	{
+		"rhs_weap_ak74",
+		"rhs_weap_aks74",
+		"rhs_weap_aks74_2"
+	};
+	magazines[]=
+	{
+		"rhs_mag_9x18_8_57N181S",
+		3,
+		"30Rnd_545x39_Mag_F",
+		6,
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"CL_Logitracker",
+		"ToolKit"
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL",
+		"ACRE_SEM52SL"
+	};
+	map[]=
+	{
+		"ItemMap"
+	};
+	insignia[]=
+	{
+		""
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 2, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive false;";
+};
+class i_medevac_common: CommonIndependant
+{
+	vest[]=
+	{
+		"V_Plain_crystal_F"
+	};
+	primary[]=
+	{
+		""
+	};
+	secondary[]=
+	{
+		""
+	};
+	magazines[]=
+	{
+		"Chemlight_blue",
+		"Chemlight_yellow",
+		"SmokeShellBlue",
+		"SmokeShellYellow"
+	};
+	headgear[]=
+	{
+		"H_Shemag_olive",
+		"H_ShemagOpen_tan",
+		"H_ShemagOpen_khk",
+		"CUP_H_TKI_Pakol_1_01",
+		"CUP_H_TKI_Pakol_1_02",
+		"CUP_H_TKI_Pakol_1_03",
+		"CUP_H_TKI_Pakol_1_04",
+		"CUP_H_TKI_Pakol_1_05",
+		"CUP_H_TKI_Pakol_1_06",
+		"CUP_H_TKI_Pakol_2_01",
+		"CUP_H_TKI_Pakol_2_02",
+		"CUP_H_TKI_Pakol_2_03",
+		"CUP_H_TKI_Pakol_2_04",
+		"CUP_H_TKI_Pakol_2_05",
+		"CUP_H_TKI_Pakol_2_06",
+		"CUP_H_TKI_SkullCap_01",
+		"CUP_H_TKI_SkullCap_02",
+		"CUP_H_TKI_SkullCap_03",
+		"CUP_H_TKI_SkullCap_04",
+		"CUP_H_TKI_SkullCap_05",
+		"CUP_H_TKI_SkullCap_06",
+		"CUP_H_TKI_Lungee_01",
+		"CUP_H_TKI_Lungee_02",
+		"CUP_H_TKI_Lungee_03",
+		"CUP_H_TKI_Lungee_04",
+		"CUP_H_TKI_Lungee_05",
+		"CUP_H_TKI_Lungee_06",
+		"CUP_H_TKI_Lungee_Open_01",
+		"CUP_H_TKI_Lungee_Open_02",
+		"CUP_H_TKI_Lungee_Open_03",
+		"CUP_H_TKI_Lungee_Open_04",
+		"CUP_H_TKI_Lungee_Open_05",
+		"CUP_H_TKI_Lungee_Open_06"
+	};
+	goggles[]=
+	{
+		""
+	};
+	insignia[]=
+	{
+		""
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  0,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive true;";
+};
+class i_medevac_doc: i_medevac_common
+{
+	backpack[]=
+	{
+		"CUP_B_AlicePack_Khaki"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_salineIV_500",
+		10,
+		"ACE_surgicalKit",
+		"W_Defibrillator",
+		"ACE_elasticBandage",
+		40,
+		"ACE_quikclot",
+		40,
+		"ACE_tourniquet",
+		6,
+		"ACE_morphine",
+		15,
+		"ACE_epinephrine",
+		30
+	};
+	preLoadout="(_this select 0) setVariable [""ACE_medical_medicClass"",  2,  true]; (_this select 0) setVariable [""ACE_isEngineer"", 0, true]; (_this select 0) setVariable [""ACE_isEOD"", false, true]; (_this select 0) setCaptive true;";
+};
+class i_medevac_tl: i_medevac_doc
+{
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_salineIV_500",
+		10,
+		"ACE_surgicalKit",
+		"W_Defibrillator",
+		"ACE_elasticBandage",
+		40,
+		"ACE_quikclot",
+		40,
+		"ACE_tourniquet",
+		6,
+		"ACE_morphine",
+		15,
+		"ACE_epinephrine",
+		30,
+		"ACE_microDAGR",
+		"ACE_MapTools",
+		"CL_Logitracker"
+	};
+};
+class i_medevac_heli: i_medevac_common
+{
+	uniform[]=
+	{
+		"CUP_O_TKI_Khet_Jeans_01",
+		"CUP_O_TKI_Khet_Jeans_02",
+		"CUP_O_TKI_Khet_Jeans_03",
+		"CUP_O_TKI_Khet_Jeans_04",
+		"CUP_O_TKI_Khet_Partug_01",
+		"CUP_O_TKI_Khet_Partug_02",
+		"CUP_O_TKI_Khet_Partug_03",
+		"CUP_O_TKI_Khet_Partug_04",
+		"CUP_O_TKI_Khet_Partug_05",
+		"CUP_O_TKI_Khet_Partug_06",
+		"CUP_O_TKI_Khet_Partug_07",
+		"CUP_O_TKI_Khet_Partug_08"
+	};
+	map[]=
+	{
+		"itemMap"
+	};
+	goggles[]=
+	{
+		""
+	};
+	lrRadios[]=
+	{
+		"ACRE_SEM52SL"
+	};
+	headgear[]=
+	{
+		"rhs_tsh4",
+		"rhs_tsh4_ess"
+	};
+	nvgs[]=
+	{
+		""
+	};
+};
+class i_medevac_drv: i_medevac_common
+{
+	items[]=
+	{
+		"ACE_EarPlugs",
+		"ACE_fieldDressing",
+		10,
+		"ACE_tourniquet",
+		"ACE_Banana"
+	};
+};
+class i_officer_f: i_platoon_pl
+{
+	scope=0;
+};
+class i_soldier_uav_f: i_platoon_uav
+{
+	scope=0;
+};
+class i_soldier_sl_f: i_squad_sl
+{
+	scope=0;
+};
+class i_soldier_tl_f: i_squad_ftl
+{
+	scope=0;
+};
+class i_soldier_ar_f: i_squad_ar
+{
+	scope=0;
+};
+class i_soldier_gl_f: i_squad_gl
+{
+	scope=0;
+};
+class i_soldier_lite_f: i_squad_light
+{
+	scope=0;
+};
+class i_soldier_f: i_squad_aar
+{
+	scope=0;
+};
+class i_soldier_lat_f: i_squad_lat
+{
+	scope=0;
+};
+class i_medic_f: i_squad_cm
+{
+	scope=0;
+};
+class i_soldier_m_f: i_squad_dm
+{
+	scope=0;
+};
+class i_engineer_f: i_squad_eng
+{
+	scope=0;
+};
+class i_support_mg_f: i_weapons_hmg
+{
+	scope=0;
+};
+class i_support_amg_f: i_weapons_ahmg
+{
+	scope=0;
+};
+class i_support_gmg_f: i_weapons_gmg
+{
+	scope=0;
+};
+class i_t_support_amg_f: i_weapons_agmg
+{
+	scope=0;
+};
+class i_soldier_at_f: i_weapons_atgm
+{
+	scope=0;
+};
+class i_soldier_aat_f: i_weapons_aatgm
+{
+	scope=0;
+};
+class i_soldier_aa_f: i_weapons_aa
+{
+	scope=0;
+};
+class i_soldier_aaa_f: i_weapons_aaa
+{
+	scope=0;
+};
+class i_support_mort_f: i_weapons_mort
+{
+	scope=0;
+};
+class i_support_amort_f: i_weapons_amort
+{
+	scope=0;
+};
+class i_soldier_a_f: i_weapons_acmort
+{
+	scope=0;
+};
+class i_diver_f: i_diver_rm
+{
+	scope=0;
+};
+class i_diver_tl_f: i_diver_tl
+{
+	scope=0;
+};
+class i_diver_exp_f: i_diver_exp
+{
+	scope=0;
+};
+class i_spotter_f: i_sniper_spot
+{
+	scope=0;
+};
+class i_ghillie_ard_f: i_sniper_ap
+{
+	scope=0;
+};
+class i_ghillie_lsh_f: i_sniper_am
+{
+	scope=0;
+};
+class i_sniper_f: i_sniper_exp
+{
+	scope=0;
+};
+class i_crew_f: i_crew_common
+{
+	scope=0;
+};
+class i_pilot_f: i_crew_jet
+{
+	scope=0;
+};
+class i_helicrew_f: i_crew_heli
+{
+	scope=0;
+};
+class i_helipilot_f: i_crew_helipilot
+{
+	scope=0;
+};
+class i_soldier_repair_f: i_logistics_common
+{
+	scope=0;
+};
